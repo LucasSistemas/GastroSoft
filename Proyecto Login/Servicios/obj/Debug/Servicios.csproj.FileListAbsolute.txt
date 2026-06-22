@@ -1,0 +1,12 @@
+C:\Users\rukus\source\repos\Proyecto Login\Servicios\bin\Debug\Servicios.dll
+C:\Users\rukus\source\repos\Proyecto Login\Servicios\bin\Debug\Servicios.pdb
+C:\Users\rukus\source\repos\Proyecto Login\Servicios\obj\Debug\Servicios.csproj.AssemblyReference.cache
+C:\Users\rukus\source\repos\Proyecto Login\Servicios\obj\Debug\Servicios.csproj.CoreCompileInputs.cache
+C:\Users\rukus\source\repos\Proyecto Login\Servicios\obj\Debug\Servicios.dll
+C:\Users\rukus\source\repos\Proyecto Login\Servicios\obj\Debug\Servicios.pdb
+C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Servicios\bin\Debug\Servicios.dll
+C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Servicios\bin\Debug\Servicios.pdb
+C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Servicios\obj\Debug\Servicios.csproj.AssemblyReference.cache
+C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Servicios\obj\Debug\Servicios.csproj.CoreCompileInputs.cache
+C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Servicios\obj\Debug\Servicios.dll
+C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Servicios\obj\Debug\Servicios.pdb

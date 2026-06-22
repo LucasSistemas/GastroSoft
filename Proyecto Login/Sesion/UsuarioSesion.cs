@@ -1,0 +1,166 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Text;
+using System.Threading.Tasks;
+using Entidad;
+
+namespace Sesion
+{
+    public static class UsuarioSesion
+    {
+        #region Propiedades
+        // Propiedades del usuario logueado
+        private static int IdUsuario { get; set; }
+        private static string NombreUsuario { get; set; }
+        private static string Rol { get; set; }
+        private static string Contraseña { get; set; }
+        private static bool PrimeraVez { get; set; }
+        private static int Intentos_Sesion { get; set; }
+        private static DateTime? TiempoResetIntentos { get; set; } = null;
+        private static DateTime? Fecha_Ultimo_Login { get; set; } = null;
+        private static bool Bloqueado { get; set; } = false;
+        private static DateTime? BloqueadoHasta { get; set; } = null;
+        private static bool estaLogueado { get; set; } = false;
+        #endregion
+        /*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        */
+        #region Getters
+        public static int ObtenerIdUsuario()
+        {
+            return IdUsuario;
+        }
+        public static string ObtenerNombreUsuario()
+        {
+            return NombreUsuario;
+        }
+        public static string ObtenerRol()
+        {
+            return Rol;
+        }
+        public static string ObtenerContraseña()
+        {
+            return Contraseña;
+        }
+        public static bool ObtenerPrimeraVez()
+        {
+            return PrimeraVez;
+        }
+        public static int ObtenerIntentosSesion()
+        {
+            return Intentos_Sesion;
+        }
+        public static DateTime? ObtenerFechaUltimoLogin()
+        {
+            return Fecha_Ultimo_Login;
+        }
+        public static bool ObtenerBloqueado()
+        {
+            return Bloqueado;
+        }
+        public static DateTime? ObtenerBloqueadoHasta()
+        {
+            return BloqueadoHasta;
+        }
+        public static DateTime? ObtenerTiempoResetIntentos()
+        {
+            return TiempoResetIntentos;
+        }
+        #endregion
+        /*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        */
+        #region Setters
+        public static void SetIdUsuario(int IdUsuario)
+        {
+            UsuarioSesion.IdUsuario = IdUsuario;
+        }
+        public static void SetNombreUsuario(string NombreCompleto)
+        {
+            UsuarioSesion.NombreUsuario = NombreCompleto;
+        }
+        public static void SetRol(string Rol)
+        {
+            UsuarioSesion.Rol = Rol;
+        }
+        public static void SetContraseña(string Contraseña)
+        {
+            UsuarioSesion.Contraseña = Contraseña;
+        }
+        public static void SetPrimeraVez(bool PrimeraVez)
+        {
+            UsuarioSesion.PrimeraVez = PrimeraVez;
+        }
+        public static void SetIntentosSesion(int IntentosSesion)
+        {
+            UsuarioSesion.Intentos_Sesion = IntentosSesion;
+        }
+        public static void SetFechaUltimoLogin(DateTime? FechaUltimoLogin)
+        {
+            UsuarioSesion.Fecha_Ultimo_Login = FechaUltimoLogin;
+        }
+        public static void SetBloqueado(bool Bloqueado)
+        {
+            UsuarioSesion.Bloqueado = Bloqueado;
+        }
+        public static void SetBloqueadoHasta(DateTime? BloqueadoHasta)
+        {
+            UsuarioSesion.BloqueadoHasta = BloqueadoHasta;
+        }
+        public static void SetTiempoResetIntentos(DateTime? TiempoResetIntentos)
+        {
+            UsuarioSesion.TiempoResetIntentos = TiempoResetIntentos;
+        }
+
+        #endregion
+        /*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        */
+
+
+        // Verificar sesión activa
+        public static void ActivarSesion()
+        {
+            estaLogueado = true;
+        }
+        public static bool EstaLogueado()
+        {
+            return estaLogueado;
+        }
+
+        // Cerrar sesión
+        public static void CerrarSesion()
+        {
+            IdUsuario = 0;
+            NombreUsuario = null;
+            Rol = null;
+            Contraseña = null;
+            PrimeraVez = false;
+            Intentos_Sesion = 0;
+            Fecha_Ultimo_Login = null;
+            Bloqueado = false;
+            BloqueadoHasta = null;
+            estaLogueado = false;
+        }
+    }
+}
