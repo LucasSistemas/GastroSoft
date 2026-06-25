@@ -1,0 +1,22 @@
+Ver qué cambió:
+
+git status
+
+Agregar los cambios:
+
+git add .
+
+Crear un commit:
+
+git commit -m "Descripción de los cambios"
+
+Subirlos a GitHub:
+
+git push
+
+-----------------------------------------------------------------------------
+
+Clonar repositorio
+1. Crea una nueva carpeta en el escritorio con un nombre identificativo
+2. Click derecho y abre git bash here
+3. 
