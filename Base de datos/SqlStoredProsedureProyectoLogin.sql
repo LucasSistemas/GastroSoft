@@ -220,6 +220,10 @@ begin
     set Intentos_Sesion = 3
     where NombreUsuario = @Usuario
 
+    update Usuarios
+    set TiempoResetIntentos = null
+    where NombreUsuario = @Usuario
+
 end
 
 go
