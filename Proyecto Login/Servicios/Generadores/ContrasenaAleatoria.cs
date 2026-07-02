@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Servicios
 {
-    public class ContrasenaAleatoria
+    public class CodigoAleatorio
     {
-        public static string GenerarContrasena()
+        public static string GenerarCodigo()
         {
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
             Random random = new Random();
