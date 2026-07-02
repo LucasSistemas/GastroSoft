@@ -10,9 +10,9 @@ C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Entidad\obj\Debug\Enti
 C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Entidad\obj\Debug\Entidad.csproj.CoreCompileInputs.cache
 C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Entidad\obj\Debug\Entidad.dll
 C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Entidad\obj\Debug\Entidad.pdb
-C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Entidad\bin\Debug\Entidad.dll
-C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Entidad\bin\Debug\Entidad.pdb
-C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Entidad\obj\Debug\Entidad.csproj.AssemblyReference.cache
-C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Entidad\obj\Debug\Entidad.csproj.CoreCompileInputs.cache
-C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Entidad\obj\Debug\Entidad.dll
-C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Entidad\obj\Debug\Entidad.pdb
+C:\Users\User\Desktop\GastroSoft-main\GastroSoft\Proyecto Login\Entidad\bin\Debug\Entidad.dll
+C:\Users\User\Desktop\GastroSoft-main\GastroSoft\Proyecto Login\Entidad\bin\Debug\Entidad.pdb
+C:\Users\User\Desktop\GastroSoft-main\GastroSoft\Proyecto Login\Entidad\obj\Debug\Entidad.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\GastroSoft-main\GastroSoft\Proyecto Login\Entidad\obj\Debug\Entidad.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\GastroSoft-main\GastroSoft\Proyecto Login\Entidad\obj\Debug\Entidad.dll
+C:\Users\User\Desktop\GastroSoft-main\GastroSoft\Proyecto Login\Entidad\obj\Debug\Entidad.pdb

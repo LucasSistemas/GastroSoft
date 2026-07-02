@@ -240,12 +240,13 @@
             this.btGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btGuardar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btGuardar.ForeColor = System.Drawing.Color.Green;
-            this.btGuardar.Location = new System.Drawing.Point(256, 539);
+            this.btGuardar.Location = new System.Drawing.Point(257, 566);
             this.btGuardar.Name = "btGuardar";
             this.btGuardar.Size = new System.Drawing.Size(98, 36);
             this.btGuardar.TabIndex = 8;
             this.btGuardar.Text = "Guardar ";
             this.btGuardar.UseVisualStyleBackColor = false;
+            this.btGuardar.Click += new System.EventHandler(this.btGuardar_Click);
             // 
             // btVolver
             // 
@@ -288,7 +289,7 @@
             this.Controls.Add(this.gbpoliticas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmConfiguracionDeseguridadDelSistema";
-            this.Text = "Configuracion de seguridad del sistema | Gastrosoft";
+            this.Text = "Configuracion de seguridad del sistema | Gastrosft";
             this.Load += new System.EventHandler(this.frmConfiguracionDeseguridadDelSistema_Load);
             this.gbpoliticas.ResumeLayout(false);
             this.gbpoliticas.PerformLayout();

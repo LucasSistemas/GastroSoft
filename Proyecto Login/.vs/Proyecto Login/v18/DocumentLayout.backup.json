@@ -1,0 +1,129 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\GastroSoft-main\\GastroSoft\\Proyecto Login\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AE92839D-63AB-4C5C-B1C3-1B2A019CF353}|Sesion\\Sesion.csproj|c:\\users\\user\\desktop\\gastrosoft-main\\gastrosoft\\proyecto login\\sesion\\usuariosesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE92839D-63AB-4C5C-B1C3-1B2A019CF353}|Sesion\\Sesion.csproj|solutionrelative:sesion\\usuariosesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|C:\\Users\\User\\Desktop\\GastroSoft-main\\GastroSoft\\Proyecto Login\\vista\\frmconfiguraciondeseguridaddelsistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|solutionrelative:vista\\frmconfiguraciondeseguridaddelsistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|c:\\users\\user\\desktop\\gastrosoft-main\\gastrosoft\\proyecto login\\vista\\frmnuevacontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|solutionrelative:vista\\frmnuevacontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|C:\\Users\\User\\Desktop\\GastroSoft-main\\GastroSoft\\Proyecto Login\\vista\\frmconfiguraciondeseguridaddelsistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|solutionrelative:vista\\frmconfiguraciondeseguridaddelsistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|C:\\Users\\User\\Desktop\\GastroSoft-main\\GastroSoft\\Proyecto Login\\vista\\frmnuevacontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|solutionrelative:vista\\frmnuevacontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|C:\\Users\\User\\Desktop\\GastroSoft-main\\GastroSoft\\Proyecto Login\\vista\\frmconfiguraciondecontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|solutionrelative:vista\\frmconfiguraciondecontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 337,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmConfiguracionDeContrase\u00F1a.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\GastroSoft-main\\GastroSoft\\Proyecto Login\\Vista\\frmConfiguracionDeContrase\u00F1a.cs",
+              "RelativeDocumentMoniker": "Vista\\frmConfiguracionDeContrase\u00F1a.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\GastroSoft-main\\GastroSoft\\Proyecto Login\\Vista\\frmConfiguracionDeContrase\u00F1a.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vista\\frmConfiguracionDeContrase\u00F1a.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T22:28:10.976Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmNuevaContrase\u00F1a.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\GastroSoft-main\\GastroSoft\\Proyecto Login\\Vista\\frmNuevaContrase\u00F1a.cs",
+              "RelativeDocumentMoniker": "Vista\\frmNuevaContrase\u00F1a.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\GastroSoft-main\\GastroSoft\\Proyecto Login\\Vista\\frmNuevaContrase\u00F1a.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vista\\frmNuevaContrase\u00F1a.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T22:28:26.548Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmNuevaContrase\u00F1a.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\GastroSoft-main\\GastroSoft\\Proyecto Login\\Vista\\frmNuevaContrase\u00F1a.cs",
+              "RelativeDocumentMoniker": "Vista\\frmNuevaContrase\u00F1a.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\GastroSoft-main\\GastroSoft\\Proyecto Login\\Vista\\frmNuevaContrase\u00F1a.cs",
+              "RelativeToolTip": "Vista\\frmNuevaContrase\u00F1a.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAYwGsAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T21:23:47.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmConfiguracionDeseguridadDelSistema.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\GastroSoft-main\\GastroSoft\\Proyecto Login\\Vista\\frmConfiguracionDeseguridadDelSistema.cs",
+              "RelativeDocumentMoniker": "Vista\\frmConfiguracionDeseguridadDelSistema.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\GastroSoft-main\\GastroSoft\\Proyecto Login\\Vista\\frmConfiguracionDeseguridadDelSistema.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vista\\frmConfiguracionDeseguridadDelSistema.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T22:28:13.119Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmConfiguracionDeseguridadDelSistema.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\GastroSoft-main\\GastroSoft\\Proyecto Login\\Vista\\frmConfiguracionDeseguridadDelSistema.cs",
+              "RelativeDocumentMoniker": "Vista\\frmConfiguracionDeseguridadDelSistema.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\GastroSoft-main\\GastroSoft\\Proyecto Login\\Vista\\frmConfiguracionDeseguridadDelSistema.cs",
+              "RelativeToolTip": "Vista\\frmConfiguracionDeseguridadDelSistema.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAwwEEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T22:29:31.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsuarioSesion.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\GastroSoft-main\\GastroSoft\\Proyecto Login\\Sesion\\UsuarioSesion.cs",
+              "RelativeDocumentMoniker": "Sesion\\UsuarioSesion.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\GastroSoft-main\\GastroSoft\\Proyecto Login\\Sesion\\UsuarioSesion.cs",
+              "RelativeToolTip": "Sesion\\UsuarioSesion.cs",
+              "ViewState": "AgIAAI4AAAAAAAAAAAAgwKYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T22:30:47.95Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 63,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

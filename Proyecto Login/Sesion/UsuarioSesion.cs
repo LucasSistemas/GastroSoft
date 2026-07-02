@@ -162,5 +162,40 @@ namespace Sesion
             BloqueadoHasta = null;
             estaLogueado = false;
         }
+
+
+        #region GetSet_PoliticasDeContraseñas
+        public static class Politicas_De_Contraseñas
+        {
+            // --- POLÍTICAS DE CONTRASEÑA (Valores por defecto) ---
+            public static int LongitudMinima { get; set; } = 8;
+            public static bool RequiereMayusculas { get; set; } = false;
+            public static bool RequiereNumeros { get; set; } = false;
+            public static bool RequiereEspeciales { get; set; } = false;
+            public static bool NoRepetirContraseñas { get; set; } = false;
+
+            // --- CONFIGURACIÓN DE PREGUNTAS ---
+            public static int CantidadPreguntasRequeridas { get; set; } = 3; // Para probar vamos a pobner que por defecto sean 3 preguntas de seguridad
+
+            // --- Estas preguntas son solo para probar la pantalla y tal vez no sean las definitivas
+            public static List<string> PreguntasUsuarioSimuladas { get; set; } = new List<string>()
+            {
+            "¿Cuál es el nombre de tu primera mascota?",
+            "¿En qué ciudad naciste?",
+            "¿Cuál es tu plato de comida favorito?",
+            "¿Cuál fue tu primera escuela?",
+            "¿Cómo se llamaba tu superhéroe favorito de la infancia?"
+            };
+        }
+        #endregion
+        /*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        */
     }
 }
