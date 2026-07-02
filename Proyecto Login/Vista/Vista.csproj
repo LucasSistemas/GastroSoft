@@ -46,105 +46,96 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmAltaEmpleadosRegistrados.cs">
+    <Compile Include="Gestion Usuarios\frmAltaEmpleadosRegistrados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAltaEmpleadosRegistrados.Designer.cs">
+    <Compile Include="Gestion Usuarios\frmAltaEmpleadosRegistrados.Designer.cs">
       <DependentUpon>frmAltaEmpleadosRegistrados.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmConfiguracionDeContraseña.cs">
+    <Compile Include="Gestion Usuarios\frmConfiguracionDeContraseña.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmConfiguracionDeContraseña.Designer.cs">
+    <Compile Include="Gestion Usuarios\frmConfiguracionDeContraseña.Designer.cs">
       <DependentUpon>frmConfiguracionDeContraseña.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmConfiguracionDeseguridadDelSistema.cs">
+    <Compile Include="Politicas de Seguridad\frmConfiguracionDeseguridadDelSistema.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmConfiguracionDeseguridadDelSistema.Designer.cs">
+    <Compile Include="Politicas de Seguridad\frmConfiguracionDeseguridadDelSistema.Designer.cs">
       <DependentUpon>frmConfiguracionDeseguridadDelSistema.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCrearUsuarioAEmpleado.cs">
+    <Compile Include="Gestion Usuarios\frmCrearUsuarioAEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCrearUsuarioAEmpleado.Designer.cs">
+    <Compile Include="Gestion Usuarios\frmCrearUsuarioAEmpleado.Designer.cs">
       <DependentUpon>frmCrearUsuarioAEmpleado.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEditarPerfilUsuario.cs">
+    <Compile Include="Gestion Usuarios\frmEditarPerfilUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEditarPerfilUsuario.Designer.cs">
+    <Compile Include="Gestion Usuarios\frmEditarPerfilUsuario.Designer.cs">
       <DependentUpon>frmEditarPerfilUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLogin.cs">
+    <Compile Include="Login y Registro\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.Designer.cs">
+    <Compile Include="Login y Registro\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMenuPrincipalParaAdm.cs">
+    <Compile Include="Menu\frmMenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMenuPrincipalParaAdm.Designer.cs">
-      <DependentUpon>frmMenuPrincipalParaAdm.cs</DependentUpon>
+    <Compile Include="Menu\frmMenuPrincipal.Designer.cs">
+      <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNuevaContraseña.cs">
+    <Compile Include="Politicas de Seguridad\frmPreguntasDeSeguridad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNuevaContraseña.Designer.cs">
-      <DependentUpon>frmNuevaContraseña.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmPreguntasDeSeguridad.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmPreguntasDeSeguridad.Designer.cs">
+    <Compile Include="Politicas de Seguridad\frmPreguntasDeSeguridad.Designer.cs">
       <DependentUpon>frmPreguntasDeSeguridad.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRecuperar.cs">
+    <Compile Include="Login y Registro\frmRecuperar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRecuperar.Designer.cs">
+    <Compile Include="Login y Registro\frmRecuperar.Designer.cs">
       <DependentUpon>frmRecuperar.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRegistro.cs">
+    <Compile Include="Login y Registro\frmRegistro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRegistro.Designer.cs">
+    <Compile Include="Login y Registro\frmRegistro.Designer.cs">
       <DependentUpon>frmRegistro.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmAltaEmpleadosRegistrados.resx">
+    <EmbeddedResource Include="Gestion Usuarios\frmAltaEmpleadosRegistrados.resx">
       <DependentUpon>frmAltaEmpleadosRegistrados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmConfiguracionDeContraseña.resx">
+    <EmbeddedResource Include="Gestion Usuarios\frmConfiguracionDeContraseña.resx">
       <DependentUpon>frmConfiguracionDeContraseña.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmConfiguracionDeseguridadDelSistema.resx">
+    <EmbeddedResource Include="Politicas de Seguridad\frmConfiguracionDeseguridadDelSistema.resx">
       <DependentUpon>frmConfiguracionDeseguridadDelSistema.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCrearUsuarioAEmpleado.resx">
+    <EmbeddedResource Include="Gestion Usuarios\frmCrearUsuarioAEmpleado.resx">
       <DependentUpon>frmCrearUsuarioAEmpleado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEditarPerfilUsuario.resx">
+    <EmbeddedResource Include="Gestion Usuarios\frmEditarPerfilUsuario.resx">
       <DependentUpon>frmEditarPerfilUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLogin.resx">
+    <EmbeddedResource Include="Login y Registro\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMenuPrincipalParaAdm.resx">
-      <DependentUpon>frmMenuPrincipalParaAdm.cs</DependentUpon>
+    <EmbeddedResource Include="Menu\frmMenuPrincipalParaAdm.resx">
+      <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNuevaContraseña.resx">
-      <DependentUpon>frmNuevaContraseña.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmPreguntasDeSeguridad.resx">
+    <EmbeddedResource Include="Politicas de Seguridad\frmPreguntasDeSeguridad.resx">
       <DependentUpon>frmPreguntasDeSeguridad.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRecuperar.resx">
+    <EmbeddedResource Include="Login y Registro\frmRecuperar.resx">
       <DependentUpon>frmRecuperar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRegistro.resx">
+    <EmbeddedResource Include="Login y Registro\frmRegistro.resx">
       <DependentUpon>frmRegistro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -179,5 +170,6 @@
       <Name>Logica</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

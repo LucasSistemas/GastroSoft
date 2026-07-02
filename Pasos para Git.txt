@@ -1,22 +1,91 @@
-Ver qué cambió:
+1. Crear una carpeta nueva en el escritorio
 
-git status
+2. Abrir la carpeta y hacer Click derecho y abrir Git Bash Here
 
-Agregar los cambios:
+3. Configuras tu identidad de Git con los comandos:
+git config --global user.name "Tu Nombre en GitHub"
+git config --global user.email "tu-email@example.com"
 
+4. Ver si se aplicaron los cambios correctamente con el comando git config --global --list
+
+5. Clona el repositorio con el comando git clone https://github.com/LucasSistemas/GastroSoft
+
+6. Verificar que estas en main(rama principal) con el comando git Branch
+Te tiene que aparecer con un asterisco *main
+
+7. Descargar lo último con el comando git pull origin main
+
+8. Crea tu rama con el comando git checkout -b (Titulo)
+En "titulo" le pones el nombre de lo que estas haciendo, por ejemplo: Bitacora, pantallas, AltaEmpleados,
+   configuracioncontraseña,etc.
+
+9. Subes los cambios con el comando git push -u origin (Titulo)
+Solo usas este comando para subir la rama creada a GitHub, una vez creada no tienes q volver a ejecutar el
+   comando
+
+10. Trabajas normalmente...
+
+11. Guardar los cambios con el comando:
 git add .
+git commit -m "(Mensaje)"
 
-Crear un commit:
+12. Lo subes a GitHub con el comando git push
 
-git commit -m "Descripción de los cambios"
+13. Crear Pull Request en GitHub: Esto es solamente si crees que estas seguro de lo que hiciste para fusionarlo con la rama principal 
+Entrar al repositorio.
+Ir a Pull Requests.
+New Pull Request.
+Comparar: Base: main con (tu rama)
+Crear PR.
 
-Subirlos a GitHub:
+14. Si se aprueba, se fusiona con el main
 
-git push
+15. Antes de empezar otra tarea tenes que volver al main con el comando git checkout main
 
------------------------------------------------------------------------------
+16. Actualizas (por si se aprobó lo que subiste) para verlo en el main con el comando git pull origin main
 
-Clonar repositorio
-1. Crea una nueva carpeta en el escritorio con un nombre identificativo
-2. Click derecho y abre git bash here
-3. 
+17. Creas una nueva rama
+
+
+Resumen:
+# Una sola vez
+git config --global user.name "Tu Nombre"
+git config --global user.email "tu@email.com"
+
+# Descargar proyecto
+git clone URL_DEL_REPO
+
+# Empezar tarea
+git pull origin main
+git checkout -b feature/mi-tarea
+
+# Guardar trabajo
+git add .
+git commit -m "Descripción"
+
+# Subir trabajo
+git push -u origin feature/mi-tarea
+
+
+Eliminar rama:
+git checkout main
+git pull origin main
+git branch -d feature/lucas-login
+git push origin --delete feature/lucas-login
+
+
+A la hora de crear ramas:
+Nuevas funcionalidades
+
+feature/login
+feature/productos
+feature/reportes
+
+Corrección de errores
+
+fix/error-login
+fix/calculo-iva
+
+Hotfix (arreglo urgente)
+
+hotfix/error-produccion

@@ -10,3 +10,9 @@ C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Servicios\obj\Debug\Se
 C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Servicios\obj\Debug\Servicios.csproj.CoreCompileInputs.cache
 C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Servicios\obj\Debug\Servicios.dll
 C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Servicios\obj\Debug\Servicios.pdb
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Servicios\bin\Debug\Servicios.dll
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Servicios\bin\Debug\Servicios.pdb
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Servicios\obj\Debug\Servicios.csproj.AssemblyReference.cache
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Servicios\obj\Debug\Servicios.csproj.CoreCompileInputs.cache
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Servicios\obj\Debug\Servicios.dll
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Servicios\obj\Debug\Servicios.pdb
