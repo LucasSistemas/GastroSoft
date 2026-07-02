@@ -41,11 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Localidades.cs" />
-    <Compile Include="Nacionalidades.cs" />
-    <Compile Include="Partidos.cs" />
+    <Compile Include="Geografia\Localidades.cs" />
+    <Compile Include="Geografia\Nacionalidades.cs" />
+    <Compile Include="Geografia\Partidos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Provincia.cs" />
+    <Compile Include="Geografia\Provincia.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
