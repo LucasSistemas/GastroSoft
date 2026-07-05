@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Datos
 {
-    public class Empleados : Conexion
+    public class Empleado : Conexion
     {
         public bool CargarNuevoEmpleado(string nombre, string apellido, string documento, string sexo,
             string genero, string fecha_nac, string telefono, string mail, string calle, string numero,

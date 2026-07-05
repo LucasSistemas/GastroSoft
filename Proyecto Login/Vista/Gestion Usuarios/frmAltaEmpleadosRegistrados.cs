@@ -26,5 +26,10 @@ namespace Vista
             this.Close();
             menu.Show();
         }
+
+        private void frmAltaEmpleadosRegistrados_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

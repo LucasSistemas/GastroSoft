@@ -34,6 +34,8 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.gpDatos = new System.Windows.Forms.GroupBox();
+            this.lblCodigoPostal = new System.Windows.Forms.Label();
+            this.txtCodigoPostal = new System.Windows.Forms.TextBox();
             this.txtDepartamento = new System.Windows.Forms.TextBox();
             this.txtPiso = new System.Windows.Forms.TextBox();
             this.lblFechaNac = new System.Windows.Forms.Label();
@@ -70,8 +72,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblCodigoPostal = new System.Windows.Forms.Label();
-            this.txtCodigoPostal = new System.Windows.Forms.TextBox();
             this.gpDatos.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -153,6 +153,23 @@
             this.gpDatos.TabIndex = 4;
             this.gpDatos.TabStop = false;
             this.gpDatos.Text = "Datos Personales";
+            // 
+            // lblCodigoPostal
+            // 
+            this.lblCodigoPostal.AutoSize = true;
+            this.lblCodigoPostal.Location = new System.Drawing.Point(18, 194);
+            this.lblCodigoPostal.Name = "lblCodigoPostal";
+            this.lblCodigoPostal.Size = new System.Drawing.Size(67, 19);
+            this.lblCodigoPostal.TabIndex = 32;
+            this.lblCodigoPostal.Text = "C.Postal:";
+            // 
+            // txtCodigoPostal
+            // 
+            this.txtCodigoPostal.Location = new System.Drawing.Point(98, 190);
+            this.txtCodigoPostal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCodigoPostal.Name = "txtCodigoPostal";
+            this.txtCodigoPostal.Size = new System.Drawing.Size(131, 26);
+            this.txtCodigoPostal.TabIndex = 31;
             // 
             // txtDepartamento
             // 
@@ -515,23 +532,6 @@
             this.pictureBox1.TabIndex = 36;
             this.pictureBox1.TabStop = false;
             // 
-            // lblCodigoPostal
-            // 
-            this.lblCodigoPostal.AutoSize = true;
-            this.lblCodigoPostal.Location = new System.Drawing.Point(18, 194);
-            this.lblCodigoPostal.Name = "lblCodigoPostal";
-            this.lblCodigoPostal.Size = new System.Drawing.Size(67, 19);
-            this.lblCodigoPostal.TabIndex = 32;
-            this.lblCodigoPostal.Text = "C.Postal:";
-            // 
-            // txtCodigoPostal
-            // 
-            this.txtCodigoPostal.Location = new System.Drawing.Point(98, 190);
-            this.txtCodigoPostal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtCodigoPostal.Name = "txtCodigoPostal";
-            this.txtCodigoPostal.Size = new System.Drawing.Size(131, 26);
-            this.txtCodigoPostal.TabIndex = 31;
-            // 
             // frmRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -551,6 +551,7 @@
             this.Name = "frmRegistro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registrar empleado | Gastrosft";
+            this.Load += new System.EventHandler(this.frmRegistro_Load);
             this.gpDatos.ResumeLayout(false);
             this.gpDatos.PerformLayout();
             this.groupBox2.ResumeLayout(false);

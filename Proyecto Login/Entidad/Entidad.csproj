@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Empleados y Usuarios\Empleados.cs" />
     <Compile Include="Geografia\Localidades.cs" />
     <Compile Include="Geografia\Nacionalidades.cs" />
     <Compile Include="Geografia\Partidos.cs" />

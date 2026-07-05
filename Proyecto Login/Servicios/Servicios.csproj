@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enviar al correo\ArmarMail.cs" />
-    <Compile Include="Generadores\ContrasenaAleatoria.cs" />
+    <Compile Include="Generadores\CodigoAleatorio.cs" />
     <Compile Include="Generadores\ConvertirHash.cs" />
     <Compile Include="Enviar al correo\EnviarMail.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

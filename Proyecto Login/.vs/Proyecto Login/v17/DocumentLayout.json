@@ -3,24 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\rukus\\OneDrive\\Desktop\\GastroSoft\\Proyecto Login\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{538B2F68-83B7-4F59-A6AE-F238095F21B7}|Servicios\\Servicios.csproj|c:\\users\\rukus\\onedrive\\desktop\\gastrosoft\\proyecto login\\servicios\\generadores\\contrasenaaleatoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{538B2F68-83B7-4F59-A6AE-F238095F21B7}|Servicios\\Servicios.csproj|solutionrelative:servicios\\generadores\\contrasenaaleatoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|c:\\users\\rukus\\onedrive\\desktop\\gastrosoft\\proyecto login\\vista\\gestion usuarios\\frmaltaempleadosregistrados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|solutionrelative:vista\\gestion usuarios\\frmaltaempleadosregistrados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B1E55ED2-9CD6-4404-96E2-45AB6BB40186}|Logica\\Logica.csproj|c:\\users\\rukus\\onedrive\\desktop\\gastrosoft\\proyecto login\\logica\\gestion de empleados\\daraltaempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B1E55ED2-9CD6-4404-96E2-45AB6BB40186}|Logica\\Logica.csproj|solutionrelative:logica\\gestion de empleados\\daraltaempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{845CA4C1-C517-4A2A-8D14-E65765F34B37}|Datos\\Datos.csproj|c:\\users\\rukus\\onedrive\\desktop\\gastrosoft\\proyecto login\\datos\\abm\\empleados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{845CA4C1-C517-4A2A-8D14-E65765F34B37}|Datos\\Datos.csproj|solutionrelative:datos\\abm\\empleados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|c:\\users\\rukus\\onedrive\\desktop\\gastrosoft\\proyecto login\\vista\\gestion usuarios\\frmaltaempleadosregistrados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|C:\\Users\\rukus\\OneDrive\\Desktop\\GastroSoft\\Proyecto Login\\vista\\gestion usuarios\\frmaltaempleadosregistrados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|solutionrelative:vista\\gestion usuarios\\frmaltaempleadosregistrados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|c:\\users\\rukus\\onedrive\\desktop\\gastrosoft\\proyecto login\\vista\\menu\\frmmenuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|solutionrelative:vista\\menu\\frmmenuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{845CA4C1-C517-4A2A-8D14-E65765F34B37}|Datos\\Datos.csproj|c:\\users\\rukus\\onedrive\\desktop\\gastrosoft\\proyecto login\\datos\\cargar formularios\\empleadosespera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{845CA4C1-C517-4A2A-8D14-E65765F34B37}|Datos\\Datos.csproj|solutionrelative:datos\\cargar formularios\\empleadosespera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1E55ED2-9CD6-4404-96E2-45AB6BB40186}|Logica\\Logica.csproj|C:\\Users\\rukus\\OneDrive\\Desktop\\GastroSoft\\Proyecto Login\\logica\\gestion de empleados\\daraltaempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1E55ED2-9CD6-4404-96E2-45AB6BB40186}|Logica\\Logica.csproj|solutionrelative:logica\\gestion de empleados\\daraltaempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1E55ED2-9CD6-4404-96E2-45AB6BB40186}|Logica\\Logica.csproj|c:\\users\\rukus\\onedrive\\desktop\\gastrosoft\\proyecto login\\logica\\cargar datos a formularios\\empleados a dar alta\\cargarempleadospendientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1E55ED2-9CD6-4404-96E2-45AB6BB40186}|Logica\\Logica.csproj|solutionrelative:logica\\cargar datos a formularios\\empleados a dar alta\\cargarempleadospendientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{845CA4C1-C517-4A2A-8D14-E65765F34B37}|Datos\\Datos.csproj|c:\\users\\rukus\\onedrive\\desktop\\gastrosoft\\proyecto login\\datos\\cargar formularios\\geografia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{845CA4C1-C517-4A2A-8D14-E65765F34B37}|Datos\\Datos.csproj|solutionrelative:datos\\cargar formularios\\geografia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1E55ED2-9CD6-4404-96E2-45AB6BB40186}|Logica\\Logica.csproj|c:\\users\\rukus\\onedrive\\desktop\\gastrosoft\\proyecto login\\logica\\cargar datos a formularios\\geografia a registro\\cargarformularios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1E55ED2-9CD6-4404-96E2-45AB6BB40186}|Logica\\Logica.csproj|solutionrelative:logica\\cargar datos a formularios\\geografia a registro\\cargarformularios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{845CA4C1-C517-4A2A-8D14-E65765F34B37}|Datos\\Datos.csproj|c:\\users\\rukus\\onedrive\\desktop\\gastrosoft\\proyecto login\\datos\\abm\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{845CA4C1-C517-4A2A-8D14-E65765F34B37}|Datos\\Datos.csproj|solutionrelative:datos\\abm\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,50 +42,102 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ContrasenaAleatoria.cs",
-              "DocumentMoniker": "C:\\Users\\rukus\\OneDrive\\Desktop\\GastroSoft\\Proyecto Login\\Servicios\\Generadores\\ContrasenaAleatoria.cs",
-              "RelativeDocumentMoniker": "Servicios\\Generadores\\ContrasenaAleatoria.cs",
-              "ToolTip": "C:\\Users\\rukus\\OneDrive\\Desktop\\GastroSoft\\Proyecto Login\\Servicios\\Generadores\\ContrasenaAleatoria.cs",
-              "RelativeToolTip": "Servicios\\Generadores\\ContrasenaAleatoria.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAqAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "EmpleadosEspera.cs",
+              "DocumentMoniker": "C:\\Users\\rukus\\OneDrive\\Desktop\\GastroSoft\\Proyecto Login\\Datos\\Cargar Formularios\\EmpleadosEspera.cs",
+              "RelativeDocumentMoniker": "Datos\\Cargar Formularios\\EmpleadosEspera.cs",
+              "ToolTip": "C:\\Users\\rukus\\OneDrive\\Desktop\\GastroSoft\\Proyecto Login\\Datos\\Cargar Formularios\\EmpleadosEspera.cs",
+              "RelativeToolTip": "Datos\\Cargar Formularios\\EmpleadosEspera.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-02T19:13:31.784Z",
+              "WhenOpened": "2026-07-02T20:27:47.606Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "frmAltaEmpleadosRegistrados.cs",
+              "DocumentMoniker": "C:\\Users\\rukus\\OneDrive\\Desktop\\GastroSoft\\Proyecto Login\\Vista\\Gestion Usuarios\\frmAltaEmpleadosRegistrados.cs",
+              "RelativeDocumentMoniker": "Vista\\Gestion Usuarios\\frmAltaEmpleadosRegistrados.cs",
+              "ToolTip": "C:\\Users\\rukus\\OneDrive\\Desktop\\GastroSoft\\Proyecto Login\\Vista\\Gestion Usuarios\\frmAltaEmpleadosRegistrados.cs",
+              "RelativeToolTip": "Vista\\Gestion Usuarios\\frmAltaEmpleadosRegistrados.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAcwB8AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-02T20:24:50.263Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Geografia.cs",
+              "DocumentMoniker": "C:\\Users\\rukus\\OneDrive\\Desktop\\GastroSoft\\Proyecto Login\\Datos\\Cargar Formularios\\Geografia.cs",
+              "RelativeDocumentMoniker": "Datos\\Cargar Formularios\\Geografia.cs",
+              "ToolTip": "C:\\Users\\rukus\\OneDrive\\Desktop\\GastroSoft\\Proyecto Login\\Datos\\Cargar Formularios\\Geografia.cs",
+              "RelativeToolTip": "Datos\\Cargar Formularios\\Geografia.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAACUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-02T20:20:57.133Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CargarFormularios.cs",
+              "DocumentMoniker": "C:\\Users\\rukus\\OneDrive\\Desktop\\GastroSoft\\Proyecto Login\\Logica\\Cargar datos a Formularios\\Geografia a Registro\\CargarFormularios.cs",
+              "RelativeDocumentMoniker": "Logica\\Cargar datos a Formularios\\Geografia a Registro\\CargarFormularios.cs",
+              "ToolTip": "C:\\Users\\rukus\\OneDrive\\Desktop\\GastroSoft\\Proyecto Login\\Logica\\Cargar datos a Formularios\\Geografia a Registro\\CargarFormularios.cs",
+              "RelativeToolTip": "Logica\\Cargar datos a Formularios\\Geografia a Registro\\CargarFormularios.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA4AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-02T20:20:10.732Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CargarEmpleadosPendientes.cs",
+              "DocumentMoniker": "C:\\Users\\rukus\\OneDrive\\Desktop\\GastroSoft\\Proyecto Login\\Logica\\Cargar datos a Formularios\\Empleados a Dar Alta\\CargarEmpleadosPendientes.cs",
+              "RelativeDocumentMoniker": "Logica\\Cargar datos a Formularios\\Empleados a Dar Alta\\CargarEmpleadosPendientes.cs",
+              "ToolTip": "C:\\Users\\rukus\\OneDrive\\Desktop\\GastroSoft\\Proyecto Login\\Logica\\Cargar datos a Formularios\\Empleados a Dar Alta\\CargarEmpleadosPendientes.cs",
+              "RelativeToolTip": "Logica\\Cargar datos a Formularios\\Empleados a Dar Alta\\CargarEmpleadosPendientes.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-02T20:19:24.727Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "DarAltaEmpleado.cs",
               "DocumentMoniker": "C:\\Users\\rukus\\OneDrive\\Desktop\\GastroSoft\\Proyecto Login\\Logica\\Gestion de Empleados\\DarAltaEmpleado.cs",
               "RelativeDocumentMoniker": "Logica\\Gestion de Empleados\\DarAltaEmpleado.cs",
               "ToolTip": "C:\\Users\\rukus\\OneDrive\\Desktop\\GastroSoft\\Proyecto Login\\Logica\\Gestion de Empleados\\DarAltaEmpleado.cs",
               "RelativeToolTip": "Logica\\Gestion de Empleados\\DarAltaEmpleado.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-02T19:10:22.848Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Empleados.cs",
-              "DocumentMoniker": "C:\\Users\\rukus\\OneDrive\\Desktop\\GastroSoft\\Proyecto Login\\Datos\\ABM\\Empleados.cs",
-              "RelativeDocumentMoniker": "Datos\\ABM\\Empleados.cs",
-              "ToolTip": "C:\\Users\\rukus\\OneDrive\\Desktop\\GastroSoft\\Proyecto Login\\Datos\\ABM\\Empleados.cs",
-              "RelativeToolTip": "Datos\\ABM\\Empleados.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGkAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "Empleado.cs",
+              "DocumentMoniker": "C:\\Users\\rukus\\OneDrive\\Desktop\\GastroSoft\\Proyecto Login\\Datos\\ABM\\Empleado.cs",
+              "RelativeDocumentMoniker": "Datos\\ABM\\Empleado.cs",
+              "ToolTip": "C:\\Users\\rukus\\OneDrive\\Desktop\\GastroSoft\\Proyecto Login\\Datos\\ABM\\Empleado.cs",
+              "RelativeToolTip": "Datos\\ABM\\Empleado.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAFEAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-02T19:00:52.091Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "frmAltaEmpleadosRegistrados.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\rukus\\OneDrive\\Desktop\\GastroSoft\\Proyecto Login\\Vista\\Gestion Usuarios\\frmAltaEmpleadosRegistrados.cs",
               "RelativeDocumentMoniker": "Vista\\Gestion Usuarios\\frmAltaEmpleadosRegistrados.cs",
@@ -81,18 +145,6 @@
               "RelativeToolTip": "Vista\\Gestion Usuarios\\frmAltaEmpleadosRegistrados.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-02T19:00:42.433Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "frmMenuPrincipal.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\rukus\\OneDrive\\Desktop\\GastroSoft\\Proyecto Login\\Vista\\Menu\\frmMenuPrincipal.cs",
-              "RelativeDocumentMoniker": "Vista\\Menu\\frmMenuPrincipal.cs",
-              "ToolTip": "C:\\Users\\rukus\\OneDrive\\Desktop\\GastroSoft\\Proyecto Login\\Vista\\Menu\\frmMenuPrincipal.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Vista\\Menu\\frmMenuPrincipal.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-02T19:00:35.45Z",
               "EditorCaption": " [Dise\u00F1o]"
             }
           ]

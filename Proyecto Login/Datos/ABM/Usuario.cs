@@ -12,7 +12,7 @@ using System.Net;
 
 namespace Datos
 {
-    public class Usuarios : Conexion
+    public class Usuario : Conexion
     {
         SqlConnection conn;
         SqlCommand cmd;
