@@ -5,6 +5,9 @@ alter table Empleados add CodigoAcceso nvarchar (10) null
 alter table Empleados add VencimientoCodigo datetime
 
 update Empleados set Activo = 0 where IdEmpleado = 1
+update Empleados set CodigoAcceso = null where IdEmpleado = 1
+update Empleados set Mail = 'rukuseru2020@gmail.com' where IdEmpleado = 1
+
 
 
 dbcc CHECKIDENT ('Empleados',RESEED,0)

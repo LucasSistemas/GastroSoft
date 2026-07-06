@@ -303,18 +303,5 @@ go
 ---------------------------------------------------------------------------------------------------
 --                                      Cargar Codigo Para Alta
 ---------------------------------------------------------------------------------------------------
-create or alter procedure sp_CargarCodigoAltaEmpleados
-    @Codigo nvarchar (25),
-    @Documento nvarchar (50)
-as
-begin
-    update Empleados
-    set CodigoAcceso = @Codigo
-    where Documento = @Documento
 
-    update Empleados
-    set VencimientoCodigo = Dateadd(minute,20,GETDATE())
-    where Documento = @Documento
-
-end
     

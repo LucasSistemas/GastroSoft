@@ -41,10 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cargar Formularios\EmpleadosEspera.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="ABM\Empleado.cs" />
-    <Compile Include="Cargar Formularios\Geografia.cs" />
+    <Compile Include="Consultas Tablas\Geografia.cs" />
+    <Compile Include="Consultas Tablas\TablaEmpleados.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ABM\Usuario.cs" />
   </ItemGroup>

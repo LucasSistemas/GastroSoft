@@ -5,15 +5,20 @@ using System.Net.Mail;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
 
 namespace Servicios
 {
     class EnviarMail
     {
-        public static bool enviarmail(string to, string asunto, string body)
+        private static string host = ConfigurationManager.AppSettings["SmtpHost"];
+        private static int port = int.Parse(ConfigurationManager.AppSettings["SmtpPort"]);
+        private static string email = ConfigurationManager.AppSettings["SmtpEmail"];
+        private static string password = ConfigurationManager.AppSettings["SmtpPassword"];
+        public static bool enviarmail(string correo, string asunto, string body,string titulo)
         {
-            string from = "lukytasperez@gmail.com"; //correo de la empresa
-            string displayName = "Recuperacion de Cuenta"; //Lo que se ve al recibir el mail
+            string from = email; //correo de la empresa
+            string displayName = titulo; //Lo que se ve al recibir el mail
             try
             {
                 MailMessage mail = new MailMessage
@@ -21,14 +26,14 @@ namespace Servicios
                     From = new MailAddress(from, displayName)
                 };
 
-                mail.To.Add(to);
+                mail.To.Add(correo);
                 mail.Subject = asunto;
                 mail.Body = body;
                 mail.IsBodyHtml = true;
 
-                SmtpClient client = new SmtpClient("smtp.gmail.com", 587)
+                SmtpClient client = new SmtpClient(host,port)
                 {
-                    Credentials = new NetworkCredential(from, "fqudmrgqnmejudzt"),
+                    Credentials = new NetworkCredential(email,password),
                     EnableSsl = true
                 };
                 client.Send(mail);

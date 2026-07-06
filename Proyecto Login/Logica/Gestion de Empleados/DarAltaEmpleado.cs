@@ -8,13 +8,33 @@ using System.Threading.Tasks;
 
 namespace Logica.Gestion_de_Empleados
 {
-    public class DarAltaEmpleado
+    public class GestionDeEmpleados
     {
-        public void CrearCodigoParaEmpleado(string documento)
+        public (bool Exito,string mensaje) DarAlta(string documento,string correo)
         {
             string codigo = CodigoAleatorio.GenerarCodigo(6);
-            Empleado emp = new Empleado();
-            emp.CargarCodigoEmpleado(codigo,documento);
+            Empleado empdatos = new Empleado();
+            bool resultado = empdatos.CargarCodigoAcceso(codigo,documento);
+
+            if (resultado)
+            {
+                try
+                {
+                    // Enviar correo con el código de acceso
+                    string asunto = "Código de acceso para dar de alta su cuenta";
+                    string mensaje = codigo;
+                    ArmarMail.armarMail.Preparar(correo, asunto, mensaje);
+                    return (true, "Se ha enviado un correo con el código de acceso.");
+                }
+                catch (Exception ex)
+                {
+                    return (false, "Error al enviar el correo");
+                }
+            }
+            else
+            {
+                return (false, "No se pudo generar el código de acceso.");
+            }
         }
     }
 }

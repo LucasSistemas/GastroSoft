@@ -1,5 +1,4 @@
-﻿using Entidad;
-using Entidad.Empleados_y_Usuarios;
+﻿using Entidad.Empleados_y_Usuarios;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -8,10 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-namespace Datos.Cargar_Formularios
+namespace Datos.Consultas_Tablas
 {
-    public class EmpleadosEspera :Conexion
+    public class TablaEmpleados :Conexion
     {
         public List<Empleados> ObtenerEmpleadosenEspera()
         {

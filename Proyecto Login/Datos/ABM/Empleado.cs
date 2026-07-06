@@ -79,11 +79,11 @@ namespace Datos
 
             }
         }
-        public void CargarCodigoEmpleado(string codigo, string documento)
+        public bool CargarCodigoAcceso(string codigo, string documento)
         {
             using (SqlConnection conn = new SqlConnection(AccesoCadena()))
             {
-                using (SqlCommand cmd = new SqlCommand("sp_CargarCodigoAltaEmpleado", conn))
+                using (SqlCommand cmd = new SqlCommand("sp_CargarCodigoAcceso", conn))
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@Documento", documento);
@@ -93,10 +93,11 @@ namespace Datos
                     {
                         conn.Open();
                         cmd.ExecuteNonQuery();
+                        return true;
                     }
                     catch (SqlException ex)
                     {
-                        
+                        return false;
                     }
                 }
             }
