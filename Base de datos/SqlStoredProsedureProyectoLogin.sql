@@ -303,5 +303,20 @@ go
 ---------------------------------------------------------------------------------------------------
 --                                      Cargar Codigo Para Alta
 ---------------------------------------------------------------------------------------------------
+create or alter sp_CargarCodigoAcceso
+    @Codigo nvarchar (25),
+    @Documento nvarchar (50)
+as
+begin
+    update Empleados
+    set CodigoAcceso = @Codigo
+    where Documento = @Documento
 
-    
+    update Empleados
+    set VencimientoCodigo = Dateadd(minute,20,GETDATE())
+    where Documento = @Documento
+
+    update Empleados
+    set Activo = 1
+    where Documento = @Documento
+end
