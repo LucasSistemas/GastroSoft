@@ -242,10 +242,12 @@ create or alter procedure sp_BloquearUsuario
     @Usuario nvarchar (50)
 as
 begin
+    --Bloquea el usuario
     update Usuarios
     set Bloqueado = 1
     where NombreUsuario = @Usuario
 
+    --Establece la duracion del bloqueo
     update Usuarios
     set BloqueadoHasta = Dateadd(minute,10,GETDATE())
     where NombreUsuario = @Usuario and Intentos_Sesion <= 0
@@ -267,26 +269,55 @@ go
 --                                      Dar Alta Empleado 
 ---------------------------------------------------------------------------------------------------
 create or alter procedure sp_DarAltaEmpleado
+    @Codigo nvarchar (25),
     @Documento int
 as
+    declare @FechaVencimiento datetime
 begin
-    update Empleados 
-    set Activo = 0 
+    select @FechaVencimiento = VencimientoCodigo
+    from Empleados
     where Documento = @Documento
 
-    update Empleados
-    set Fecha_Alta = GETDATE()
-    where Documento = @Documento
+    if (@FechaVencimiento > getdate())
+    begin
+        --Da Alta al empleado
+        update Empleados 
+        set Activo = 1
+        where Documento = @Documento
+
+        --Coloca la fecha que fue dada el alta
+        update Empleados
+        set Fecha_Alta = GETDATE()
+        where Documento = @Documento
+    end
 end
 
 go
 --///////////////////////////////////////////////////////////////////////////
 --///////////////////////////////////////////////////////////////////////////
---///////////////////////////////////////////////////////////////////////////
+--/////////////////////////////////////////////////////////V//////////////////
 --///////////////////////////////////////////////////////////////////////////
 --///////////////////////////////////////////////////////////////////////////
 --///////////////////////////////////////////////////////////////////////////
 
 ---------------------------------------------------------------------------------------------------
---                                      
+--                                      Cargar Codigo Para Alta
 ---------------------------------------------------------------------------------------------------
+create or alter sp_CargarCodigoAcceso
+    @Codigo nvarchar (25),
+    @Documento nvarchar (50)
+as
+begin
+    update Empleados
+    set CodigoAcceso = @Codigo
+    where Documento = @Documento
+
+    update Empleados
+    set VencimientoCodigo = Dateadd(minute,20,GETDATE())
+    where Documento = @Documento
+
+    update Empleados
+    set Activo = 1
+    where Documento = @Documento
+end
+

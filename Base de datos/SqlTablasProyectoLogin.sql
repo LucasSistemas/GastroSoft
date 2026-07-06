@@ -89,6 +89,8 @@ IdDireccion int not null,
 Activo bit default 0 not null,
 Fecha_Registro datetime default getdate(),
 Fecha_Alta datetime,
+CodigoAcceso nvarchar (10) null,
+VencimientoCodigo datetime,
 
 foreign key (IdDireccion) references Direcciones(IdDireccion)
 );

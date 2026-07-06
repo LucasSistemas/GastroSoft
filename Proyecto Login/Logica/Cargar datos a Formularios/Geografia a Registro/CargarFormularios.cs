@@ -12,24 +12,24 @@ namespace Logica
 {
     public class CargarFormularios
     {
-        Formularios formularios;
+        Geografia formularios;
         public List<Localidades> CargarLocalidades()
         {
-            formularios = new Formularios();
+            formularios = new Geografia();
             List<Localidades> listaloc = formularios.ObtenerLocalidades();
 
             return listaloc;
         }
         public List<Partidos> CargarPartidos()
         {
-            formularios = new Formularios();
+            formularios = new Geografia();
             List<Partidos> listapart = formularios.ObtenerPartidos();
             return listapart;
         }
 
         public List<Provincias> CargarProvincias()
         {
-            formularios = new Formularios();
+            formularios = new Geografia();
             List<Provincias> listaprov = formularios.ObtenerProvincias();
 
             return listaprov;
@@ -37,7 +37,7 @@ namespace Logica
 
         public List<Nacionalidades> CargarNacionalidades()
         {
-            formularios = new Formularios();
+            formularios = new Geografia();
             List<Nacionalidades> listanac = formularios.ObtenerNacionalidades();
 
             return listanac;

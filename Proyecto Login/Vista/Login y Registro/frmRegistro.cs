@@ -473,5 +473,10 @@ namespace Vista
                 MessageBox.Show(resultado.Mensaje, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void frmRegistro_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

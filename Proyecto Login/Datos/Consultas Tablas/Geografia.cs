@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Datos
 {
-    public class Formularios : Conexion
+    public class Geografia : Conexion
     {
         public List<Localidades> ObtenerLocalidades()
         {

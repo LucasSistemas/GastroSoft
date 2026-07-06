@@ -33,7 +33,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dgAltaUsuario = new System.Windows.Forms.DataGridView();
+            this.dgvAltaEmpleado = new System.Windows.Forms.DataGridView();
             this.btDarAlta = new System.Windows.Forms.Button();
             this.btRechazar = new System.Windows.Forms.Button();
             this.btAtras = new System.Windows.Forms.Button();
@@ -44,7 +44,7 @@
             this.btC_Rechazo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgAltaUsuario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAltaEmpleado)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -91,16 +91,16 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Visualice los usuarios registrados y autorice su acceso al sistema.";
             // 
-            // dgAltaUsuario
+            // dgvAltaEmpleado
             // 
-            this.dgAltaUsuario.BackgroundColor = System.Drawing.Color.DarkSlateGray;
-            this.dgAltaUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgAltaUsuario.Location = new System.Drawing.Point(12, 246);
-            this.dgAltaUsuario.Margin = new System.Windows.Forms.Padding(4);
-            this.dgAltaUsuario.Name = "dgAltaUsuario";
-            this.dgAltaUsuario.RowHeadersWidth = 51;
-            this.dgAltaUsuario.Size = new System.Drawing.Size(689, 144);
-            this.dgAltaUsuario.TabIndex = 5;
+            this.dgvAltaEmpleado.BackgroundColor = System.Drawing.Color.DarkSlateGray;
+            this.dgvAltaEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAltaEmpleado.Location = new System.Drawing.Point(12, 246);
+            this.dgvAltaEmpleado.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvAltaEmpleado.Name = "dgvAltaEmpleado";
+            this.dgvAltaEmpleado.RowHeadersWidth = 51;
+            this.dgvAltaEmpleado.Size = new System.Drawing.Size(689, 144);
+            this.dgvAltaEmpleado.TabIndex = 5;
             // 
             // btDarAlta
             // 
@@ -114,6 +114,7 @@
             this.btDarAlta.TabIndex = 7;
             this.btDarAlta.Text = "Dar alta";
             this.btDarAlta.UseVisualStyleBackColor = true;
+            this.btDarAlta.Click += new System.EventHandler(this.btDarAlta_Click);
             // 
             // btRechazar
             // 
@@ -212,7 +213,7 @@
             this.Controls.Add(this.btAtras);
             this.Controls.Add(this.btRechazar);
             this.Controls.Add(this.btDarAlta);
-            this.Controls.Add(this.dgAltaUsuario);
+            this.Controls.Add(this.dgvAltaEmpleado);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
@@ -220,10 +221,11 @@
             this.Name = "frmAltaEmpleadosRegistrados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Alta de usuarios | Gastrosoft";
+            this.Load += new System.EventHandler(this.frmAltaEmpleadosRegistrados_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgAltaUsuario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAltaEmpleado)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -235,7 +237,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dgAltaUsuario;
+        private System.Windows.Forms.DataGridView dgvAltaEmpleado;
         private System.Windows.Forms.Button btDarAlta;
         private System.Windows.Forms.Button btRechazar;
         private System.Windows.Forms.Button btAtras;

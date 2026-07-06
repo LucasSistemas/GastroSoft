@@ -33,7 +33,7 @@ namespace Logica
                 string hash = ConvertirHash.GenerateSHA256Hash(usuario, contraseña);
 
                 // 3. Buscar en la base de datos
-                Usuarios usuarios = new Usuarios();
+                Usuario usuarios = new Usuario();
                 if (!usuarios.VerificarUsuario(usuario))
                 {
                     return (false, "Error al conectar con la base de datos", null);
