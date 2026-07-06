@@ -320,3 +320,4 @@ begin
     set Activo = 1
     where Documento = @Documento
 end
+
