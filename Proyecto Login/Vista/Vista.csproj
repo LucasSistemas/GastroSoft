@@ -178,10 +178,6 @@
       <Project>{b1e55ed2-9cd6-4404-96e2-45ab6bb40186}</Project>
       <Name>Logica</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Sesion\Sesion.csproj">
-      <Project>{ae92839d-63ab-4c5c-b1c3-1b2a019cf353}</Project>
-      <Name>Sesion</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

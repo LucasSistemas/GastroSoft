@@ -94,7 +94,7 @@
             this.btnVolver.BackColor = System.Drawing.Color.White;
             this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolver.Location = new System.Drawing.Point(82, 297);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(2);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(96, 40);
             this.btnVolver.TabIndex = 14;
@@ -144,6 +144,7 @@
             this.Name = "frmNuevaContraseña";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmNuevaContraseña";
+            this.Load += new System.EventHandler(this.frmNuevaContraseña_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
