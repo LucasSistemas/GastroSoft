@@ -17,7 +17,7 @@ namespace Vista
         CerrarSesion cerrarSesion = new Logica.CerrarSesion();
         frmLogin frmlogin;
         frmEditarPerfilUsuario frmEditarPerfilUsuario;
-        frmNuevaContraseña frmNuevaContraseña;
+        frmCrearUsuario frmNuevaContraseña;
         frmRegistro frmRegistro;
         frmAltaEmpleadosRegistrados frmAltaEmpleadosRegistrados;
 
@@ -56,7 +56,7 @@ namespace Vista
 
         private void btnCambiarContra_Click(object sender, EventArgs e)
         {
-            frmNuevaContraseña = new frmNuevaContraseña(this);
+            frmNuevaContraseña = new frmCrearUsuario(this);
             frmNuevaContraseña.Show();
             this.Hide();
         }

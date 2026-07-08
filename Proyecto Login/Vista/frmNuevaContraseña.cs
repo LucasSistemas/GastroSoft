@@ -13,11 +13,11 @@ using System.Windows.Forms;
 
 namespace Vista
 {
-    public partial class frmNuevaContraseña : Form
+    public partial class frmCrearUsuario : Form
     {
         private frmMenuPrincipalParaAdm menu;
 
-        public frmNuevaContraseña(frmMenuPrincipalParaAdm menu)
+        public frmCrearUsuario(frmMenuPrincipalParaAdm menu)
         {
             InitializeComponent();
             this.menu = menu;

@@ -1,38 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Ematp\\Desktop\\avances\\Proyecto Login\\",
+  "WorkspaceRootPath": "C:\\Users\\Ematp\\Desktop\\repositorio\\GastroSoft\\Proyecto Login\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|c:\\users\\ematp\\desktop\\avances\\proyecto login\\vista\\frmconfiguraciondeseguridaddelsistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|solutionrelative:vista\\frmconfiguraciondeseguridaddelsistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B1E55ED2-9CD6-4404-96E2-45AB6BB40186}|Logica\\Logica.csproj|c:\\users\\ematp\\desktop\\avances\\proyecto login\\logica\\logicapoliticasseguridad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B1E55ED2-9CD6-4404-96E2-45AB6BB40186}|Logica\\Logica.csproj|solutionrelative:logica\\logicapoliticasseguridad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|c:\\users\\ematp\\desktop\\avances\\proyecto login\\vista\\frmconfiguraciondeseguridaddelsistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|solutionrelative:vista\\frmconfiguraciondeseguridaddelsistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9314E34-FEBB-4FE9-B178-93EEFBE3996B}|Entidad\\Entidad.csproj|c:\\users\\ematp\\desktop\\avances\\proyecto login\\entidad\\politicasseguridadentidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9314E34-FEBB-4FE9-B178-93EEFBE3996B}|Entidad\\Entidad.csproj|solutionrelative:entidad\\politicasseguridadentidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{845CA4C1-C517-4A2A-8D14-E65765F34B37}|Datos\\Datos.csproj|c:\\users\\ematp\\desktop\\avances\\proyecto login\\datos\\datospoliticasseguridad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{845CA4C1-C517-4A2A-8D14-E65765F34B37}|Datos\\Datos.csproj|solutionrelative:datos\\datospoliticasseguridad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|c:\\users\\ematp\\desktop\\avances\\proyecto login\\vista\\frmnuevacontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|C:\\Users\\Ematp\\Desktop\\repositorio\\GastroSoft\\Proyecto Login\\vista\\frmnuevacontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|solutionrelative:vista\\frmnuevacontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|c:\\users\\ematp\\desktop\\avances\\proyecto login\\vista\\frmnuevacontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|solutionrelative:vista\\frmnuevacontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|C:\\Users\\Ematp\\Desktop\\repositorio\\GastroSoft\\Proyecto Login\\vista\\frmconfiguraciondecontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|solutionrelative:vista\\frmconfiguraciondecontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|c:\\users\\ematp\\desktop\\avances\\proyecto login\\vista\\frmconfiguraciondecontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|solutionrelative:vista\\frmconfiguraciondecontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|c:\\users\\ematp\\desktop\\repositorio\\gastrosoft\\proyecto login\\vista\\frmconfiguraciondeseguridaddelsistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|solutionrelative:vista\\frmconfiguraciondeseguridaddelsistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1E55ED2-9CD6-4404-96E2-45AB6BB40186}|Logica\\Logica.csproj|C:\\Users\\Ematp\\Desktop\\repositorio\\GastroSoft\\Proyecto Login\\logica\\logicapoliticasseguridad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1E55ED2-9CD6-4404-96E2-45AB6BB40186}|Logica\\Logica.csproj|solutionrelative:logica\\logicapoliticasseguridad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|C:\\Users\\Ematp\\Desktop\\repositorio\\GastroSoft\\Proyecto Login\\vista\\frmconfiguraciondeseguridaddelsistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|solutionrelative:vista\\frmconfiguraciondeseguridaddelsistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9314E34-FEBB-4FE9-B178-93EEFBE3996B}|Entidad\\Entidad.csproj|C:\\Users\\Ematp\\Desktop\\repositorio\\GastroSoft\\Proyecto Login\\entidad\\politicasseguridadentidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9314E34-FEBB-4FE9-B178-93EEFBE3996B}|Entidad\\Entidad.csproj|solutionrelative:entidad\\politicasseguridadentidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{845CA4C1-C517-4A2A-8D14-E65765F34B37}|Datos\\Datos.csproj|C:\\Users\\Ematp\\Desktop\\repositorio\\GastroSoft\\Proyecto Login\\datos\\datospoliticasseguridad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{845CA4C1-C517-4A2A-8D14-E65765F34B37}|Datos\\Datos.csproj|solutionrelative:datos\\datospoliticasseguridad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,11 +58,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "frmConfiguracionDeContrase\u00F1a.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Ematp\\Desktop\\avances\\Proyecto Login\\Vista\\frmConfiguracionDeContrase\u00F1a.cs",
+              "DocumentMoniker": "C:\\Users\\Ematp\\Desktop\\repositorio\\GastroSoft\\Proyecto Login\\Vista\\frmConfiguracionDeContrase\u00F1a.cs",
               "RelativeDocumentMoniker": "Vista\\frmConfiguracionDeContrase\u00F1a.cs",
-              "ToolTip": "C:\\Users\\Ematp\\Desktop\\avances\\Proyecto Login\\Vista\\frmConfiguracionDeContrase\u00F1a.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\Ematp\\Desktop\\repositorio\\GastroSoft\\Proyecto Login\\Vista\\frmConfiguracionDeContrase\u00F1a.cs [Dise\u00F1o]",
               "RelativeToolTip": "Vista\\frmConfiguracionDeContrase\u00F1a.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-08T21:26:35.227Z",
@@ -74,24 +70,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "frmNuevaContrase\u00F1a.cs",
-              "DocumentMoniker": "C:\\Users\\Ematp\\Desktop\\avances\\Proyecto Login\\Vista\\frmNuevaContrase\u00F1a.cs",
-              "RelativeDocumentMoniker": "Vista\\frmNuevaContrase\u00F1a.cs",
-              "ToolTip": "C:\\Users\\Ematp\\Desktop\\avances\\Proyecto Login\\Vista\\frmNuevaContrase\u00F1a.cs",
-              "RelativeToolTip": "Vista\\frmNuevaContrase\u00F1a.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAIA8wG4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-08T21:24:40.811Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "frmNuevaContrase\u00F1a.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Ematp\\Desktop\\avances\\Proyecto Login\\Vista\\frmNuevaContrase\u00F1a.cs",
+              "DocumentMoniker": "C:\\Users\\Ematp\\Desktop\\repositorio\\GastroSoft\\Proyecto Login\\Vista\\frmNuevaContrase\u00F1a.cs",
               "RelativeDocumentMoniker": "Vista\\frmNuevaContrase\u00F1a.cs",
-              "ToolTip": "C:\\Users\\Ematp\\Desktop\\avances\\Proyecto Login\\Vista\\frmNuevaContrase\u00F1a.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\Ematp\\Desktop\\repositorio\\GastroSoft\\Proyecto Login\\Vista\\frmNuevaContrase\u00F1a.cs [Dise\u00F1o]",
               "RelativeToolTip": "Vista\\frmNuevaContrase\u00F1a.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-08T21:24:30.385Z",
@@ -99,11 +82,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "frmConfiguracionDeseguridadDelSistema.cs",
-              "DocumentMoniker": "C:\\Users\\Ematp\\Desktop\\avances\\Proyecto Login\\Vista\\frmConfiguracionDeseguridadDelSistema.cs",
+              "DocumentMoniker": "C:\\Users\\Ematp\\Desktop\\repositorio\\GastroSoft\\Proyecto Login\\Vista\\frmConfiguracionDeseguridadDelSistema.cs",
               "RelativeDocumentMoniker": "Vista\\frmConfiguracionDeseguridadDelSistema.cs",
-              "ToolTip": "C:\\Users\\Ematp\\Desktop\\avances\\Proyecto Login\\Vista\\frmConfiguracionDeseguridadDelSistema.cs",
+              "ToolTip": "C:\\Users\\Ematp\\Desktop\\repositorio\\GastroSoft\\Proyecto Login\\Vista\\frmConfiguracionDeseguridadDelSistema.cs",
               "RelativeToolTip": "Vista\\frmConfiguracionDeseguridadDelSistema.cs",
               "ViewState": "AgIAAC0AAAAAAAAAAAAWwDEAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -112,54 +95,50 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "frmConfiguracionDeseguridadDelSistema.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Ematp\\Desktop\\avances\\Proyecto Login\\Vista\\frmConfiguracionDeseguridadDelSistema.cs",
+              "DocumentMoniker": "C:\\Users\\Ematp\\Desktop\\repositorio\\GastroSoft\\Proyecto Login\\Vista\\frmConfiguracionDeseguridadDelSistema.cs",
               "RelativeDocumentMoniker": "Vista\\frmConfiguracionDeseguridadDelSistema.cs",
               "ToolTip": "C:\\Users\\Ematp\\Desktop\\avances\\Proyecto Login\\Vista\\frmConfiguracionDeseguridadDelSistema.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Vista\\frmConfiguracionDeseguridadDelSistema.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\..\\avances\\Proyecto Login\\Vista\\frmConfiguracionDeseguridadDelSistema.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-08T21:26:31.35Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LogicaPoliticasSeguridad.cs",
-              "DocumentMoniker": "C:\\Users\\Ematp\\Desktop\\avances\\Proyecto Login\\Logica\\LogicaPoliticasSeguridad.cs",
-              "RelativeDocumentMoniker": "Logica\\LogicaPoliticasSeguridad.cs",
-              "ToolTip": "C:\\Users\\Ematp\\Desktop\\avances\\Proyecto Login\\Logica\\LogicaPoliticasSeguridad.cs",
-              "RelativeToolTip": "Logica\\LogicaPoliticasSeguridad.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-08T21:29:46.641Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DatosPoliticasSeguridad.cs",
-              "DocumentMoniker": "C:\\Users\\Ematp\\Desktop\\avances\\Proyecto Login\\Datos\\DatosPoliticasSeguridad.cs",
-              "RelativeDocumentMoniker": "Datos\\DatosPoliticasSeguridad.cs",
-              "ToolTip": "C:\\Users\\Ematp\\Desktop\\avances\\Proyecto Login\\Datos\\DatosPoliticasSeguridad.cs",
-              "RelativeToolTip": "Datos\\DatosPoliticasSeguridad.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-08T21:28:52.409Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-08T21:26:31.35Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "LogicaPoliticasSeguridad.cs",
+              "DocumentMoniker": "C:\\Users\\Ematp\\Desktop\\repositorio\\GastroSoft\\Proyecto Login\\Logica\\LogicaPoliticasSeguridad.cs",
+              "RelativeDocumentMoniker": "Logica\\LogicaPoliticasSeguridad.cs",
+              "ToolTip": "C:\\Users\\Ematp\\Desktop\\repositorio\\GastroSoft\\Proyecto Login\\Logica\\LogicaPoliticasSeguridad.cs",
+              "RelativeToolTip": "Logica\\LogicaPoliticasSeguridad.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-08T21:29:46.641Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DatosPoliticasSeguridad.cs",
+              "DocumentMoniker": "C:\\Users\\Ematp\\Desktop\\repositorio\\GastroSoft\\Proyecto Login\\Datos\\DatosPoliticasSeguridad.cs",
+              "RelativeDocumentMoniker": "Datos\\DatosPoliticasSeguridad.cs",
+              "ToolTip": "C:\\Users\\Ematp\\Desktop\\repositorio\\GastroSoft\\Proyecto Login\\Datos\\DatosPoliticasSeguridad.cs",
+              "RelativeToolTip": "Datos\\DatosPoliticasSeguridad.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-08T21:28:52.409Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "PoliticasSeguridadEntidad.cs",
-              "DocumentMoniker": "C:\\Users\\Ematp\\Desktop\\avances\\Proyecto Login\\Entidad\\PoliticasSeguridadEntidad.cs",
+              "DocumentMoniker": "C:\\Users\\Ematp\\Desktop\\repositorio\\GastroSoft\\Proyecto Login\\Entidad\\PoliticasSeguridadEntidad.cs",
               "RelativeDocumentMoniker": "Entidad\\PoliticasSeguridadEntidad.cs",
-              "ToolTip": "C:\\Users\\Ematp\\Desktop\\avances\\Proyecto Login\\Entidad\\PoliticasSeguridadEntidad.cs",
+              "ToolTip": "C:\\Users\\Ematp\\Desktop\\repositorio\\GastroSoft\\Proyecto Login\\Entidad\\PoliticasSeguridadEntidad.cs",
               "RelativeToolTip": "Entidad\\PoliticasSeguridadEntidad.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-08T21:29:29.341Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-08T21:29:29.341Z"
             }
           ]
         },
