@@ -28,7 +28,7 @@ namespace Logica.Gestion_de_Empleados
                 }
                 catch (Exception ex)
                 {
-                    return (false, "Error al enviar el correo");
+                    return (false, "Error al enviar el correo, verifique el appconfig. o su conexion a internet");
                 }
             }
             else

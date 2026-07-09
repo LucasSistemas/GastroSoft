@@ -53,29 +53,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Login y Registro\frmCrearNuevoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login y Registro\frmCrearNuevoUsuario.Designer.cs">
+      <DependentUpon>frmCrearNuevoUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gestion Usuarios\frmAltaEmpleadosRegistrados.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Gestion Usuarios\frmAltaEmpleadosRegistrados.Designer.cs">
       <DependentUpon>frmAltaEmpleadosRegistrados.cs</DependentUpon>
     </Compile>
-    <Compile Include="Gestion Usuarios\frmConfiguracionDeContraseña.cs">
+    <Compile Include="Gestion Usuarios\frmCambiarContraseña.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Gestion Usuarios\frmConfiguracionDeContraseña.Designer.cs">
-      <DependentUpon>frmConfiguracionDeContraseña.cs</DependentUpon>
+    <Compile Include="Gestion Usuarios\frmCambiarContraseña.Designer.cs">
+      <DependentUpon>frmCambiarContraseña.cs</DependentUpon>
     </Compile>
-    <Compile Include="Politicas de Seguridad\frmConfiguracionDeseguridadDelSistema.cs">
+    <Compile Include="Politicas de Seguridad\frmPoliticasContraseña.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Politicas de Seguridad\frmConfiguracionDeseguridadDelSistema.Designer.cs">
-      <DependentUpon>frmConfiguracionDeseguridadDelSistema.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Gestion Usuarios\frmCrearUsuarioAEmpleado.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Gestion Usuarios\frmCrearUsuarioAEmpleado.Designer.cs">
-      <DependentUpon>frmCrearUsuarioAEmpleado.cs</DependentUpon>
+    <Compile Include="Politicas de Seguridad\frmPoliticasContraseña.Designer.cs">
+      <DependentUpon>frmPoliticasContraseña.cs</DependentUpon>
     </Compile>
     <Compile Include="Gestion Usuarios\frmEditarPerfilUsuario.cs">
       <SubType>Form</SubType>
@@ -95,10 +95,10 @@
     <Compile Include="Menu\frmMenuPrincipal.Designer.cs">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Politicas de Seguridad\frmPreguntasDeSeguridad.cs">
+    <Compile Include="Login y Registro\frmPreguntasDeSeguridad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Politicas de Seguridad\frmPreguntasDeSeguridad.Designer.cs">
+    <Compile Include="Login y Registro\frmPreguntasDeSeguridad.Designer.cs">
       <DependentUpon>frmPreguntasDeSeguridad.cs</DependentUpon>
     </Compile>
     <Compile Include="Login y Registro\frmRecuperar.cs">
@@ -115,17 +115,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Menu\frmMenuPrincipal.resx">
+      <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login y Registro\frmCrearNuevoUsuario.resx">
+      <DependentUpon>frmCrearNuevoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Gestion Usuarios\frmAltaEmpleadosRegistrados.resx">
       <DependentUpon>frmAltaEmpleadosRegistrados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Gestion Usuarios\frmConfiguracionDeContraseña.resx">
-      <DependentUpon>frmConfiguracionDeContraseña.cs</DependentUpon>
+    <EmbeddedResource Include="Gestion Usuarios\frmCambiarContraseña.resx">
+      <DependentUpon>frmCambiarContraseña.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Politicas de Seguridad\frmConfiguracionDeseguridadDelSistema.resx">
-      <DependentUpon>frmConfiguracionDeseguridadDelSistema.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Gestion Usuarios\frmCrearUsuarioAEmpleado.resx">
-      <DependentUpon>frmCrearUsuarioAEmpleado.cs</DependentUpon>
+    <EmbeddedResource Include="Politicas de Seguridad\frmPoliticasContraseña.resx">
+      <DependentUpon>frmPoliticasContraseña.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gestion Usuarios\frmEditarPerfilUsuario.resx">
       <DependentUpon>frmEditarPerfilUsuario.cs</DependentUpon>
@@ -133,10 +136,7 @@
     <EmbeddedResource Include="Login y Registro\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu\frmMenuPrincipalParaAdm.resx">
-      <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Politicas de Seguridad\frmPreguntasDeSeguridad.resx">
+    <EmbeddedResource Include="Login y Registro\frmPreguntasDeSeguridad.resx">
       <DependentUpon>frmPreguntasDeSeguridad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login y Registro\frmRecuperar.resx">
@@ -153,6 +153,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -178,7 +179,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="WhatsApp Image 2026-07-05 at 20.44.29.ico" />
+    <None Include="Resources\GastroSoft.ico.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

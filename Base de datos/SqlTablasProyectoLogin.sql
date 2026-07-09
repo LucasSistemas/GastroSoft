@@ -143,8 +143,10 @@ PrimeraVez bit default 1 not null,
 Intentos_Sesion int default 3 not null,
 TiempoResetIntentos datetime null,
 Fecha_Ultimo_Login datetime,
+IdEmpleado int null,
 
-foreign key (IdRol) references Roles(IdRol)
+foreign key (IdRol) references Roles(IdRol),
+foreign key (IdEmpleado) references Empleados(IdEmpleado)
 );
 
 go
@@ -152,8 +154,6 @@ go
 create table Contraseñas(
 IdContraseña int primary key identity,
 HashContraseña nvarchar(100) not null,
-
-
 );
 
 go
@@ -246,8 +246,14 @@ IdBitacora int primary key identity
 
 go
 
-create table Configuraciones(
-IdConfiguracion int primary key identity
+create table PoliticaContraseña(
+    IdPolitica int primary key identity(1,1),
+    Longitud int default 8 NOT NULL,
+    Mayusculas bit default 0 NOT NULL,
+    Numeros bit default 0 NOT NULL,
+    CaracteresEspeciales bit default 0 NOT NULL,
+    NoRepiteContraseña bit default 0 NOT NULL,
+    CantidadPreguntas int default 3 NOT NULL
 );
 
 

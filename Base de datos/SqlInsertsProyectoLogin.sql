@@ -113,6 +113,7 @@ insert into Localidades (Localidad, IdPartido) values ('Malagueño', 17);
 
 --Roles
 insert into Roles(Rol,Descripcion)values('AdminMaster','Control total del sistema')
+insert into Roles(Rol,Descripcion)values('UsuarioGeneral','Acceso limitado a funcionalidades del sistema')
 
 --Usuarios
 insert into Usuarios(NombreUsuario,IdRol,IdContraseña,PrimeraVez,Intentos_Sesion,Fecha_Ultimo_Login) values('admin',1,1,0,3,getdate())
@@ -128,5 +129,7 @@ insert into Contraseñas(HashContraseña)values('4976ca28d46c8bc0272cbbd32a3e34b
 --///////////////////////////////////////////////////////////////////////////
 
 ---------------------------------------------------------------------------------------------------
---                                        BITACORA
+--                                        POLITICAS CONTRASEÑA
 ---------------------------------------------------------------------------------------------------
+--aca se insertan valores predeterminados a los campos anterioremente creados  
+insert into PoliticaContraseña (Longitud, Mayusculas, Numeros, CaracteresEspeciales, NoRepiteContraseña, CantidadPreguntas)values (8, 0, 0, 0, 0, 3);

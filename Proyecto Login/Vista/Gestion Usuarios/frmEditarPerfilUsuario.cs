@@ -13,12 +13,12 @@ namespace Vista
 {
     public partial class frmEditarPerfilUsuario : Form
     {
-        frmMenuPrincipalParaAdm menuPrincipalParaAdm;
+        frmMenuPrincipal menuPrincipal;
         SolicitarDatos logica;
-        public frmEditarPerfilUsuario(frmMenuPrincipalParaAdm menu)
+        public frmEditarPerfilUsuario(frmMenuPrincipal menu)
         {
             InitializeComponent();
-            this.menuPrincipalParaAdm = menu;
+            this.menuPrincipal = menu;
             logica = new SolicitarDatos();
         }
         private void frmEditarPerfilUsuario_Load(object sender, EventArgs e)
@@ -158,7 +158,7 @@ namespace Vista
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            menuPrincipalParaAdm.Show();
+            menuPrincipal.Show();
             this.Dispose();
             this.Close();
         }

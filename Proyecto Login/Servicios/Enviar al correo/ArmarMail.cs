@@ -58,7 +58,7 @@ namespace Servicios
                                 </div>
 
                                 <p style='font-size:14px; color:#777;'>
-                                    Este código expirará en <strong>20 minutos</strong>.
+                                    Este código expirará en <strong>24 horas</strong>.
                                 </p>
 
                                 <hr style='margin:30px 0; border:none; border-top:1px solid #ddd;'>

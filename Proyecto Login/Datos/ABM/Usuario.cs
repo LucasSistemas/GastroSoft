@@ -30,8 +30,6 @@ namespace Datos
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@Usuario", usuario);
 
-                        //conn.Open();
-
                         using (reader = cmd.ExecuteReader())
                         {
                             while (reader.Read())
@@ -190,6 +188,29 @@ namespace Datos
                     catch
                     {
                         return;
+                    }
+                }
+            }
+        }
+        public bool CrearNuevoUsuario(string usuario, string hashcontraseña,string documento)
+        {
+            using (conn = new SqlConnection(AccesoCadena()))
+            {
+                using (cmd = new SqlCommand("sp_CrearNuevoUsuario", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Usuario", usuario);
+                    cmd.Parameters.AddWithValue("@HashContraseña", hashcontraseña);
+                    cmd.Parameters.AddWithValue("@Documento", documento);
+                    try
+                    {
+                        conn.Open();
+                        cmd.ExecuteNonQuery();
+                        return true;
+                    }
+                    catch
+                    {
+                        return false;
                     }
                 }
             }

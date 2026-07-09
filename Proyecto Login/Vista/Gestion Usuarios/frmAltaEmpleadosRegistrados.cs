@@ -15,10 +15,10 @@ namespace Vista
 {
     public partial class frmAltaEmpleadosRegistrados : Form
     {
-        private frmMenuPrincipalParaAdm menu;
+        private frmMenuPrincipal menu;
         private CargarEmpleadosPendientes logica = new CargarEmpleadosPendientes();
 
-        public frmAltaEmpleadosRegistrados(frmMenuPrincipalParaAdm menu)
+        public frmAltaEmpleadosRegistrados(frmMenuPrincipal menu)
         {
             InitializeComponent();
             this.menu = menu;

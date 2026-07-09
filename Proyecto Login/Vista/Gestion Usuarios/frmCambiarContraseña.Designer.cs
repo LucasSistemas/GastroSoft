@@ -1,6 +1,6 @@
 ﻿namespace Vista
 {
-    partial class frmConfiguracionDeContraseña
+    partial class frmCambiarContraseña
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConfiguracionDeContraseña));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCambiarContraseña));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtActual = new System.Windows.Forms.TextBox();
             this.txtNueva = new System.Windows.Forms.TextBox();

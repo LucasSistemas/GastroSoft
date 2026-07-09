@@ -11,18 +11,28 @@ namespace Logica
 {
     public class IniciarSesion
     {
-        public (bool Exito,string Mensaje,string NombreUsuario) Iniciar(string contrasena)
+        Usuario usuariodatos = new Usuario(); // objeto de la capa Datos
+        Empleado empleadodatos = new Empleado(); // objeto de la capa Datos
+        public (bool Exito,string Mensaje,string Nombre) Iniciar(string contrasena)
         {
-            if(contrasena == "null")
+            //FLUJO DE INICIO DE SESION CON EMPLEADO PARA CREAR USUARIO
+            if(contrasena.Length == 6)
             {
-                //ACA SE VERIFICA EL CODIGO DE ACCESO POR SER LA PRIMERA VEZ, SE COMPARA EL CODIGO ESTA EN UNA LISTA
-                //DE LA BASE DE DATOS Y SI ESTA, EL USUARIO PUEDE ACCEDER Y SEGUI CON LA CREACION DEL USUARIO, CUANDO
-                //TERMINA SE VUELVE AL  LOGIN Y DEBE CARGAR USUARIO-CONTRASEÑA Y REGISTRAR LAS RESPUESTAS DE SEGURIDAD
-                //SI ES PRIMERA VEZ
-                return (false, "hola", null);
+                string codigoAcceso = contrasena;
+                var resultado = empleadodatos.ValidaryDarAltaEmpleado(codigoAcceso);
+
+                if (!resultado.Exito)
+                {
+                    return (false, resultado.Mensaje, null);
+                }
+                else
+                {
+                    return (true, resultado.Mensaje, $"{EmpleadoSesion.ObtenerNombre()} {EmpleadoSesion.ObtenerApellido()}");
+                }
             }
             else
             {
+                // FLUJO DE INICIO DE SESION CON USUARIO
                 // 1. Separar usuario y contraseña por el guión
                 string[] partes = contrasena.Split('-');
 
@@ -33,8 +43,7 @@ namespace Logica
                 string hash = ConvertirHash.GenerateSHA256Hash(usuario, contraseña);
 
                 // 3. Buscar en la base de datos
-                Usuario usuarios = new Usuario();
-                if (!usuarios.VerificarUsuario(usuario))
+                if (!usuariodatos.VerificarUsuario(usuario))
                 {
                     return (false, "Error al conectar con la base de datos", null);
                 }
@@ -57,13 +66,13 @@ namespace Logica
                             {
                                 UsuarioSesion.SetBloqueado(false);
                                 UsuarioSesion.SetBloqueadoHasta(null);
-                                usuarios.ReiniciarIntentos(usuario);
+                                usuariodatos.ReiniciarIntentos(usuario);
                             }
                         }
                     }
                     if (UsuarioSesion.ObtenerContraseña() != hash)
                     {
-                        usuarios.RestarIntentos(UsuarioSesion.ObtenerNombreUsuario());
+                        usuariodatos.RestarIntentos(UsuarioSesion.ObtenerNombreUsuario());
                         return (false, "Contraseña incorrecta", null);
                     }
                     if (UsuarioSesion.ObtenerIntentosSesion() == 0 || UsuarioSesion.ObtenerTiempoResetIntentos() < hora)
@@ -79,8 +88,8 @@ namespace Logica
                     //5. Iniciar sesión
                     UsuarioSesion.ActivarSesion();
                     UsuarioSesion.SetFechaUltimoLogin(DateTime.Now);
-                    usuarios.ReiniciarIntentos(usuario);
-                    usuarios.ActualizarFechaUltimoLogin(UsuarioSesion.ObtenerNombreUsuario());
+                    usuariodatos.ReiniciarIntentos(usuario);
+                    usuariodatos.ActualizarFechaUltimoLogin(UsuarioSesion.ObtenerNombreUsuario());
                 }
                 return (true, "Inicio de sesión exitoso", UsuarioSesion.ObtenerNombreUsuario());
             }
