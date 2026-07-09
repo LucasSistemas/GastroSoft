@@ -12,9 +12,12 @@ namespace Vista
 {
     public partial class frmPreguntasDeSeguridad : Form
     {
-        public frmPreguntasDeSeguridad()
+        private frmLogin loginForm;
+
+        public frmPreguntasDeSeguridad(frmLogin login)
         {
             InitializeComponent();
+            loginForm = login;
         }
 
         private void frmPreguntasDeSeguridad_Load(object sender, EventArgs e)

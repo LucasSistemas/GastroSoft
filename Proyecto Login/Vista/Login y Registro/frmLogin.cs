@@ -13,6 +13,7 @@ namespace Vista
 {
     public partial class frmLogin : Form
     {
+        frmPreguntasDeSeguridad frmPreguntasDeSeguridad;
         public frmLogin()
         {
             InitializeComponent();
@@ -20,6 +21,7 @@ namespace Vista
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
+            IniciarSesion iniciarSesion = new IniciarSesion();
             if (txtContrasena.Text == "")
             {
                 MessageBox.Show("Por favor, complete todos los campos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -27,16 +29,46 @@ namespace Vista
             }
             else
             {
+                // Este if es para iniciar sesion con usuario y contraseña
                 if (txtContrasena.Text.Contains("-"))
                 {
-                    IniciarSesion iniciarSesion = new IniciarSesion();
                     var resultado = iniciarSesion.Iniciar(txtContrasena.Text);
 
                     if (resultado.Exito)
+                    { 
+                        if (resultado.Mensaje == "Complete el formulario de seguridad para continuar")
+                        {
+                            MessageBox.Show(resultado.Mensaje, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            frmPreguntasDeSeguridad = new frmPreguntasDeSeguridad(this);
+                            frmPreguntasDeSeguridad.Show();
+                            txtContrasena.Clear();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show(resultado.Mensaje, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            frmMenuPrincipal menu = new frmMenuPrincipal(this, resultado.Nombre);
+                            menu.Show();
+                            txtContrasena.Clear();
+                            this.Hide();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show(resultado.Mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtContrasena.Clear();
+                        txtContrasena.Focus();
+                    }
+                }
+                // Este else if es para iniciar sesion con contraseña enviada al correo de 6 digitos
+                else if (txtContrasena.Text.Length == 6)
+                {
+                    var resultado = iniciarSesion.Iniciar(txtContrasena.Text);
+                    if (resultado.Exito)
                     {
                         MessageBox.Show(resultado.Mensaje, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        frmMenuPrincipalParaAdm menu = new frmMenuPrincipalParaAdm(this,resultado.NombreUsuario);
-                        menu.Show();
+                        frmCrearUsuario frmCrearUsuario = new frmCrearUsuario(this,resultado.Nombre);
+                        frmCrearUsuario.Show();
                         txtContrasena.Clear();
                         this.Hide();
                     }
@@ -55,7 +87,6 @@ namespace Vista
                 }
             }
         }
-
         private void frmLogin_Load(object sender, EventArgs e)
         {
 
@@ -76,8 +107,7 @@ namespace Vista
             else
             {
                 txtContrasena.UseSystemPasswordChar= true;
-            }
-               
+            }  
         }
 
         private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)

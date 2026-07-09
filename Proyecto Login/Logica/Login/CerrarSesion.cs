@@ -12,7 +12,9 @@ namespace Logica
         public void Cerrar()
         {
             // Lógica para cerrar sesión
+            EmpleadoSesion.LimpiarSesion();
             UsuarioSesion.CerrarSesion();
+            
         }
     }
 }
