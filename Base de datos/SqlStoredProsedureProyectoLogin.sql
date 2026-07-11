@@ -220,6 +220,10 @@ begin
     set Intentos_Sesion = 3
     where NombreUsuario = @Usuario
 
+    update Usuarios
+    set TiempoResetIntentos = null
+    where NombreUsuario = @Usuario
+
 end
 
 go
@@ -238,10 +242,12 @@ create or alter procedure sp_BloquearUsuario
     @Usuario nvarchar (50)
 as
 begin
+    --Bloquea el usuario
     update Usuarios
     set Bloqueado = 1
     where NombreUsuario = @Usuario
 
+    --Establece la duracion del bloqueo
     update Usuarios
     set BloqueadoHasta = Dateadd(minute,10,GETDATE())
     where NombreUsuario = @Usuario and Intentos_Sesion <= 0
@@ -260,29 +266,252 @@ go
 --///////////////////////////////////////////////////////////////////////////
 
 ---------------------------------------------------------------------------------------------------
---                                      Dar Alta Empleado 
+--                                  Validar y Dar Alta Empleado 
 ---------------------------------------------------------------------------------------------------
-create or alter procedure sp_DarAltaEmpleado
-    @Documento int
+create or alter procedure sp_ValidaryDarAltaEmpleado
+    @Codigo nvarchar (25),
+    @Mensaje nvarchar(200) output,
+    @Documento nvarchar (50) output
+as
+    declare @FechaVencimiento datetime
+begin
+    --Valida el codigo
+    if exists (select 1 from Empleados where CodigoAcceso = @Codigo)
+    begin
+
+        --Carga la variable @FechaVencimiento con le fecha de vencimiento del codigo
+        select @FechaVencimiento = VencimientoCodigo
+        from Empleados
+        where @Codigo = CodigoAcceso
+
+        --Carga la variable @Documento con el documento del empleado que tiene este codigo
+        select @Documento = Documento
+        from Empleados
+        where @Codigo = CodigoAcceso
+
+        if (@FechaVencimiento > getdate())
+        begin
+            
+            --Da Alta al empleado
+            update Empleados 
+            set Activo = 1
+            where Documento = @Documento
+
+            --Coloca la fecha que fue dada el alta
+            update Empleados
+            set Fecha_Alta = GETDATE()
+            where Documento = @Documento
+
+            --Borra el codigo
+            update Empleados
+            set CodigoAcceso = null
+            where Documento = @Documento
+
+            --Borra la fecha de vencimiento
+            update Empleados
+            set VencimientoCodigo = null
+            where Documento = @Documento
+
+            -- Mensaje de exito
+            set @Mensaje = 'Código de acceso válido. Continúe con la creación del usuario.';
+        end
+        else
+        begin
+            -- Mensaje de error
+            set @Mensaje = 'El codigo fue caducado! Comuniquese con el administrador e intentelo de nuevo.';
+        end
+    end
+end
+
+go
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--/////////////////////////////////////////////////////////V//////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+
+---------------------------------------------------------------------------------------------------
+--                                      Cargar Codigo Para Alta
+---------------------------------------------------------------------------------------------------
+create or alter procedure sp_CargarCodigoAcceso
+    @Codigo nvarchar (25),
+    @Documento nvarchar (50)
 as
 begin
-    update Empleados 
-    set Activo = 0 
+    --Carga el codigo
+    update Empleados
+    set CodigoAcceso = @Codigo
     where Documento = @Documento
 
+    --Coloca la fecha de vencimiento del codigo
     update Empleados
-    set Fecha_Alta = GETDATE()
+    set VencimientoCodigo = Dateadd(day,1,GETDATE())
     where Documento = @Documento
 end
 
 go
 --///////////////////////////////////////////////////////////////////////////
 --///////////////////////////////////////////////////////////////////////////
---///////////////////////////////////////////////////////////////////////////
+--/////////////////////////////////////////////////////////V//////////////////
 --///////////////////////////////////////////////////////////////////////////
 --///////////////////////////////////////////////////////////////////////////
 --///////////////////////////////////////////////////////////////////////////
 
 ---------------------------------------------------------------------------------------------------
---                                      
+--                                      Cargar Empleado Sesion
 ---------------------------------------------------------------------------------------------------
+CREATE OR ALTER PROCEDURE sp_CargarEmpleadoSesion
+    @Documento NVARCHAR(50)
+AS
+BEGIN
+    SELECT e.Nombre,e.Apellido,e.Documento,e.Sexo,e.Genero,e.Fecha_Nac,e.Telefono,e.Mail,d.Calle,d.Numero,d.Piso,d.Departamento,d.CodigoPostal,l.Localidad
+    FROM Empleados e
+    INNER JOIN Direcciones d
+        ON e.IdDireccion = d.IdDireccion
+    INNER JOIN Localidades l
+        ON d.IdLocalidad = l.IdLocalidad
+    WHERE e.Documento = @Documento;
+END
+
+go
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--/////////////////////////////////////////////////////////V//////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+---------------------------------------------------------------------------------------------------
+--                              CREAR NUEVO USUARIO
+---------------------------------------------------------------------------------------------------
+CREATE OR ALTER PROCEDURE sp_CrearNuevoUsuario
+    @Usuario nvarchar (50),
+    @HashContraseña nvarchar (100),
+    @Documento nvarchar (50)
+as
+    declare @IdEmpleado int
+    declare @IdContraseña int
+begin
+    --Se carga la variable @IdEmpleado
+    select @IdEmpleado = IdEmpleado
+    from Empleados
+    where Documento = @Documento
+
+    --Se ingresa la contraseña
+    insert into Contraseñas(HashContraseña)
+    values(@HashContraseña)
+
+    -- Se obtiene el id de la ultimo registro
+    SET @IdContraseña = SCOPE_IDENTITY();
+
+    --Se ingresa el usuario
+    insert into Usuarios(NombreUsuario,IdRol,IdContraseña,PrimeraVez,Intentos_Sesion,Fecha_Ultimo_Login,IdEmpleado) 
+    values(@Usuario,2,@IdContraseña,1,3,getdate(),@IdEmpleado)
+
+end
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--/////////////////////////////////////////////////////////V//////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+---------------------------------------------------------------------------------------------------
+--                                COMPROBAR EXISTENCIA USUARIO
+---------------------------------------------------------------------------------------------------
+CREATE OR ALTER PROCEDURE sp_ComprobarExistenciaUsuario
+    @Usuario nvarchar (50),
+    @Resultado bit output
+as
+    set @Resultado = 0
+begin
+    if exists(select 1 from Usuarios where NombreUsuario = @Usuario)
+    begin
+        set @Resultado = 1
+    end
+end
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--/////////////////////////////////////////////////////////V//////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+---------------------------------------------------------------------------------------------------
+--                               OBTENER POLÍTICAS DE SEGURIDAD
+---------------------------------------------------------------------------------------------------
+CREATE OR ALTER PROCEDURE sp_ObtenerConfiguracionSeguridad
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SELECT TOP 1 
+        Longitud, 
+        Mayusculas, 
+        Numeros, 
+        CaracteresEspeciales, 
+        NoRepiteContraseña, 
+        CantidadPreguntas,
+        ValidarDatosPersonales
+    FROM PoliticaContraseña;
+END;
+GO
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--/////////////////////////////////////////////////////////V//////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+---------------------------------------------------------------------------------------------------
+--                              MODIFICAR POLÍTICAS DE SEGURIDAD
+---------------------------------------------------------------------------------------------------
+CREATE OR ALTER PROCEDURE sp_ModificarConfiguracionSeguridad
+    @Longitud INT,
+    @Mayusculas BIT,
+    @Numeros BIT,
+    @CaracteresEspeciales BIT,
+    @NoRepiteContraseña BIT,
+    @CantidadPreguntas INT,
+    @ValidarDatosPersonales BIT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    
+    UPDATE PoliticaContraseña 
+    SET 
+        Longitud = @Longitud, 
+        Mayusculas = @Mayusculas, 
+        Numeros = @Numeros, 
+        CaracteresEspeciales = @CaracteresEspeciales,
+        NoRepiteContraseña = @NoRepiteContraseña, 
+        CantidadPreguntas = @CantidadPreguntas,
+        ValidarDatosPersonales = @ValidarDatosPersonales;
+END;
+GO
+
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--/////////////////////////////////////////////////////////V//////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+---------------------------------------------------------------------------------------------------
+--                               OBTENER PREGUNTAS DE SEGURIDAD Y ALEATORIAS
+---------------------------------------------------------------------------------------------------
+CREATE OR ALTER PROCEDURE sp_ObtenerPreguntasAleatorias
+AS
+BEGIN
+    SET NOCOUNT ON;
+    DECLARE @Cantidad INT;
+
+    -- Primero se Busca cuántas preguntas exigen las politicas actuales
+    SELECT TOP 1 @Cantidad = CantidadPreguntas FROM PoliticaContraseña;
+    
+    -- Si por algún motivo no hay políticas creadas, por defecto se traeran 3
+    IF @Cantidad IS NULL SET @Cantidad = 3;
+
+    -- Y por ultimo se elligen pregtuntas de forma aleatoria usando NEWID(), gracias papa sql
+    SELECT TOP (@Cantidad) IdPregunta, Pregunta 
+    FROM PreguntaSeguridad
+    ORDER BY NEWID();
+END;
+GO
+

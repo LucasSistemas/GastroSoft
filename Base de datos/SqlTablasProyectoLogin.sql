@@ -89,6 +89,8 @@ IdDireccion int not null,
 Activo bit default 0 not null,
 Fecha_Registro datetime default getdate(),
 Fecha_Alta datetime,
+CodigoAcceso nvarchar (10) null,
+VencimientoCodigo datetime,
 
 foreign key (IdDireccion) references Direcciones(IdDireccion)
 );
@@ -141,8 +143,10 @@ PrimeraVez bit default 1 not null,
 Intentos_Sesion int default 3 not null,
 TiempoResetIntentos datetime null,
 Fecha_Ultimo_Login datetime,
+IdEmpleado int null,
 
-foreign key (IdRol) references Roles(IdRol)
+foreign key (IdRol) references Roles(IdRol),
+foreign key (IdEmpleado) references Empleados(IdEmpleado)
 );
 
 go
@@ -150,8 +154,6 @@ go
 create table Contraseñas(
 IdContraseña int primary key identity,
 HashContraseña nvarchar(100) not null,
-
-
 );
 
 go
@@ -167,19 +169,20 @@ foreign key (IdUsuario) references Usuarios(IdUsuario)
 
 go
 
-create table Pregunta_Seguridad(
-IdPregunta int primary key identity,
-Pregunta nvarchar(50)not null
+create table PreguntaSeguridad(
+IdPregunta int primary key identity(1,1),
+Pregunta nvarchar(150) NOT NULL
 );
 
 go
 
-create table Respuesta_Seguridad(
-IdRespuesta int primary key identity,
-Respuesta nvarchar(50)not null,
-IdUsuario int not null,
-
-foreign key (IdUsuario) references Usuarios(IdUsuario)
+create table RespuestaSeguridad(
+IdRespuesta int primary key identity(1,1),
+IdUsuario INT,
+IdPregunta INT,
+RespuestaHash NVARCHAR(100), -------> Aca se guarda la respuesta protegida o mejor dicho hasheada
+FOREIGN KEY (IdUsuario) REFERENCES Usuarios(IdUsuario),
+FOREIGN KEY (IdPregunta) REFERENCES PreguntaSeguridad(IdPregunta)
 );
 
 go
@@ -190,7 +193,7 @@ go
 --///////////////////////////////////////////////////////////////////////////
 --///////////////////////////////////////////////////////////////////////////
 
---Tablas de normalizacion
+--Tablas de normalizacion (No se usa ninguna hasta el momento)
 create table EmpleadoDireccion (
 IdEmpleado int,
 IdDireccion int,
@@ -244,13 +247,13 @@ IdBitacora int primary key identity
 
 go
 
-create table Configuraciones(
-IdConfiguracion int primary key identity
+create table PoliticaContraseña(
+IdPolitica int primary key identity(1,1),
+Longitud int default 8 NOT NULL,
+Mayusculas bit default 0 NOT NULL,
+Numeros bit default 0 NOT NULL,
+CaracteresEspeciales bit default 0 NOT NULL,
+NoRepiteContraseña bit default 0 NOT NULL,
+CantidadPreguntas int default 3 NOT NULL,
+ValidarDatosPersonales bit default 0 NOT NULL
 );
-
-
-
-
-
-
-
