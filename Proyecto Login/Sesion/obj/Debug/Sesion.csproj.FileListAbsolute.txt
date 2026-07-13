@@ -34,3 +34,12 @@ C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Sesion\obj\Debug\Sesio
 C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Sesion\obj\Debug\Sesion.csproj.Up2Date
 C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Sesion\obj\Debug\Sesion.dll
 C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Sesion\obj\Debug\Sesion.pdb
+C:\Users\gimen\OneDrive\Desktop\Nueva carpeta\GastroSoft\Proyecto Login\Sesion\bin\Debug\Sesion.dll
+C:\Users\gimen\OneDrive\Desktop\Nueva carpeta\GastroSoft\Proyecto Login\Sesion\bin\Debug\Sesion.pdb
+C:\Users\gimen\OneDrive\Desktop\Nueva carpeta\GastroSoft\Proyecto Login\Sesion\bin\Debug\Entidad.dll
+C:\Users\gimen\OneDrive\Desktop\Nueva carpeta\GastroSoft\Proyecto Login\Sesion\bin\Debug\Entidad.pdb
+C:\Users\gimen\OneDrive\Desktop\Nueva carpeta\GastroSoft\Proyecto Login\Sesion\obj\Debug\Sesion.csproj.AssemblyReference.cache
+C:\Users\gimen\OneDrive\Desktop\Nueva carpeta\GastroSoft\Proyecto Login\Sesion\obj\Debug\Sesion.csproj.CoreCompileInputs.cache
+C:\Users\gimen\OneDrive\Desktop\Nueva carpeta\GastroSoft\Proyecto Login\Sesion\obj\Debug\Sesion.csproj.Up2Date
+C:\Users\gimen\OneDrive\Desktop\Nueva carpeta\GastroSoft\Proyecto Login\Sesion\obj\Debug\Sesion.dll
+C:\Users\gimen\OneDrive\Desktop\Nueva carpeta\GastroSoft\Proyecto Login\Sesion\obj\Debug\Sesion.pdb

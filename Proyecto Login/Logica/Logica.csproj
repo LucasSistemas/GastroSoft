@@ -43,6 +43,8 @@
   <ItemGroup>
     <Compile Include="Cargar datos a Formularios\Empleados a Dar Alta\CargarEmpleadosPendientes.cs" />
     <Compile Include="Cargar datos a Formularios\Geografia a Registro\CargarFormularios.cs" />
+    <Compile Include="Gestion de Empleados\ActualizarEmpleado.cs" />
+    <Compile Include="Gestion de Empleados\PreguntasRespuestas.cs" />
     <Compile Include="Gestion de Empleados\DarAltaEmpleado.cs" />
     <Compile Include="Gestion de Politicas de Seguridad\GestionPoliticasContraseña.cs" />
     <Compile Include="Gestion de Usuario\CrearNuevo.cs" />

@@ -1,3 +1,6 @@
+use ProyectoLogin
+
+go
 --///////////////////////////////////////////////////////////////////////////
 --///////////////////////////////////////////////////////////////////////////
 --///////////////////////////////////////////////////////////////////////////
@@ -133,3 +136,119 @@ insert into Contraseñas(HashContraseña)values('4976ca28d46c8bc0272cbbd32a3e34b
 ---------------------------------------------------------------------------------------------------
 --aca se insertan valores predeterminados a los campos anterioremente creados  
 insert into PoliticaContraseña (Longitud, Mayusculas, Numeros, CaracteresEspeciales, NoRepiteContraseña, CantidadPreguntas)values (8, 0, 0, 0, 0, 3);
+
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+
+---------------------------------------------------------------------------------------------------
+--                                        Permisos
+---------------------------------------------------------------------------------------------------
+INSERT INTO Permisos (Permiso, Descripcion) VALUES 
+--AdminMaster(todos los permisos)		para agregar usar ('',''),    ;para finalizar la lista de permisos
+('VER_USUARIOS', 'Permite ver el listado de usuarios del sistema'),
+('GESTION_USUARIOS', 'Permite crear usuarios, asignarles empleados y editarlos'),
+('BLOQUEAR_USUARIOS', 'Permite bloquear, desbloquear y resetear intentos de sesión de usuarios'),
+('GESTION_ROLES', 'Permite crear roles y asignarles o quitarles permisos (Tabla Rol_Permiso)'),
+('CONFIG_POLITICAS', 'Permite modificar las políticas de complejidad de contraseñas'),
+('VER_BITACORA', 'Permite visualizar y filtrar el historial de acciones en la bitácora del sistema'),
+--UsuarioGeneral(todos los de abajo)
+('Acceso_EditarPerfil','Permite el acceso a la pantalla para modificar los propios datos'),
+('Acceso_CambiarContrasena','Permite el acceso a la pantalla para cambiar la contraseña'),
+--	UsuarioPedidos
+('Acceso_Pedidos', 'Permite el acceso a la pantalla Pedidos'),
+('Pedidos_AbrirMesa', 'Permite abrir mesas'),
+('Pedidos_CerrarMesa', 'Permite abrir mesas'),
+('Pedidos_NuevoPedidoBarra', 'Permite cargar un nuevo pedido en la barra'),
+--	UsuarioStockMercaderia
+('Acceso_StockMercaderia', 'Permite el acceso a la pantalla Stock de Mercaderia'),
+('StockMercaderia_CargarExistencia', 'Permite cargar el stock existente'),
+('StockMercaderia_ModificarProducto', 'Permite modificar los datos de los productos'),
+('StockMercaderia_SolicitarMercaderia', 'Permite solicitar mercaderia'),
+('StockMercaderia_VerListaProveedores', 'Permite ver la lista de proveedores'),
+('StockMercaderia_EstablecerNiveles', 'Permite establecer los niveles de stock'),
+--	UsuarioControlMozos
+('Acceso_ControlMozos', 'Permite el acceso a la pantalla Control de Mozos'),
+('ControlMozos_IngresarPago', 'Permite ingresar pago del mozo'),
+--	UsuarioMenuRestaurante
+('Acceso_MenuRestaurante', 'Permite el acceso a la pantalla Menu del Restaurante'),
+('MenuRestaurante_AgregarMenuIndividual', 'Permite agregar un menu individual');
+
+-- Le asignamos TODOS los permisos existentes al AdminMaster (IdRol = 1)
+
+-- Usamos un INSERT basado en un SELECT para no hacerlo uno por uno
+INSERT INTO Rol_Permiso (IdRol, IdPermiso, Duracion)
+SELECT 1, IdPermiso, NULL FROM Permisos;
+GO
+
+
+-- Al UsuarioGeneral solo le damos permiso de editar su propio perfil y cambiar su contraseña (IdRol = 2)
+INSERT INTO Rol_Permiso (IdRol, IdPermiso, Duracion) VALUES 
+(2, (SELECT IdPermiso FROM Permisos WHERE Permiso = 'Acceso_EditarPerfil'), NULL),
+(2, (SELECT IdPermiso FROM Permisos WHERE Permiso = 'Acceso_CambiarContrasena'), NULL);
+GO
+
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+
+---------------------------------------------------------------------------------------------------
+--                                        Preguntas de Seguridad
+---------------------------------------------------------------------------------------------------
+INSERT INTO Pregunta_Seguridad (Pregunta)
+VALUES 
+(N'¿Cuál era el nombre de tu escuela?'),
+(N'¿Cómo se llama tu mascota?'),
+(N'¿Cuál es tu color favorito?'),
+(N'¿Cuál es tu comida favorita?'),
+(N'¿Cuál es tu deporte favorito?');
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+
+---------------------------------------------------------------------------------------------------
+--                                        Respuestas a preguntas de Seguridad del usuario admin
+---------------------------------------------------------------------------------------------------
+-- Borra respuestas de amin si las hubiera, la podriamos usar para resetear las respuestas de seguridad del usuario admin
+DELETE FROM Respuesta_Seguridad 
+WHERE IdUsuario = (SELECT IdUsuario FROM Usuarios WHERE NombreUsuario = 'admin');
+GO
+
+-- Cargamos las respuestas para las 5 preguntas del sistema
+INSERT INTO Respuesta_Seguridad (IdPregunta, IdUsuario, Respuesta)
+VALUES 
+(
+    (SELECT IdPregunta FROM Pregunta_Seguridad WHERE Pregunta LIKE '%escuela%'), 
+    (SELECT IdUsuario FROM Usuarios WHERE NombreUsuario = 'admin'), 
+    'Sarmiento'
+),
+(
+    (SELECT IdPregunta FROM Pregunta_Seguridad WHERE Pregunta LIKE '%mascota%'), 
+    (SELECT IdUsuario FROM Usuarios WHERE NombreUsuario = 'admin'), 
+    'Firulais'
+),
+(
+    (SELECT IdPregunta FROM Pregunta_Seguridad WHERE Pregunta LIKE '%color%'), 
+    (SELECT IdUsuario FROM Usuarios WHERE NombreUsuario = 'admin'), 
+    'Azul'
+),
+(
+    (SELECT IdPregunta FROM Pregunta_Seguridad WHERE Pregunta LIKE '%comida%'), 
+    (SELECT IdUsuario FROM Usuarios WHERE NombreUsuario = 'admin'), 
+    'Asado'
+),
+(
+    (SELECT IdPregunta FROM Pregunta_Seguridad WHERE Pregunta LIKE '%deporte%'), 
+    (SELECT IdUsuario FROM Usuarios WHERE NombreUsuario = 'admin'), 
+    'Futbol'
+);
+GO

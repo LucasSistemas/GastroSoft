@@ -53,6 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Gestion Usuarios\frmCambiarRespuestas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion Usuarios\frmCambiarRespuestas.Designer.cs">
+      <DependentUpon>frmCambiarRespuestas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login y Registro\frmCrearNuevoUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +121,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Gestion Usuarios\frmCambiarRespuestas.resx">
+      <DependentUpon>frmCambiarRespuestas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu\frmMenuPrincipal.resx">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -169,6 +178,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Datos\Datos.csproj">
+      <Project>{845ca4c1-c517-4a2a-8d14-e65765f34b37}</Project>
+      <Name>Datos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Entidad\Entidad.csproj">
       <Project>{a9314e34-febb-4fe9-b178-93eefbe3996b}</Project>
       <Name>Entidad</Name>
@@ -176,6 +189,10 @@
     <ProjectReference Include="..\Logica\Logica.csproj">
       <Project>{b1e55ed2-9cd6-4404-96e2-45ab6bb40186}</Project>
       <Name>Logica</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sesion\Sesion.csproj">
+      <Project>{ae92839d-63ab-4c5c-b1c3-1b2a019cf353}</Project>
+      <Name>Sesion</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

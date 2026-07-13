@@ -8,21 +8,22 @@ namespace Sesion
 {
     public static class EmpleadoSesion
     {
-        private static string Nombre { get; set; }
-        private static string Apellido { get; set; }
-        private static string Documento { get; set; }
-        private static string Sexo { get; set; }
-        private static string Genero { get; set; }
-        private static DateTime Fecha_Nac { get; set; }
-        private static string Telefono { get; set; }
-        private static string Mail { get; set; }
-        private static string Calle { get; set; }
-        private static string Numero { get; set; }
-        private static string Piso { get; set; }
-        private static string Departamento { get; set; }
-        private static int CodigoPostal { get; set; }
-        private static string Localidad { get; set; }
-
+        public static int Id { get; set; }
+        public static string Nombre { get; set; }
+        public static string Apellido { get; set; }
+        public static string Documento { get; set; }
+        public static string Sexo { get; set; }
+        public static string Genero { get; set; }
+        public static DateTime Fecha_Nac { get; set; }
+        public static string Telefono { get; set; }
+        public static string Mail { get; set; }
+        public static string Calle { get; set; }
+        public static string Numero { get; set; }
+        public static string Piso { get; set; }
+        public static string Departamento { get; set; }
+        public static int CodigoPostal { get; set; }
+        public static string Localidad { get; set; }
+        
         #region Getters
         public static string ObtenerNombre()
         {

@@ -17,7 +17,7 @@ go
 --Tablas geograficas
 create table Nacionalidades(
 IdNacionalidad int primary key identity,
-Nacionalidad nvarchar(50)not null,
+Nacionalidad nvarchar(50)not null
 );
 
 go
@@ -63,7 +63,7 @@ Departamento nvarchar(10)null,
 Codigo_Postal int not null,
 IdLocalidad int not null,
 
-foreign key (IdLocalidad) references Localidades(IdLocalidad),
+foreign key (IdLocalidad) references Localidades(IdLocalidad)
 );
 
 --///////////////////////////////////////////////////////////////////////////
@@ -96,18 +96,6 @@ foreign key (IdDireccion) references Direcciones(IdDireccion)
 );
 
 go
-
-create table Telefonos(
-IdTelefono int primary key identity,
-CodigoArea nvarchar (10)not null,
-Telefono nvarchar(50)not null,
-IdEmpleado int,
-TipoTelefono nvarchar (50)not null,
-
-foreign key (IdEmpleado) references Empleados(IdEmpleado),
-);
-
-go
 --///////////////////////////////////////////////////////////////////////////
 --///////////////////////////////////////////////////////////////////////////
 --///////////////////////////////////////////////////////////////////////////
@@ -132,6 +120,13 @@ Descripcion nvarchar(100)not null
 
 go
 
+create table Contraseñas(
+IdContraseña int primary key identity,
+HashContraseña nvarchar(100) not null
+);
+
+go
+
 create table Usuarios(
 IdUsuario int primary key identity,
 NombreUsuario nvarchar(50)not null,
@@ -151,17 +146,11 @@ foreign key (IdEmpleado) references Empleados(IdEmpleado)
 
 go
 
-create table Contraseñas(
-IdContraseña int primary key identity,
-HashContraseña nvarchar(100) not null,
-);
-
-go
 
 create table Historial_Contraseña(
 IdHistorial int primary key identity,
 Contraseña_Pasada nvarchar(100)not null,
-Fecha_Modificasion datetime not null,
+Fecha_Modificacion datetime not null,
 IdUsuario int not null,
 
 foreign key (IdUsuario) references Usuarios(IdUsuario)
@@ -177,10 +166,12 @@ Pregunta nvarchar(50)not null
 go
 
 create table Respuesta_Seguridad(
-IdRespuesta int primary key identity,
-Respuesta nvarchar(50)not null,
+IdRespuestaSeguridad int primary key identity,
+IdPregunta int not null,
 IdUsuario int not null,
+Respuesta nvarchar(50) not null,
 
+foreign key (IdPregunta) references Pregunta_Seguridad(IdPregunta),
 foreign key (IdUsuario) references Usuarios(IdUsuario)
 );
 
@@ -193,42 +184,14 @@ go
 --///////////////////////////////////////////////////////////////////////////
 
 --Tablas de normalizacion
-create table EmpleadoDireccion (
-IdEmpleado int,
-IdDireccion int,
-primary key (IdEmpleado, IdDireccion),
-foreign key (IdEmpleado) references Empleados(IdEmpleado),
-foreign key (IdDireccion) references Direcciones(IdDireccion)
-);
-
-go
-
-create table EmpleadoTelefono(
-IdEmpTel int primary key identity,
-IdEmpleado int,
-IdTelefono int,
-
-foreign key (IdEmpleado) references Empleados(IdEmpleado),
-foreign key (IdTelefono) references Telefonos(IdTelefono),
-);
-
-go
-
 create table Rol_Permiso(
 IdRol int not null,
 IdPermiso int not null,
 Duracion datetime
 
+PRIMARY KEY (IdRol, IdPermiso)
 foreign key (IdRol) references Roles(IdRol),
 foreign key (IdPermiso) references Permisos(IdPermiso)
-);
-
-go
-
-create table Usuario_Rol(
-IdUsuario int not null,
-IdRol int not null
-primary key (IdUsuario,IdRol)
 );
 
 go
@@ -241,7 +204,15 @@ go
 
 --Settings
 create table Bitacora(
-IdBitacora int primary key identity
+IdBitacora int primary key identity,
+FechaHora datetime default getdate() not null,
+Accion nvarchar(50) not null,
+Modulo nvarchar(50) not null,
+Descripcion nvarchar(250) not null,
+Criticidad nvarchar(20) not null,
+IdUsuario int not null,
+
+foreign key (IdUsuario) references Usuarios(IdUsuario)
 );
 
 go

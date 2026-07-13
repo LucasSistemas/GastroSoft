@@ -131,6 +131,7 @@ namespace Datos
                         {
                             if (reader.Read())
                             {
+                                EmpleadoSesion.Id = Convert.ToInt32(reader["IdEmpleado"]);
                                 EmpleadoSesion.SetNombre(reader["Nombre"].ToString());
                                 EmpleadoSesion.SetApellido(reader["Apellido"].ToString());
                                 EmpleadoSesion.SetDocumento(reader["Documento"].ToString());
@@ -143,7 +144,7 @@ namespace Datos
                                 EmpleadoSesion.SetNumero(reader["Numero"].ToString());
                                 EmpleadoSesion.SetPiso(reader["Piso"].ToString());
                                 EmpleadoSesion.SetDepartamento(reader["Departamento"].ToString());
-                                EmpleadoSesion.SetCodigoPostal(Convert.ToInt32(reader["CodigoPostal"]));
+                                EmpleadoSesion.SetCodigoPostal(Convert.ToInt32(reader["Codigo_Postal"]));
                                 EmpleadoSesion.SetLocalidad(reader["Localidad"].ToString());
                                 // Aquí puedes almacenar estos datos en variables de sesión o en un objeto de usuario según tu implementación.
                             }
@@ -152,6 +153,48 @@ namespace Datos
                     catch (SqlException ex)
                     {
                         // Manejar la excepción según sea necesario
+                    }
+                }
+            }
+        }
+        public bool ActualizarEmpleado(int idEmpleado, string nombre, string apellido, string documento, string sexo,
+            string genero, string fecha_nac, string telefono, string mail, string calle, string numero,
+            string piso, string departamento, int codigopostal, int idlocalidad)
+        {
+            using (SqlConnection conn = new SqlConnection(AccesoCadena()))
+            {
+                // Asumo que tu Stored Procedure de actualización se llama algo así:
+                using (SqlCommand cmd = new SqlCommand("sp_Actualizar_Empleado", conn))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                    // Parámetro clave para el WHERE del UPDATE en SQL
+                    cmd.Parameters.AddWithValue("@IdEmpleado", idEmpleado);
+                    cmd.Parameters.AddWithValue("@Nombre", nombre);
+                    cmd.Parameters.AddWithValue("@Apellido", apellido);
+                    cmd.Parameters.AddWithValue("@Documento", documento);
+                    cmd.Parameters.AddWithValue("@Sexo", sexo); // Corregido el '@' que faltaba
+                    cmd.Parameters.AddWithValue("@Genero", genero);
+                    cmd.Parameters.AddWithValue("@Fecha_Nac", fecha_nac);
+                    cmd.Parameters.AddWithValue("@Telefono", telefono);
+                    cmd.Parameters.AddWithValue("@Mail", mail);
+                    cmd.Parameters.AddWithValue("@Calle", calle);
+                    cmd.Parameters.AddWithValue("@Numero", numero);
+                    cmd.Parameters.AddWithValue("@Piso", string.IsNullOrEmpty(piso) ? (object)DBNull.Value : piso);
+                    cmd.Parameters.AddWithValue("@Departamento", string.IsNullOrEmpty(departamento) ? (object)DBNull.Value : departamento);
+                    cmd.Parameters.AddWithValue("@CodigoPostal", codigopostal);
+                    cmd.Parameters.AddWithValue("@IdLocalidad", idlocalidad);
+
+                    try
+                    {
+                        conn.Open();
+                        int filasAfectadas = cmd.ExecuteNonQuery();
+                        return filasAfectadas > 0; // Devuelve true si realmente modificó el registro
+                    }
+                    catch (SqlException ex)
+                    {
+                        // Aquí podrías loguear el error si usas bitácora
+                        return false;
                     }
                 }
             }
