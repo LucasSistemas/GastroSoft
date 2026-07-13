@@ -4,15 +4,21 @@ C:\Users\rukus\source\repos\Proyecto Login\Servicios\obj\Debug\Servicios.csproj.
 C:\Users\rukus\source\repos\Proyecto Login\Servicios\obj\Debug\Servicios.csproj.CoreCompileInputs.cache
 C:\Users\rukus\source\repos\Proyecto Login\Servicios\obj\Debug\Servicios.dll
 C:\Users\rukus\source\repos\Proyecto Login\Servicios\obj\Debug\Servicios.pdb
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Servicios\bin\Debug\Servicios.dll
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Servicios\bin\Debug\Servicios.pdb
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Servicios\obj\Debug\Servicios.csproj.AssemblyReference.cache
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Servicios\obj\Debug\Servicios.csproj.CoreCompileInputs.cache
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Servicios\obj\Debug\Servicios.dll
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Servicios\obj\Debug\Servicios.pdb
 C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Servicios\bin\Debug\Servicios.dll
 C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Servicios\bin\Debug\Servicios.pdb
 C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Servicios\obj\Debug\Servicios.csproj.AssemblyReference.cache
 C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Servicios\obj\Debug\Servicios.csproj.CoreCompileInputs.cache
 C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Servicios\obj\Debug\Servicios.dll
 C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Servicios\obj\Debug\Servicios.pdb
-C:\Users\User\Desktop\GastroSoft-main\GastroSoft\Proyecto Login\Servicios\bin\Debug\Servicios.dll
-C:\Users\User\Desktop\GastroSoft-main\GastroSoft\Proyecto Login\Servicios\bin\Debug\Servicios.pdb
-C:\Users\User\Desktop\GastroSoft-main\GastroSoft\Proyecto Login\Servicios\obj\Debug\Servicios.csproj.AssemblyReference.cache
-C:\Users\User\Desktop\GastroSoft-main\GastroSoft\Proyecto Login\Servicios\obj\Debug\Servicios.csproj.CoreCompileInputs.cache
-C:\Users\User\Desktop\GastroSoft-main\GastroSoft\Proyecto Login\Servicios\obj\Debug\Servicios.dll
-C:\Users\User\Desktop\GastroSoft-main\GastroSoft\Proyecto Login\Servicios\obj\Debug\Servicios.pdb
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Servicios\bin\Debug\Servicios.dll
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Servicios\bin\Debug\Servicios.pdb
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Servicios\obj\Debug\Servicios.csproj.AssemblyReference.cache
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Servicios\obj\Debug\Servicios.csproj.CoreCompileInputs.cache
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Servicios\obj\Debug\Servicios.dll
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Servicios\obj\Debug\Servicios.pdb

@@ -1,4 +1,4 @@
-alter table PoliticaContraseña add ValidarDatosPersonales bit default 0 NOT NULL
+alter table Usuarios add IdEmpleado int null
 alter table Usuarios add foreign key (IdEmpleado) references Empleados(IdEmpleado)
 
 alter table Contraseñas add IdUsuario int null
@@ -13,7 +13,6 @@ update Empleados set Mail = 'tumail@gmail.com' where IdEmpleado = 1
 update Empleados set VencimientoCodigo = null where IdEmpleado = 1
 
 update Empleados set CodigoAcceso = 'bGCnsT' where IdEmpleado = 1
-update Empleados set VencimientoCodigo =  where IdEmpleado = 1
 
 
 update Contraseñas set IdUsuario = null where IdContraseña = 1
@@ -26,12 +25,12 @@ DROP column IdUsuario
 
 drop table PoliticaContraseña
 
---Para reiniciar el id de cualquier tabla
-dbcc CHECKIDENT ('Contraseñas',RESEED,1)
-
+dbcc CHECKIDENT ('Empleados',RESEED,0)
 select * from Usuarios
 select * from Empleados
 select * from Roles
+select * from Contraseñas
+select * from RespuestaSeguridad
 
 SELECT fk.name
 FROM sys.foreign_keys fk
@@ -44,14 +43,11 @@ update Usuarios set Intentos_Sesion = 3 where NombreUsuario = 'admin'
 update Usuarios set TiempoResetIntentos = null where NombreUsuario = 'admin'
 update Usuarios set Bloqueado = 0 where NombreUsuario = 'admin'
 update Usuarios set BloqueadoHasta = null where NombreUsuario = 'admin'
+UPDATE Usuarios 
+    SET PrimeraVez = 1 
+    WHERE IdUsuario = 2;
 
-select * from PreguntaSeguridad
-select * from Usuarios
-select * from Contraseñas
-select * from PoliticaContraseña 
-
-delete from Contraseñas where IdContraseña = 3
-delete from Usuarios where NombreUsuario = 'Luxel'
+select IdEmpleado from Usuarios where NombreUsuario= 'Luxel'
 ---------------------------------------------------------------
 ---------------------------------------------------------------
 update Empleados set Activo = 0 where IdEmpleado = 1
@@ -203,5 +199,3 @@ WHERE parent_object_id = OBJECT_ID('Contraseñas');
 
 ALTER TABLE Contraseñas
 DROP CONSTRAINT FK__Contra__IdUsuario__177F90F9;
-
-select * from PoliticaContraseña

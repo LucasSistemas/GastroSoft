@@ -17,5 +17,6 @@ namespace Logica
         {
             return _datosPreguntas.ObtenerPreguntasAleatorias();
         }
+
     }
 }

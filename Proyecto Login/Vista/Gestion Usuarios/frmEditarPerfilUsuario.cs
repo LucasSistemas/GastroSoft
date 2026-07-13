@@ -8,24 +8,27 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Logica;
+using Logica.Pedir_datos_de_la_capa_Sesion;
 
 namespace Vista
 {
     public partial class frmEditarPerfilUsuario : Form
     {
         frmMenuPrincipal menuPrincipal;
-        SolicitarDatos logica;
+        SolicitarDatosUsuario user;
+        SolicitarDatosEmpleado empl;
         public frmEditarPerfilUsuario(frmMenuPrincipal menu)
         {
             InitializeComponent();
             this.menuPrincipal = menu;
-            logica = new SolicitarDatos();
+            user = new SolicitarDatosUsuario();
+            empl = new SolicitarDatosEmpleado();
         }
         private void frmEditarPerfilUsuario_Load(object sender, EventArgs e)
         {
-            lblEmpleado.Text = "Empleado: " + logica.SolicitarNombre();
-            lblRol.Text = "Rol: " + logica.SolicitarRol();
-            lblUsuario.Text = "Usuario: " + logica.SolicitarUsuario();
+            lblEmpleado.Text = "Empleado: " + empl.SolicitarNombre();
+            lblRol.Text = "Rol: " + user.SolicitarRol();
+            lblUsuario.Text = "Usuario: " + user.SolicitarUsuario();
 
         }
         #region Eventos para validar campos
@@ -60,7 +63,6 @@ namespace Vista
         }
         #endregion
 
-        #region Guardar Cambios
         private void btGuardar_Cambios_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(tbNombre_R.Text))
@@ -154,7 +156,6 @@ namespace Vista
             //si son correctas se actualiza los datos
             MessageBox.Show("Perfil actualizado correctamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-        #endregion
 
         private void btnVolver_Click(object sender, EventArgs e)
         {

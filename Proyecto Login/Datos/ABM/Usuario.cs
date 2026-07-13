@@ -84,6 +84,14 @@ namespace Datos
                                 {
                                     UsuarioSesion.SetTiempoResetIntentos(null);
                                 }
+
+                                string documento = reader["Documento"] == null ? string.Empty : reader["Documento"].ToString();
+
+                                Empleado empleado = new Empleado();
+                                if (!string.IsNullOrEmpty(documento))
+                                {
+                                    empleado.CargarEmpleadoSesion(documento);
+                                }
                             }
                             return true;
                         }
@@ -188,27 +196,6 @@ namespace Datos
                     catch
                     {
                         return;
-                    }
-                }
-            }
-        }
-        public bool ComprobarExistenciaUsuario(string usuario)
-        {
-            using (conn = new SqlConnection(AccesoCadena()))
-            {
-                using (cmd = new SqlCommand("sp_ComprobarExistenciaUsuario", conn))
-                {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@Usuario", usuario);
-                    try
-                    {
-                        conn.Open();
-                        var resultado = cmd.ExecuteScalar();
-                        return Convert.ToBoolean(resultado);
-                    }
-                    catch
-                    {
-                        return false;
                     }
                 }
             }

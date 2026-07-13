@@ -41,15 +41,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CargarFormularios.cs" />
-    <Compile Include="CerrarSesion.cs" />
-    <Compile Include="IniciarSesion.cs" />
-    <Compile Include="LogicaPoliticasSeguridad.cs" />
+    <Compile Include="Cargar datos a Formularios\Empleados a Dar Alta\CargarEmpleadosPendientes.cs" />
+    <Compile Include="Cargar datos a Formularios\Geografia a Registro\CargarFormularios.cs" />
+    <Compile Include="Gestion de Empleados\DarAltaEmpleado.cs" />
+    <Compile Include="Gestion de Politicas de Seguridad\DatosPersonalesContraseña.cs" />
+    <Compile Include="Gestion de Politicas de Seguridad\GestionGuardarRespuestas.cs" />
+    <Compile Include="Gestion de Politicas de Seguridad\GestionPoliticasContraseña.cs" />
+    <Compile Include="Gestion de Politicas de Seguridad\GestionPreguntas.cs" />
+    <Compile Include="Gestion de Usuario\CrearNuevo.cs" />
+    <Compile Include="Gestion de Usuario\ValidarContraseña.cs" />
+    <Compile Include="Login\CerrarSesion.cs" />
+    <Compile Include="Login\IniciarSesion.cs" />
+    <Compile Include="Pedir datos de la capa Sesion\SolicitarDatosEmpleado.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Recuperar.cs" />
-    <Compile Include="Registrar.cs" />
-    <Compile Include="SolicitarDatos.cs" />
-    <Compile Include="Validardatos.cs" />
+    <Compile Include="Login\Recuperar.cs" />
+    <Compile Include="Gestion de Empleados\Registrar.cs" />
+    <Compile Include="Pedir datos de la capa Sesion\SolicitarDatosUsuario.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Datos\Datos.csproj">
@@ -69,5 +76,6 @@
       <Name>Sesion</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -137,16 +137,10 @@ insert into PoliticaContraseña (Longitud, Mayusculas, Numeros, CaracteresEspeci
 ---------------------------------------------------------------------------------------------------
 --                                        PREGUNTAS DE SEGURIDAD
 ---------------------------------------------------------------------------------------------------
-insert into PreguntaSeguridad (Pregunta) values 
+insert into PreguntasSeguridad (Pregunta) values 
 ('¿Cuál fue el nombre de tu primera mascota?'),
 ('¿En qué ciudad naciste?'),
 ('¿Cuál es tu película favorita de la infancia?'),
-('¿Cuál es tu modelo de auto favorito?'),
-('¿Cómo se llamaba tu escuela primaria?'),
-('¿Cuál es el segundo nombre de tu madre?'),
-('¿Cuál es tu postre favorito?'),
-('¿Cuál es tu animal favorito?'),
-('¿Cuál es tu color favorito?'),
 ('¿Como se llamaba tu primera pareja?'),
-('¿Cual es tu pelicula favorita ?');
+('¿Cual es tu modeloo de auto favorito ?');
 go

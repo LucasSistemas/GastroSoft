@@ -33,7 +33,7 @@ namespace Datos
                         }
                     }
                     catch (SqlException)
-                    {
+                    { 
                         /* Error al conectar con la base de datos */ 
                     }
                 }

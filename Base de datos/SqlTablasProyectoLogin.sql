@@ -170,19 +170,18 @@ foreign key (IdUsuario) references Usuarios(IdUsuario)
 go
 
 create table PreguntaSeguridad(
-IdPregunta int primary key identity(1,1),
-Pregunta nvarchar(150) NOT NULL
+IdPregunta int primary key identity,
+Pregunta nvarchar(50)not null
 );
 
 go
 
 create table RespuestaSeguridad(
-IdRespuesta int primary key identity(1,1),
-IdUsuario INT,
-IdPregunta INT,
-RespuestaHash NVARCHAR(100), -------> Aca se guarda la respuesta protegida o mejor dicho hasheada
-FOREIGN KEY (IdUsuario) REFERENCES Usuarios(IdUsuario),
-FOREIGN KEY (IdPregunta) REFERENCES PreguntaSeguridad(IdPregunta)
+IdRespuesta int primary key identity,
+Respuesta nvarchar(50)not null,
+IdUsuario int not null,
+
+foreign key (IdUsuario) references Usuarios(IdUsuario)
 );
 
 go
@@ -193,7 +192,7 @@ go
 --///////////////////////////////////////////////////////////////////////////
 --///////////////////////////////////////////////////////////////////////////
 
---Tablas de normalizacion (No se usa ninguna hasta el momento)
+--Tablas de normalizacion
 create table EmpleadoDireccion (
 IdEmpleado int,
 IdDireccion int,
@@ -248,12 +247,40 @@ IdBitacora int primary key identity
 go
 
 create table PoliticaContraseña(
-IdPolitica int primary key identity(1,1),
-Longitud int default 8 NOT NULL,
-Mayusculas bit default 0 NOT NULL,
-Numeros bit default 0 NOT NULL,
-CaracteresEspeciales bit default 0 NOT NULL,
-NoRepiteContraseña bit default 0 NOT NULL,
-CantidadPreguntas int default 3 NOT NULL,
-ValidarDatosPersonales bit default 0 NOT NULL
+    IdPolitica int primary key identity(1,1),
+    Longitud int default 8 NOT NULL,
+    Mayusculas bit default 0 NOT NULL,
+    Numeros bit default 0 NOT NULL,
+    CaracteresEspeciales bit default 0 NOT NULL,
+    NoRepiteContraseña bit default 0 NOT NULL,
+    CantidadPreguntas int default 3 NOT NULL
+
+--///////////////////////////////////////////////////////////////////////////
+
+alter table PoliticaContraseña add ValidarDatosPersonales bit default 0 NOT NULL;
+
+--///////////////////////////////////////////////////////////////////////////
+
+create table PreguntasSeguridad (
+    IdPregunta int primary key identity(1,1),
+    Pregunta nvarchar(150) NOT NULL
 );
+GO
+
+create table RespuestasSeguridad (
+    IdRespuesta int primary key identity(1,1),
+    IdUsuario INT NOT NULL,
+    IdPregunta INT NOT NULL,
+    RespuestaHash NVARCHAR(100) NOT NULL, -------> Aca se guarda la respuesta protegida o mejor dicho hasheada
+    FOREIGN KEY (IdUsuario) REFERENCES Usuarios(IdUsuario),
+    FOREIGN KEY (IdPregunta) REFERENCES PreguntasSeguridad(IdPregunta)
+);
+GO
+);
+
+
+
+
+
+
+

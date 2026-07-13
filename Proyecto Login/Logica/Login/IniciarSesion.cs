@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Datos;
+using Logica.Pedir_datos_de_la_capa_Sesion;
 using Servicios;
 using Sesion;
 
@@ -39,8 +40,8 @@ namespace Logica
                 string usuario = partes[0];
                 string contraseña = partes[1];
 
-                // 2. Hashear la cadena completa (usuario-contraseña)
-                string hash = ConvertirHash.GenerateSHA256Hash(usuario, contraseña);
+                // 2. Hashear contraseña
+                string hash = ConvertirHash.GenerateSHA256Hash(contrasena);
 
                 // 3. Buscar en la base de datos
                 if (!usuariodatos.VerificarUsuario(usuario))
@@ -90,8 +91,12 @@ namespace Logica
                     UsuarioSesion.SetFechaUltimoLogin(DateTime.Now);
                     usuariodatos.ReiniciarIntentos(usuario);
                     usuariodatos.ActualizarFechaUltimoLogin(UsuarioSesion.ObtenerNombreUsuario());
+
+                    //6.
+                    SolicitarDatosEmpleado solicitarDatosEmpleado = new SolicitarDatosEmpleado();
+                    
                 }
-                return (true, "Inicio de sesión exitoso", UsuarioSesion.ObtenerNombreUsuario());
+                return (true, "Inicio de sesión exitoso", $"{EmpleadoSesion.ObtenerNombre()} {EmpleadoSesion.ObtenerApellido()}");
             }
         }
     }

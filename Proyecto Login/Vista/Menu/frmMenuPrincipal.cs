@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Logica;
+using Logica.Pedir_datos_de_la_capa_Sesion;
 
 namespace Vista
 {
     public partial class frmMenuPrincipal : Form
     {
+        private string nombreEmpleado;
         private string nombreUsuario;
         CerrarSesion cerrarSesion = new Logica.CerrarSesion();
         frmLogin frmlogin;
@@ -20,19 +22,28 @@ namespace Vista
         frmRegistro frmRegistro;
         frmAltaEmpleadosRegistrados frmAltaEmpleadosRegistrados;
         frmPoliticasContraseña frmPoliticasContraseña;
+        SolicitarDatosUsuario solicitarDatosUsuario = new SolicitarDatosUsuario();
+        SolicitarDatosEmpleado solicitarDatosEmpleado = new SolicitarDatosEmpleado();
 
-        public frmMenuPrincipal(frmLogin login, string nombreUsuario)
+        public frmMenuPrincipal(frmLogin login)
         {
             InitializeComponent();
-            this.nombreUsuario = nombreUsuario;
+            nombreEmpleado = solicitarDatosEmpleado.SolicitarNombre() + " " + solicitarDatosEmpleado.SolicitarApellido();
+            nombreUsuario = solicitarDatosUsuario.SolicitarNombre();
             this.frmlogin = login;
         }
 
         private void frmMenuPrincipalParaAdm_Load(object sender, EventArgs e)
         {
-            lblBienvenido.Text = "¡Bienvenido, " + nombreUsuario + "!";
+            if(string.IsNullOrEmpty(nombreEmpleado) || nombreEmpleado == " ")
+            {
+                lblBienvenido.Text = "¡Bienvenido, " + nombreUsuario + "!";
+            }
+            else
+            {
+                lblBienvenido.Text = "¡Bienvenido, " + nombreEmpleado + "!";
+            }
         }
-
 
         private void btnEditar_Click(object sender, EventArgs e)
         {

@@ -46,6 +46,7 @@ namespace Vista
             if (exito)
             {
                 MessageBox.Show("Políticas de seguridad guardadas con éxito en la Base de Datos de Gastrosoft.", "GastroSoft", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close(); // y se cierra la pantalla
             }
             else
             {
@@ -57,6 +58,11 @@ namespace Vista
         {
             menu.Show();
             this.Close();
+        }
+
+        private void frmPoliticasContraseña_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

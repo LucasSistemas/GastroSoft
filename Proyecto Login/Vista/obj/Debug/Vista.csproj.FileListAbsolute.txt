@@ -79,6 +79,36 @@ C:\Users\rukus\OneDrive\Desktop\Proyecto\Proyecto Login\Vista\obj\Debug\Vista.fr
 C:\Users\rukus\OneDrive\Desktop\Proyecto\Proyecto Login\Vista\obj\Debug\Vista.frmMenuPrincipalParaAdm.resources
 C:\Users\rukus\OneDrive\Desktop\Proyecto\Proyecto Login\Vista\obj\Debug\Vista.frmNuevaContraseña.resources
 C:\Users\rukus\OneDrive\Desktop\Proyecto\Proyecto Login\Vista\obj\Debug\Vista.frmPreguntasDeSeguridad.resources
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Vista\bin\Debug\Vista.exe.config
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Vista\bin\Debug\Vista.exe
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Vista\bin\Debug\Vista.pdb
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Vista\bin\Debug\Entidad.dll
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Vista\bin\Debug\Logica.dll
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Vista\bin\Debug\Datos.dll
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Vista\bin\Debug\Sesion.dll
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Vista\bin\Debug\Servicios.dll
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Vista\bin\Debug\Entidad.pdb
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Vista\bin\Debug\Logica.pdb
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Vista\bin\Debug\Datos.pdb
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Vista\bin\Debug\Sesion.pdb
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Vista\bin\Debug\Servicios.pdb
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Vista\obj\Debug\Vista.csproj.AssemblyReference.cache
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Vista\obj\Debug\Vista.frmAltaEmpleadosRegistrados.resources
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Vista\obj\Debug\Vista.frmConfiguracionDeContraseña.resources
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Vista\obj\Debug\Vista.frmConfiguracionDeseguridadDelSistema.resources
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Vista\obj\Debug\Vista.frmCrearUsuarioAEmpleado.resources
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Vista\obj\Debug\Vista.frmEditarPerfilUsuario.resources
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Vista\obj\Debug\Vista.frmLogin.resources
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Vista\obj\Debug\Vista.frmMenuPrincipalParaAdm.resources
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Vista\obj\Debug\Vista.frmPreguntasDeSeguridad.resources
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Vista\obj\Debug\Vista.frmRecuperar.resources
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Vista\obj\Debug\Vista.frmRegistro.resources
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Vista\obj\Debug\Vista.Properties.Resources.resources
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Vista\obj\Debug\Vista.csproj.GenerateResource.cache
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Vista\obj\Debug\Vista.csproj.CoreCompileInputs.cache
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Vista\obj\Debug\Vista.csproj.Up2Date
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Vista\obj\Debug\Vista.exe
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Vista\obj\Debug\Vista.pdb
 C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Vista\bin\Debug\Vista.exe.config
 C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Vista\bin\Debug\Vista.exe
 C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Vista\bin\Debug\Vista.pdb
@@ -93,14 +123,11 @@ C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Vista\bin\Debug\Datos.
 C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Vista\bin\Debug\Sesion.pdb
 C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Vista\bin\Debug\Servicios.pdb
 C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Vista\obj\Debug\Vista.csproj.AssemblyReference.cache
+C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Vista\obj\Debug\Vista.frmMenuPrincipal.resources
+C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Vista\obj\Debug\Vista.frmCrearUsuario.resources
 C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Vista\obj\Debug\Vista.frmAltaEmpleadosRegistrados.resources
-C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Vista\obj\Debug\Vista.frmConfiguracionDeContraseña.resources
-C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Vista\obj\Debug\Vista.frmConfiguracionDeseguridadDelSistema.resources
-C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Vista\obj\Debug\Vista.frmCrearUsuarioAEmpleado.resources
 C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Vista\obj\Debug\Vista.frmEditarPerfilUsuario.resources
 C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Vista\obj\Debug\Vista.frmLogin.resources
-C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Vista\obj\Debug\Vista.frmMenuPrincipalParaAdm.resources
-C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Vista\obj\Debug\Vista.frmNuevaContraseña.resources
 C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Vista\obj\Debug\Vista.frmPreguntasDeSeguridad.resources
 C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Vista\obj\Debug\Vista.frmRecuperar.resources
 C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Vista\obj\Debug\Vista.frmRegistro.resources
@@ -110,20 +137,67 @@ C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Vista\obj\Debug\Vista.
 C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Vista\obj\Debug\Vista.csproj.Up2Date
 C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Vista\obj\Debug\Vista.exe
 C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Vista\obj\Debug\Vista.pdb
-C:\Users\User\Desktop\GastroSoft-main\GastroSoft\Proyecto Login\Vista\obj\Debug\Vista.csproj.AssemblyReference.cache
-C:\Users\User\Desktop\GastroSoft-main\GastroSoft\Proyecto Login\Vista\obj\Debug\Vista.frmAltaEmpleadosRegistrados.resources
-C:\Users\User\Desktop\GastroSoft-main\GastroSoft\Proyecto Login\Vista\obj\Debug\Vista.frmConfiguracionDeContraseña.resources
-C:\Users\User\Desktop\GastroSoft-main\GastroSoft\Proyecto Login\Vista\obj\Debug\Vista.frmConfiguracionDeseguridadDelSistema.resources
-C:\Users\User\Desktop\GastroSoft-main\GastroSoft\Proyecto Login\Vista\obj\Debug\Vista.frmCrearUsuarioAEmpleado.resources
-C:\Users\User\Desktop\GastroSoft-main\GastroSoft\Proyecto Login\Vista\obj\Debug\Vista.frmEditarPerfilUsuario.resources
-C:\Users\User\Desktop\GastroSoft-main\GastroSoft\Proyecto Login\Vista\obj\Debug\Vista.frmLogin.resources
-C:\Users\User\Desktop\GastroSoft-main\GastroSoft\Proyecto Login\Vista\obj\Debug\Vista.frmMenuPrincipalParaAdm.resources
-C:\Users\User\Desktop\GastroSoft-main\GastroSoft\Proyecto Login\Vista\obj\Debug\Vista.frmNuevaContraseña.resources
-C:\Users\User\Desktop\GastroSoft-main\GastroSoft\Proyecto Login\Vista\obj\Debug\Vista.frmPreguntasDeSeguridad.resources
-C:\Users\User\Desktop\GastroSoft-main\GastroSoft\Proyecto Login\Vista\obj\Debug\Vista.frmRecuperar.resources
-C:\Users\User\Desktop\GastroSoft-main\GastroSoft\Proyecto Login\Vista\obj\Debug\Vista.frmRegistro.resources
-C:\Users\User\Desktop\GastroSoft-main\GastroSoft\Proyecto Login\Vista\obj\Debug\Vista.Properties.Resources.resources
-C:\Users\User\Desktop\GastroSoft-main\GastroSoft\Proyecto Login\Vista\obj\Debug\Vista.csproj.GenerateResource.cache
-C:\Users\User\Desktop\GastroSoft-main\GastroSoft\Proyecto Login\Vista\obj\Debug\Vista.csproj.CoreCompileInputs.cache
-C:\Users\User\Desktop\GastroSoft-main\GastroSoft\Proyecto Login\Vista\obj\Debug\Vista.exe
-C:\Users\User\Desktop\GastroSoft-main\GastroSoft\Proyecto Login\Vista\obj\Debug\Vista.pdb
+C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Vista\obj\Debug\Vista.exe.config
+C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Vista\obj\Debug\Vista.frmCambiarContraseña.resources
+C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Vista\obj\Debug\Vista.frmPoliticasContraseña.resources
+C:\Users\User\Desktop\GastroSoft-dev\Proyecto Login\Vista\bin\Debug\Vista.exe.config
+C:\Users\User\Desktop\GastroSoft-dev\Proyecto Login\Vista\bin\Debug\Vista.exe
+C:\Users\User\Desktop\GastroSoft-dev\Proyecto Login\Vista\bin\Debug\Vista.pdb
+C:\Users\User\Desktop\GastroSoft-dev\Proyecto Login\Vista\bin\Debug\Entidad.dll
+C:\Users\User\Desktop\GastroSoft-dev\Proyecto Login\Vista\bin\Debug\Logica.dll
+C:\Users\User\Desktop\GastroSoft-dev\Proyecto Login\Vista\bin\Debug\Datos.dll
+C:\Users\User\Desktop\GastroSoft-dev\Proyecto Login\Vista\bin\Debug\Sesion.dll
+C:\Users\User\Desktop\GastroSoft-dev\Proyecto Login\Vista\bin\Debug\Servicios.dll
+C:\Users\User\Desktop\GastroSoft-dev\Proyecto Login\Vista\bin\Debug\Entidad.pdb
+C:\Users\User\Desktop\GastroSoft-dev\Proyecto Login\Vista\bin\Debug\Logica.pdb
+C:\Users\User\Desktop\GastroSoft-dev\Proyecto Login\Vista\bin\Debug\Datos.pdb
+C:\Users\User\Desktop\GastroSoft-dev\Proyecto Login\Vista\bin\Debug\Sesion.pdb
+C:\Users\User\Desktop\GastroSoft-dev\Proyecto Login\Vista\bin\Debug\Servicios.pdb
+C:\Users\User\Desktop\GastroSoft-dev\Proyecto Login\Vista\obj\Debug\Vista.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\GastroSoft-dev\Proyecto Login\Vista\obj\Debug\Vista.frmMenuPrincipal.resources
+C:\Users\User\Desktop\GastroSoft-dev\Proyecto Login\Vista\obj\Debug\Vista.frmCrearUsuario.resources
+C:\Users\User\Desktop\GastroSoft-dev\Proyecto Login\Vista\obj\Debug\Vista.frmAltaEmpleadosRegistrados.resources
+C:\Users\User\Desktop\GastroSoft-dev\Proyecto Login\Vista\obj\Debug\Vista.frmCambiarContraseña.resources
+C:\Users\User\Desktop\GastroSoft-dev\Proyecto Login\Vista\obj\Debug\Vista.frmPoliticasContraseña.resources
+C:\Users\User\Desktop\GastroSoft-dev\Proyecto Login\Vista\obj\Debug\Vista.frmEditarPerfilUsuario.resources
+C:\Users\User\Desktop\GastroSoft-dev\Proyecto Login\Vista\obj\Debug\Vista.frmLogin.resources
+C:\Users\User\Desktop\GastroSoft-dev\Proyecto Login\Vista\obj\Debug\Vista.frmPreguntasDeSeguridad.resources
+C:\Users\User\Desktop\GastroSoft-dev\Proyecto Login\Vista\obj\Debug\Vista.frmRecuperar.resources
+C:\Users\User\Desktop\GastroSoft-dev\Proyecto Login\Vista\obj\Debug\Vista.frmRegistro.resources
+C:\Users\User\Desktop\GastroSoft-dev\Proyecto Login\Vista\obj\Debug\Vista.Properties.Resources.resources
+C:\Users\User\Desktop\GastroSoft-dev\Proyecto Login\Vista\obj\Debug\Vista.csproj.GenerateResource.cache
+C:\Users\User\Desktop\GastroSoft-dev\Proyecto Login\Vista\obj\Debug\Vista.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\GastroSoft-dev\Proyecto Login\Vista\obj\Debug\Vista.csproj.Up2Date
+C:\Users\User\Desktop\GastroSoft-dev\Proyecto Login\Vista\obj\Debug\Vista.exe
+C:\Users\User\Desktop\GastroSoft-dev\Proyecto Login\Vista\obj\Debug\Vista.pdb
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Vista\bin\Debug\Vista.exe.config
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Vista\bin\Debug\Vista.exe
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Vista\bin\Debug\Vista.pdb
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Vista\bin\Debug\Entidad.dll
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Vista\bin\Debug\Logica.dll
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Vista\bin\Debug\Sesion.dll
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Vista\bin\Debug\Datos.dll
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Vista\bin\Debug\Servicios.dll
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Vista\bin\Debug\Entidad.pdb
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Vista\bin\Debug\Logica.pdb
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Vista\bin\Debug\Sesion.pdb
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Vista\bin\Debug\Datos.pdb
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Vista\bin\Debug\Servicios.pdb
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Vista\obj\Debug\Vista.csproj.AssemblyReference.cache
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Vista\obj\Debug\Vista.frmMenuPrincipal.resources
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Vista\obj\Debug\Vista.frmCrearUsuario.resources
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Vista\obj\Debug\Vista.frmAltaEmpleadosRegistrados.resources
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Vista\obj\Debug\Vista.frmCambiarContraseña.resources
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Vista\obj\Debug\Vista.frmPoliticasContraseña.resources
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Vista\obj\Debug\Vista.frmEditarPerfilUsuario.resources
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Vista\obj\Debug\Vista.frmLogin.resources
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Vista\obj\Debug\Vista.frmPreguntasDeSeguridad.resources
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Vista\obj\Debug\Vista.frmRecuperar.resources
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Vista\obj\Debug\Vista.frmRegistro.resources
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Vista\obj\Debug\Vista.Properties.Resources.resources
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Vista\obj\Debug\Vista.csproj.GenerateResource.cache
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Vista\obj\Debug\Vista.csproj.CoreCompileInputs.cache
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Vista\obj\Debug\Vista.csproj.Up2Date
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Vista\obj\Debug\Vista.exe
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Vista\obj\Debug\Vista.pdb
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Vista\obj\Debug\Vista.exe.config

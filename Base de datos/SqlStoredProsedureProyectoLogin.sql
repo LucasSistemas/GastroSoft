@@ -50,7 +50,7 @@ BEGIN
         and Numero = @Numero 
         and Piso = @Piso 
         and Departamento = @Departamento 
-        and Codigo_Postal = @CodigoPostal 
+        and CodigoPostal = @CodigoPostal 
         and IdLocalidad = @IdLocalidad;
 
         -- =====================================================
@@ -124,19 +124,19 @@ begin
     -- 1. Verificar que el usuario existe
     IF EXISTS (select 1 from Usuarios where NombreUsuario= @Usuario)
     BEGIN
-        -- 2. Obtener los roles del usuario
-        SELECT u.IdUsuario,u.NombreUsuario,r.Rol,c.HashContraseña,u.PrimeraVez,u.Intentos_Sesion,u.TiempoResetIntentos,u.Fecha_Ultimo_Login,u.Bloqueado,u.BloqueadoHasta,u.TiempoResetIntentos
+        -- 2. Devuelve todos los datos del usuario
+        SELECT u.IdUsuario,u.NombreUsuario,r.Rol,c.HashContraseña,u.PrimeraVez,u.Intentos_Sesion,u.TiempoResetIntentos,u.Fecha_Ultimo_Login,u.Bloqueado,u.BloqueadoHasta,e.Documento
         FROM Usuarios u
         INNER JOIN Roles r ON r.IdRol = u.IdRol
         INNER JOIN Contraseñas c ON c.IdContraseña = u.IdContraseña
-        WHERE u.NombreUsuario = @Usuario
-    END
-    ELSE
+        LEFT JOIN Empleados e on e.IdEmpleado = u.IdEmpleado
+        WHERE u.NombreUsuario = @Usuario  
+    end
+    else
     BEGIN
         -- Credenciales inválidas - devolver vacío
         SELECT NULL WHERE 1=0;
     END
-
 end
 
 go
@@ -382,60 +382,6 @@ go
 --///////////////////////////////////////////////////////////////////////////
 --///////////////////////////////////////////////////////////////////////////
 ---------------------------------------------------------------------------------------------------
---                              CREAR NUEVO USUARIO
----------------------------------------------------------------------------------------------------
-CREATE OR ALTER PROCEDURE sp_CrearNuevoUsuario
-    @Usuario nvarchar (50),
-    @HashContraseña nvarchar (100),
-    @Documento nvarchar (50)
-as
-    declare @IdEmpleado int
-    declare @IdContraseña int
-begin
-    --Se carga la variable @IdEmpleado
-    select @IdEmpleado = IdEmpleado
-    from Empleados
-    where Documento = @Documento
-
-    --Se ingresa la contraseña
-    insert into Contraseñas(HashContraseña)
-    values(@HashContraseña)
-
-    -- Se obtiene el id de la ultimo registro
-    SET @IdContraseña = SCOPE_IDENTITY();
-
-    --Se ingresa el usuario
-    insert into Usuarios(NombreUsuario,IdRol,IdContraseña,PrimeraVez,Intentos_Sesion,Fecha_Ultimo_Login,IdEmpleado) 
-    values(@Usuario,2,@IdContraseña,1,3,getdate(),@IdEmpleado)
-
-end
---///////////////////////////////////////////////////////////////////////////
---///////////////////////////////////////////////////////////////////////////
---/////////////////////////////////////////////////////////V//////////////////
---///////////////////////////////////////////////////////////////////////////
---///////////////////////////////////////////////////////////////////////////
---///////////////////////////////////////////////////////////////////////////
----------------------------------------------------------------------------------------------------
---                                COMPROBAR EXISTENCIA USUARIO
----------------------------------------------------------------------------------------------------
-CREATE OR ALTER PROCEDURE sp_ComprobarExistenciaUsuario
-    @Usuario nvarchar (50),
-    @Resultado bit output
-as
-    set @Resultado = 0
-begin
-    if exists(select 1 from Usuarios where NombreUsuario = @Usuario)
-    begin
-        set @Resultado = 1
-    end
-end
---///////////////////////////////////////////////////////////////////////////
---///////////////////////////////////////////////////////////////////////////
---/////////////////////////////////////////////////////////V//////////////////
---///////////////////////////////////////////////////////////////////////////
---///////////////////////////////////////////////////////////////////////////
---///////////////////////////////////////////////////////////////////////////
----------------------------------------------------------------------------------------------------
 --                               OBTENER POLÍTICAS DE SEGURIDAD
 ---------------------------------------------------------------------------------------------------
 CREATE OR ALTER PROCEDURE sp_ObtenerConfiguracionSeguridad
@@ -515,3 +461,64 @@ BEGIN
 END;
 GO
 
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--/////////////////////////////////////////////////////////V//////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+---------------------------------------------------------------------------------------------------
+--                               GUARDAR RESPUESTAS DE LAS PREGUNTAS DE SEGURIDAD
+---------------------------------------------------------------------------------------------------
+CREATE OR ALTER PROCEDURE sp_GuardarRespuestaUsuario
+    @IdUsuario INT,
+    @IdPregunta INT,
+    @Respuesta NVARCHAR(250)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    -- se inserta la respuesta
+    INSERT INTO RespuestaSeguridad (IdUsuario, IdPregunta, RespuestaHash)
+    VALUES (@IdUsuario, @IdPregunta, @Respuesta);
+
+    --- actualizamos al usuario para que ya no sea su "Primera Vez"
+    UPDATE Usuarios 
+    SET PrimeraVez = 0 
+    WHERE IdUsuario = @IdUsuario;
+END;
+GO
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--/////////////////////////////////////////////////////////V//////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+---------------------------------------------------------------------------------------------------
+--                              CREAR NUEVO USUARIO
+---------------------------------------------------------------------------------------------------
+CREATE OR ALTER PROCEDURE sp_CrearNuevoUsuario
+    @Usuario nvarchar (50),
+    @HashContraseña nvarchar (100),
+    @Documento nvarchar (50)
+as
+    declare @IdEmpleado int
+    declare @IdContraseña int
+begin
+    --Se carga la variable @IdEmpleado
+    select @IdEmpleado = IdEmpleado
+    from Empleados
+    where Documento = @Documento
+
+    --Se ingresa la contraseña
+    insert into Contraseñas(HashContraseña)
+    values(@HashContraseña)
+
+    -- Se obtiene el id de la ultimo registro
+    SET @IdContraseña = SCOPE_IDENTITY();
+
+    --Se ingresa el usuario
+    insert into Usuarios(NombreUsuario,IdRol,IdContraseña,PrimeraVez,Intentos_Sesion,Fecha_Ultimo_Login,IdEmpleado) 
+    values(@Usuario,2,@IdContraseña,1,3,getdate(),@IdEmpleado)
+
+end

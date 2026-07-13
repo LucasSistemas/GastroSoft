@@ -16,6 +16,15 @@ C:\Users\Ematp\Desktop\Proyecto\Proyecto Login\Sesion\obj\Debug\Sesion.csproj.Co
 C:\Users\Ematp\Desktop\Proyecto\Proyecto Login\Sesion\obj\Debug\Sesion.csproj.Up2Date
 C:\Users\Ematp\Desktop\Proyecto\Proyecto Login\Sesion\obj\Debug\Sesion.dll
 C:\Users\Ematp\Desktop\Proyecto\Proyecto Login\Sesion\obj\Debug\Sesion.pdb
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Sesion\bin\Debug\Sesion.dll
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Sesion\bin\Debug\Sesion.pdb
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Sesion\bin\Debug\Entidad.dll
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Sesion\bin\Debug\Entidad.pdb
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Sesion\obj\Debug\Sesion.csproj.AssemblyReference.cache
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Sesion\obj\Debug\Sesion.csproj.CoreCompileInputs.cache
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Sesion\obj\Debug\Sesion.csproj.Up2Date
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Sesion\obj\Debug\Sesion.dll
+C:\Users\Ematp\Downloads\GastroSoft-main\Proyecto Login\Sesion\obj\Debug\Sesion.pdb
 C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Sesion\bin\Debug\Sesion.dll
 C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Sesion\bin\Debug\Sesion.pdb
 C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Sesion\bin\Debug\Entidad.dll
@@ -25,12 +34,21 @@ C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Sesion\obj\Debug\Sesio
 C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Sesion\obj\Debug\Sesion.csproj.Up2Date
 C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Sesion\obj\Debug\Sesion.dll
 C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Sesion\obj\Debug\Sesion.pdb
-C:\Users\User\Desktop\GastroSoft-main\GastroSoft\Proyecto Login\Sesion\bin\Debug\Sesion.dll
-C:\Users\User\Desktop\GastroSoft-main\GastroSoft\Proyecto Login\Sesion\bin\Debug\Sesion.pdb
-C:\Users\User\Desktop\GastroSoft-main\GastroSoft\Proyecto Login\Sesion\bin\Debug\Entidad.dll
-C:\Users\User\Desktop\GastroSoft-main\GastroSoft\Proyecto Login\Sesion\bin\Debug\Entidad.pdb
-C:\Users\User\Desktop\GastroSoft-main\GastroSoft\Proyecto Login\Sesion\obj\Debug\Sesion.csproj.AssemblyReference.cache
-C:\Users\User\Desktop\GastroSoft-main\GastroSoft\Proyecto Login\Sesion\obj\Debug\Sesion.csproj.CoreCompileInputs.cache
-C:\Users\User\Desktop\GastroSoft-main\GastroSoft\Proyecto Login\Sesion\obj\Debug\Sesion.csproj.Up2Date
-C:\Users\User\Desktop\GastroSoft-main\GastroSoft\Proyecto Login\Sesion\obj\Debug\Sesion.dll
-C:\Users\User\Desktop\GastroSoft-main\GastroSoft\Proyecto Login\Sesion\obj\Debug\Sesion.pdb
+C:\Users\User\Desktop\GastroSoft-dev\Proyecto Login\Sesion\bin\Debug\Sesion.dll
+C:\Users\User\Desktop\GastroSoft-dev\Proyecto Login\Sesion\bin\Debug\Sesion.pdb
+C:\Users\User\Desktop\GastroSoft-dev\Proyecto Login\Sesion\bin\Debug\Entidad.dll
+C:\Users\User\Desktop\GastroSoft-dev\Proyecto Login\Sesion\bin\Debug\Entidad.pdb
+C:\Users\User\Desktop\GastroSoft-dev\Proyecto Login\Sesion\obj\Debug\Sesion.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\GastroSoft-dev\Proyecto Login\Sesion\obj\Debug\Sesion.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\GastroSoft-dev\Proyecto Login\Sesion\obj\Debug\Sesion.csproj.Up2Date
+C:\Users\User\Desktop\GastroSoft-dev\Proyecto Login\Sesion\obj\Debug\Sesion.dll
+C:\Users\User\Desktop\GastroSoft-dev\Proyecto Login\Sesion\obj\Debug\Sesion.pdb
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Sesion\bin\Debug\Sesion.dll
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Sesion\bin\Debug\Sesion.pdb
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Sesion\bin\Debug\Entidad.dll
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Sesion\bin\Debug\Entidad.pdb
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Sesion\obj\Debug\Sesion.csproj.AssemblyReference.cache
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Sesion\obj\Debug\Sesion.csproj.CoreCompileInputs.cache
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Sesion\obj\Debug\Sesion.csproj.Up2Date
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Sesion\obj\Debug\Sesion.dll
+C:\Users\rukus\Downloads\GastroSoft-guardar respuestas\Proyecto Login\Sesion\obj\Debug\Sesion.pdb

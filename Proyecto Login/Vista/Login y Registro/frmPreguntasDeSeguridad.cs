@@ -1,5 +1,6 @@
 ﻿using Entidad;
 using Logica;
+using Logica.Pedir_datos_de_la_capa_Sesion;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,9 @@ namespace Vista
     {
         private frmLogin loginForm;
         private GestionPreguntas _gestionPreguntas = new GestionPreguntas();
+
+        private GestionGuardarRespuestas _gestionGuardar = new GestionGuardarRespuestas();
+
         private List<PreguntaSeguridad> _preguntasCargadas;
 
 
@@ -30,7 +34,7 @@ namespace Vista
             //  Primero se ocultan todos los renglones de preguntas por defecto al momento de que se cargue la pantalla/formulario
             OcultarTodosLosCampos();
 
-            // Luego se trae la lista aleatoria de preguntas según la cantidad configurada en BD
+            // Luego se tare la lista aleatoria de preguta según la cantidad configurada en BD
             _preguntasCargadas = _gestionPreguntas.CargarPreguntasPantalla();
 
             // luego iteramos sobre las preguntas devueltas para activarlas dinámicamente
@@ -78,21 +82,6 @@ namespace Vista
             }
         }
 
-        private void lblPregunta1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnValidar_Click(object sender, EventArgs e)
         {
             // txtRespuesta 1: Si el campo está visible y está vacío, frena y avisa y asi consecutivamente con los 5 textBox de respuestas
@@ -135,10 +124,45 @@ namespace Vista
                 return;
             }
 
-            // Si el programa no entró a ningún 'if' entonces todo esta bien y se da luz verde para seguir
-            MessageBox.Show("¡Todos los campos fueron completados correctamente, gracias por su paciencia!", "GastroSoft", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            // Se guardan las respuestas en la Base de Datos mediante la nueva clase lógica
 
-            //por definir a que pantalla se lleva luego de esta
+            try
+            {
+                // Recorremos únicamente la cantidad de preguntas que se mostraron en pantalla
+                for (int i = 0; i < _preguntasCargadas.Count; i++)
+                {
+                    string respuestaTexto = "";
+                    switch (i + 1)
+                    {
+                        case 1: respuestaTexto = txtRespuesta1.Text; break;
+                        case 2: respuestaTexto = txtRespuesta2.Text; break;
+                        case 3: respuestaTexto = txtRespuesta3.Text; break;
+                        case 4: respuestaTexto = txtRespuesta4.Text; break;
+                        case 5: respuestaTexto = txtRespuesta5.Text; break;
+                    }
+
+                    // Guardamos la respuesta usando el método de la clase "GestioGuardarRespuestas.cs" de la capa Logica
+                    _gestionGuardar.RegistrarRespuestaUsuario(_preguntasCargadas[i].IdPregunta, respuestaTexto);
+                }
+
+                MessageBox.Show("¡Todos los campos fueron completados correctamente!\n Configuración inicial completada.",
+                                "GastroSoft", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Luego de que se guarden las respuestas se da luz verde para abrir el menu princial
+                SolicitarDatosEmpleado solicitarDatos = new SolicitarDatosEmpleado();
+
+                string nombrecompleto= $"{solicitarDatos.SolicitarNombre()} {solicitarDatos.SolicitarApellido()}";
+
+                frmMenuPrincipal menu = new frmMenuPrincipal(this.loginForm);
+                menu.Show();
+
+                this.Close(); 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al intentar guardar las respuestas en GastroSoft: ",
+                                "GastroSoft - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

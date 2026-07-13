@@ -47,7 +47,7 @@ namespace Vista
                         else
                         {
                             MessageBox.Show(resultado.Mensaje, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            frmMenuPrincipal menu = new frmMenuPrincipal(this, resultado.Nombre);
+                            frmMenuPrincipal menu = new frmMenuPrincipal(this);
                             menu.Show();
                             txtContrasena.Clear();
                             this.Hide();

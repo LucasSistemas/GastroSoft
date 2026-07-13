@@ -40,18 +40,19 @@ namespace Logica.Gestion_de_Usuario
             }
 
             // Si todas las validaciones pasan, se puede proceder a crear el usuario
-            string hash = ConvertirHash.GenerateSHA256Hash(usuario, contraseña);
+            string userpass = usuario + "-" + contraseña;
+            string hash = ConvertirHash.GenerateSHA256Hash(userpass);
 
             CrearNuevoUsuario crearNuevo = new CrearNuevoUsuario();
-            var resultado = crearNuevo.CrearUsuario(usuario, hash);
+            bool resultado = crearNuevo.CrearUsuario(usuario, hash);
 
-            if (resultado.Exito)
+            if (resultado)
             {
-                return (true, resultado.Mensaje);
+                return (true, "Usuario creado exitosamente! Inicie sesión y continúe con el proceso");
             }
             else
             {
-                return (false, resultado.Mensaje);
+                return (false, "Error al crear el usuario");
             }
         }
     }

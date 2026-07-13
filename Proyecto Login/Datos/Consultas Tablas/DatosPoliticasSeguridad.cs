@@ -1,4 +1,5 @@
 ﻿using Entidad;
+using Sesion;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -69,11 +70,37 @@ namespace Datos
                     {
                         conexion.Open();
 
-                        cmd.ExecuteNonQuery();
+                        int filasAfectadas = cmd.ExecuteNonQuery();
 
-                        return true;
+                        return filasAfectadas > 0;
                     }
                     catch (Exception)
+                    {
+                        return false;
+                    }
+                }
+            }
+        }
+        // Método para guardar las respuestas de las preguntas de seguridad mediante el SP (stored prosedure)
+        public bool GuardarRespuesta(int idUsuario, int idPregunta, string respuesta)
+        {
+            using (SqlConnection conn = new SqlConnection(AccesoCadena()))
+            {
+                using (SqlCommand cmd = new SqlCommand("sp_GuardarRespuestaUsuario", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@IdUsuario", idUsuario);
+                    cmd.Parameters.AddWithValue("@IdPregunta", idPregunta);
+                    cmd.Parameters.AddWithValue("@Respuesta", respuesta.Trim());
+
+                    try
+                    {
+                        conn.Open();
+                        cmd.ExecuteNonQuery();
+                        UsuarioSesion.SetPrimeraVez(false);
+                        return true;
+                    }
+                    catch (SqlException)
                     {
                         return false;
                     }

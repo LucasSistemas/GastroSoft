@@ -162,6 +162,5 @@ namespace Sesion
             BloqueadoHasta = null;
             estaLogueado = false;
         }
-
     }
 }
