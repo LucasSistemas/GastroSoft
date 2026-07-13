@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\gimen\\OneDrive\\Desktop\\Nueva carpeta\\GastroSoft\\Proyecto Login\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|c:\\users\\gimen\\onedrive\\desktop\\nueva carpeta\\gastrosoft\\proyecto login\\vista\\gestion usuarios\\frmcambiarrespuestas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|solutionrelative:vista\\gestion usuarios\\frmcambiarrespuestas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|c:\\users\\gimen\\onedrive\\desktop\\nueva carpeta\\gastrosoft\\proyecto login\\vista\\gestion usuarios\\frmcambiarcontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|solutionrelative:vista\\gestion usuarios\\frmcambiarcontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|c:\\users\\gimen\\onedrive\\desktop\\nueva carpeta\\gastrosoft\\proyecto login\\vista\\gestion usuarios\\frmcambiarcontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|solutionrelative:vista\\gestion usuarios\\frmcambiarcontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,21 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmCambiarRespuestas.cs",
-              "DocumentMoniker": "C:\\Users\\gimen\\OneDrive\\Desktop\\Nueva carpeta\\GastroSoft\\Proyecto Login\\Vista\\Gestion Usuarios\\frmCambiarRespuestas.cs",
-              "RelativeDocumentMoniker": "Vista\\Gestion Usuarios\\frmCambiarRespuestas.cs",
-              "ToolTip": "C:\\Users\\gimen\\OneDrive\\Desktop\\Nueva carpeta\\GastroSoft\\Proyecto Login\\Vista\\Gestion Usuarios\\frmCambiarRespuestas.cs*",
-              "RelativeToolTip": "Vista\\Gestion Usuarios\\frmCambiarRespuestas.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAASAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "frmCambiarContrase\u00F1a.cs",
+              "DocumentMoniker": "C:\\Users\\gimen\\OneDrive\\Desktop\\Nueva carpeta\\GastroSoft\\Proyecto Login\\Vista\\Gestion Usuarios\\frmCambiarContrase\u00F1a.cs",
+              "RelativeDocumentMoniker": "Vista\\Gestion Usuarios\\frmCambiarContrase\u00F1a.cs",
+              "ToolTip": "C:\\Users\\gimen\\OneDrive\\Desktop\\Nueva carpeta\\GastroSoft\\Proyecto Login\\Vista\\Gestion Usuarios\\frmCambiarContrase\u00F1a.cs",
+              "RelativeToolTip": "Vista\\Gestion Usuarios\\frmCambiarContrase\u00F1a.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAmwB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-13T02:37:08.471Z",
-              "IsPinned": true,
+              "WhenOpened": "2026-07-13T04:06:42.176Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmCambiarContrase\u00F1a.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\gimen\\OneDrive\\Desktop\\Nueva carpeta\\GastroSoft\\Proyecto Login\\Vista\\Gestion Usuarios\\frmCambiarContrase\u00F1a.cs",
+              "RelativeDocumentMoniker": "Vista\\Gestion Usuarios\\frmCambiarContrase\u00F1a.cs",
+              "ToolTip": "C:\\Users\\gimen\\OneDrive\\Desktop\\Nueva carpeta\\GastroSoft\\Proyecto Login\\Vista\\Gestion Usuarios\\frmCambiarContrase\u00F1a.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vista\\Gestion Usuarios\\frmCambiarContrase\u00F1a.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T04:06:21.563Z",
+              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }

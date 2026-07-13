@@ -163,17 +163,15 @@ namespace Datos
         {
             using (SqlConnection conn = new SqlConnection(AccesoCadena()))
             {
-                // Asumo que tu Stored Procedure de actualización se llama algo así:
                 using (SqlCommand cmd = new SqlCommand("sp_Actualizar_Empleado", conn))
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
-                    // Parámetro clave para el WHERE del UPDATE en SQL
                     cmd.Parameters.AddWithValue("@IdEmpleado", idEmpleado);
                     cmd.Parameters.AddWithValue("@Nombre", nombre);
                     cmd.Parameters.AddWithValue("@Apellido", apellido);
                     cmd.Parameters.AddWithValue("@Documento", documento);
-                    cmd.Parameters.AddWithValue("@Sexo", sexo); // Corregido el '@' que faltaba
+                    cmd.Parameters.AddWithValue("@Sexo", sexo);
                     cmd.Parameters.AddWithValue("@Genero", genero);
                     cmd.Parameters.AddWithValue("@Fecha_Nac", fecha_nac);
                     cmd.Parameters.AddWithValue("@Telefono", telefono);

@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 
 namespace Logica.Gestion_de_Empleados
 {
-    // Falta definir la clase aquí
     public class PreguntasRespuestas
     {
         private PreguntasSeguridad dal = new PreguntasSeguridad();

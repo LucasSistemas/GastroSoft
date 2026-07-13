@@ -3,11 +3,51 @@
   "WorkspaceRootPath": "C:\\Users\\gimen\\OneDrive\\Desktop\\Nueva carpeta\\GastroSoft\\Proyecto Login\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{845CA4C1-C517-4A2A-8D14-E65765F34B37}|Datos\\Datos.csproj|c:\\users\\gimen\\onedrive\\desktop\\nueva carpeta\\gastrosoft\\proyecto login\\datos\\consultas tablas\\preguntasseguridad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{845CA4C1-C517-4A2A-8D14-E65765F34B37}|Datos\\Datos.csproj|solutionrelative:datos\\consultas tablas\\preguntasseguridad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|c:\\users\\gimen\\onedrive\\desktop\\nueva carpeta\\gastrosoft\\proyecto login\\vista\\gestion usuarios\\frmcambiarrespuestas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|solutionrelative:vista\\gestion usuarios\\frmcambiarrespuestas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|c:\\users\\gimen\\onedrive\\desktop\\nueva carpeta\\gastrosoft\\proyecto login\\vista\\gestion usuarios\\frmeditarperfilusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|solutionrelative:vista\\gestion usuarios\\frmeditarperfilusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|c:\\users\\gimen\\onedrive\\desktop\\nueva carpeta\\gastrosoft\\proyecto login\\vista\\gestion usuarios\\frmeditarperfilusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|solutionrelative:vista\\gestion usuarios\\frmeditarperfilusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1E55ED2-9CD6-4404-96E2-45AB6BB40186}|Logica\\Logica.csproj|c:\\users\\gimen\\onedrive\\desktop\\nueva carpeta\\gastrosoft\\proyecto login\\logica\\gestion de empleados\\preguntasrespuestas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1E55ED2-9CD6-4404-96E2-45AB6BB40186}|Logica\\Logica.csproj|solutionrelative:logica\\gestion de empleados\\preguntasrespuestas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1E55ED2-9CD6-4404-96E2-45AB6BB40186}|Logica\\Logica.csproj|c:\\users\\gimen\\onedrive\\desktop\\nueva carpeta\\gastrosoft\\proyecto login\\logica\\gestion de empleados\\actualizarempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1E55ED2-9CD6-4404-96E2-45AB6BB40186}|Logica\\Logica.csproj|solutionrelative:logica\\gestion de empleados\\actualizarempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9314E34-FEBB-4FE9-B178-93EEFBE3996B}|Entidad\\Entidad.csproj|c:\\users\\gimen\\onedrive\\desktop\\nueva carpeta\\gastrosoft\\proyecto login\\entidad\\empleados y usuarios\\empleados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9314E34-FEBB-4FE9-B178-93EEFBE3996B}|Entidad\\Entidad.csproj|solutionrelative:entidad\\empleados y usuarios\\empleados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{845CA4C1-C517-4A2A-8D14-E65765F34B37}|Datos\\Datos.csproj|c:\\users\\gimen\\onedrive\\desktop\\nueva carpeta\\gastrosoft\\proyecto login\\datos\\dtos\\respuestaseguridaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{845CA4C1-C517-4A2A-8D14-E65765F34B37}|Datos\\Datos.csproj|solutionrelative:datos\\dtos\\respuestaseguridaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{845CA4C1-C517-4A2A-8D14-E65765F34B37}|Datos\\Datos.csproj|c:\\users\\gimen\\onedrive\\desktop\\nueva carpeta\\gastrosoft\\proyecto login\\datos\\abm\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{845CA4C1-C517-4A2A-8D14-E65765F34B37}|Datos\\Datos.csproj|solutionrelative:datos\\abm\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{845CA4C1-C517-4A2A-8D14-E65765F34B37}|Datos\\Datos.csproj|c:\\users\\gimen\\onedrive\\desktop\\nueva carpeta\\gastrosoft\\proyecto login\\datos\\consultas tablas\\tablaempleados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{845CA4C1-C517-4A2A-8D14-E65765F34B37}|Datos\\Datos.csproj|solutionrelative:datos\\consultas tablas\\tablaempleados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|c:\\users\\gimen\\onedrive\\desktop\\nueva carpeta\\gastrosoft\\proyecto login\\vista\\gestion usuarios\\frmcambiarcontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|solutionrelative:vista\\gestion usuarios\\frmcambiarcontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|c:\\users\\gimen\\onedrive\\desktop\\nueva carpeta\\gastrosoft\\proyecto login\\vista\\gestion usuarios\\frmcambiarcontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|C:\\Users\\gimen\\OneDrive\\Desktop\\Nueva carpeta\\GastroSoft\\Proyecto Login\\vista\\gestion usuarios\\frmcambiarcontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|solutionrelative:vista\\gestion usuarios\\frmcambiarcontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -18,11 +58,140 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "frmCambiarRespuestas.cs",
+              "DocumentMoniker": "C:\\Users\\gimen\\OneDrive\\Desktop\\Nueva carpeta\\GastroSoft\\Proyecto Login\\Vista\\Gestion Usuarios\\frmCambiarRespuestas.cs",
+              "RelativeDocumentMoniker": "Vista\\Gestion Usuarios\\frmCambiarRespuestas.cs",
+              "ToolTip": "C:\\Users\\gimen\\OneDrive\\Desktop\\Nueva carpeta\\GastroSoft\\Proyecto Login\\Vista\\Gestion Usuarios\\frmCambiarRespuestas.cs",
+              "RelativeToolTip": "Vista\\Gestion Usuarios\\frmCambiarRespuestas.cs",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAcwC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T20:49:56.158Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmEditarPerfilUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\gimen\\OneDrive\\Desktop\\Nueva carpeta\\GastroSoft\\Proyecto Login\\Vista\\Gestion Usuarios\\frmEditarPerfilUsuario.cs",
+              "RelativeDocumentMoniker": "Vista\\Gestion Usuarios\\frmEditarPerfilUsuario.cs",
+              "ToolTip": "C:\\Users\\gimen\\OneDrive\\Desktop\\Nueva carpeta\\GastroSoft\\Proyecto Login\\Vista\\Gestion Usuarios\\frmEditarPerfilUsuario.cs",
+              "RelativeToolTip": "Vista\\Gestion Usuarios\\frmEditarPerfilUsuario.cs",
+              "ViewState": "AgIAAAIBAAAAAAAAAAAWwAIBAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T20:48:11.386Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PreguntasSeguridad.cs",
+              "DocumentMoniker": "C:\\Users\\gimen\\OneDrive\\Desktop\\Nueva carpeta\\GastroSoft\\Proyecto Login\\Datos\\Consultas Tablas\\PreguntasSeguridad.cs",
+              "RelativeDocumentMoniker": "Datos\\Consultas Tablas\\PreguntasSeguridad.cs",
+              "ToolTip": "C:\\Users\\gimen\\OneDrive\\Desktop\\Nueva carpeta\\GastroSoft\\Proyecto Login\\Datos\\Consultas Tablas\\PreguntasSeguridad.cs",
+              "RelativeToolTip": "Datos\\Consultas Tablas\\PreguntasSeguridad.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAgwAsAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T20:37:45.063Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmEditarPerfilUsuario.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\gimen\\OneDrive\\Desktop\\Nueva carpeta\\GastroSoft\\Proyecto Login\\Vista\\Gestion Usuarios\\frmEditarPerfilUsuario.cs",
+              "RelativeDocumentMoniker": "Vista\\Gestion Usuarios\\frmEditarPerfilUsuario.cs",
+              "ToolTip": "C:\\Users\\gimen\\OneDrive\\Desktop\\Nueva carpeta\\GastroSoft\\Proyecto Login\\Vista\\Gestion Usuarios\\frmEditarPerfilUsuario.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vista\\Gestion Usuarios\\frmEditarPerfilUsuario.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T20:48:02.161Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PreguntasRespuestas.cs",
+              "DocumentMoniker": "C:\\Users\\gimen\\OneDrive\\Desktop\\Nueva carpeta\\GastroSoft\\Proyecto Login\\Logica\\Gestion de Empleados\\PreguntasRespuestas.cs",
+              "RelativeDocumentMoniker": "Logica\\Gestion de Empleados\\PreguntasRespuestas.cs",
+              "ToolTip": "C:\\Users\\gimen\\OneDrive\\Desktop\\Nueva carpeta\\GastroSoft\\Proyecto Login\\Logica\\Gestion de Empleados\\PreguntasRespuestas.cs",
+              "RelativeToolTip": "Logica\\Gestion de Empleados\\PreguntasRespuestas.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T20:42:28.444Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ActualizarEmpleado.cs",
+              "DocumentMoniker": "C:\\Users\\gimen\\OneDrive\\Desktop\\Nueva carpeta\\GastroSoft\\Proyecto Login\\Logica\\Gestion de Empleados\\ActualizarEmpleado.cs",
+              "RelativeDocumentMoniker": "Logica\\Gestion de Empleados\\ActualizarEmpleado.cs",
+              "ToolTip": "C:\\Users\\gimen\\OneDrive\\Desktop\\Nueva carpeta\\GastroSoft\\Proyecto Login\\Logica\\Gestion de Empleados\\ActualizarEmpleado.cs",
+              "RelativeToolTip": "Logica\\Gestion de Empleados\\ActualizarEmpleado.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T20:40:18.483Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Empleados.cs",
+              "DocumentMoniker": "C:\\Users\\gimen\\OneDrive\\Desktop\\Nueva carpeta\\GastroSoft\\Proyecto Login\\Entidad\\Empleados y Usuarios\\Empleados.cs",
+              "RelativeDocumentMoniker": "Entidad\\Empleados y Usuarios\\Empleados.cs",
+              "ToolTip": "C:\\Users\\gimen\\OneDrive\\Desktop\\Nueva carpeta\\GastroSoft\\Proyecto Login\\Entidad\\Empleados y Usuarios\\Empleados.cs",
+              "RelativeToolTip": "Entidad\\Empleados y Usuarios\\Empleados.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAA0wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T20:40:04.301Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RespuestaSeguridadDTO.cs",
+              "DocumentMoniker": "C:\\Users\\gimen\\OneDrive\\Desktop\\Nueva carpeta\\GastroSoft\\Proyecto Login\\Datos\\DTOs\\RespuestaSeguridadDTO.cs",
+              "RelativeDocumentMoniker": "Datos\\DTOs\\RespuestaSeguridadDTO.cs",
+              "ToolTip": "C:\\Users\\gimen\\OneDrive\\Desktop\\Nueva carpeta\\GastroSoft\\Proyecto Login\\Datos\\DTOs\\RespuestaSeguridadDTO.cs",
+              "RelativeToolTip": "Datos\\DTOs\\RespuestaSeguridadDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T20:38:44.682Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Empleado.cs",
+              "DocumentMoniker": "C:\\Users\\gimen\\OneDrive\\Desktop\\Nueva carpeta\\GastroSoft\\Proyecto Login\\Datos\\ABM\\Empleado.cs",
+              "RelativeDocumentMoniker": "Datos\\ABM\\Empleado.cs",
+              "ToolTip": "C:\\Users\\gimen\\OneDrive\\Desktop\\Nueva carpeta\\GastroSoft\\Proyecto Login\\Datos\\ABM\\Empleado.cs",
+              "RelativeToolTip": "Datos\\ABM\\Empleado.cs",
+              "ViewState": "AgIAAJUAAAAAAAAAAAAIwMIAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T20:34:22.64Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TablaEmpleados.cs",
+              "DocumentMoniker": "C:\\Users\\gimen\\OneDrive\\Desktop\\Nueva carpeta\\GastroSoft\\Proyecto Login\\Datos\\Consultas Tablas\\TablaEmpleados.cs",
+              "RelativeDocumentMoniker": "Datos\\Consultas Tablas\\TablaEmpleados.cs",
+              "ToolTip": "C:\\Users\\gimen\\OneDrive\\Desktop\\Nueva carpeta\\GastroSoft\\Proyecto Login\\Datos\\Consultas Tablas\\TablaEmpleados.cs",
+              "RelativeToolTip": "Datos\\Consultas Tablas\\TablaEmpleados.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T20:34:16.42Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "frmCambiarContrase\u00F1a.cs",
               "DocumentMoniker": "C:\\Users\\gimen\\OneDrive\\Desktop\\Nueva carpeta\\GastroSoft\\Proyecto Login\\Vista\\Gestion Usuarios\\frmCambiarContrase\u00F1a.cs",
               "RelativeDocumentMoniker": "Vista\\Gestion Usuarios\\frmCambiarContrase\u00F1a.cs",
@@ -35,7 +204,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 10,
               "Title": "frmCambiarContrase\u00F1a.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\gimen\\OneDrive\\Desktop\\Nueva carpeta\\GastroSoft\\Proyecto Login\\Vista\\Gestion Usuarios\\frmCambiarContrase\u00F1a.cs",
               "RelativeDocumentMoniker": "Vista\\Gestion Usuarios\\frmCambiarContrase\u00F1a.cs",

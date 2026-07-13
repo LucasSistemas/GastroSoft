@@ -14,7 +14,6 @@ namespace Vista.Gestion_Usuarios
 {
     public partial class frmCambiarRespuestas : Form
     {
-        // Variables de clase (declaradas una sola vez)
         private frmEditarPerfilUsuario perfil;
         private PreguntasRespuestas logica = new PreguntasRespuestas();
         private int idUsuarioActual;
@@ -142,7 +141,7 @@ namespace Vista.Gestion_Usuarios
 
         private void btAtras_Click(object sender, EventArgs e)
         {
-            this.Close(); // Te agregué esto por defecto para cerrar la ventana actual si van "Atrás"
+            this.Close();
         }
     }
 }

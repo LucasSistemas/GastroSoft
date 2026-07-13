@@ -48,16 +48,6 @@ namespace Vista
             txtCodigoPostal.Text = EmpleadoSesion.CodigoPostal.ToString();
             cbLocalidad.SelectedItem = EmpleadoSesion.Localidad;
         }
-        private void btnVolver_Click(object sender, EventArgs e)
-        {
-            Volver();
-        }
-        private void Volver()
-        {
-            this.Dispose();
-            this.Close();
-            menuPrincipal.Show();
-        }
         #region Eventos para validar campos
         private void tbNombre_R_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -273,7 +263,6 @@ namespace Vista
             if (exito)
             {
                 MessageBox.Show("Perfil actualizado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Volver();
             }
             else
             {
@@ -296,7 +285,7 @@ namespace Vista
         {
             this.Dispose();
             this.Close();
-            menuPrincipal.Show(); // Muestra el menú principal que pasaste en el constructor
+            menuPrincipal.Show();
         }
     }
 }
