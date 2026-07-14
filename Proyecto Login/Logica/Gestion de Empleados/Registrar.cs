@@ -19,6 +19,8 @@ namespace Logica
             }
             else
             {
+                BitacoraServicio servicio = new BitacoraServicio();
+                servicio.Registrar("Alta de empleado","Se registro un nuevo empleado en el sistema","USUARIO","INFO");
                 return (true, "Empleado registrado correctamente");
             }
         }

@@ -16,3 +16,9 @@ C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Entidad\obj\Debug\Enti
 C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Entidad\obj\Debug\Entidad.csproj.CoreCompileInputs.cache
 C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Entidad\obj\Debug\Entidad.dll
 C:\Users\rukus\OneDrive\Desktop\GastroSoft\Proyecto Login\Entidad\obj\Debug\Entidad.pdb
+C:\Users\rukus\OneDrive\Desktop\repositorio\GastroSoft\Proyecto Login\Entidad\bin\Debug\Entidad.dll
+C:\Users\rukus\OneDrive\Desktop\repositorio\GastroSoft\Proyecto Login\Entidad\bin\Debug\Entidad.pdb
+C:\Users\rukus\OneDrive\Desktop\repositorio\GastroSoft\Proyecto Login\Entidad\obj\Debug\Entidad.csproj.AssemblyReference.cache
+C:\Users\rukus\OneDrive\Desktop\repositorio\GastroSoft\Proyecto Login\Entidad\obj\Debug\Entidad.csproj.CoreCompileInputs.cache
+C:\Users\rukus\OneDrive\Desktop\repositorio\GastroSoft\Proyecto Login\Entidad\obj\Debug\Entidad.dll
+C:\Users\rukus\OneDrive\Desktop\repositorio\GastroSoft\Proyecto Login\Entidad\obj\Debug\Entidad.pdb

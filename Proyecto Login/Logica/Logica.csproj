@@ -41,20 +41,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BitacoraLogica.cs" />
+    <Compile Include="BitacoraServicio.cs" />
     <Compile Include="Cargar datos a Formularios\Empleados a Dar Alta\CargarEmpleadosPendientes.cs" />
     <Compile Include="Cargar datos a Formularios\Geografia a Registro\CargarFormularios.cs" />
+    <Compile Include="Cargar datos a Formularios\Preguntas a CambiarRespuestas\CargarPreguntasSeguridad.cs" />
+    <Compile Include="Cargar datos a Formularios\Preguntas a CambiarRespuestas\CargarPreguntasUsuario.cs" />
     <Compile Include="Gestion de Empleados\ActualizarEmpleado.cs" />
-    <Compile Include="Gestion de Empleados\PreguntasRespuestas.cs" />
     <Compile Include="Gestion de Empleados\DarAltaEmpleado.cs" />
+    <Compile Include="Gestion de Politicas de Seguridad\DatosPersonalesContraseña.cs" />
     <Compile Include="Gestion de Politicas de Seguridad\GestionPoliticasContraseña.cs" />
     <Compile Include="Gestion de Usuario\CrearNuevo.cs" />
+    <Compile Include="Gestion de Usuario\GestionRespuestasSeguridad.cs" />
     <Compile Include="Gestion de Usuario\ValidarContraseña.cs" />
     <Compile Include="Login\CerrarSesion.cs" />
     <Compile Include="Login\IniciarSesion.cs" />
+    <Compile Include="Pedir datos de la capa Sesion\SolicitarDatosEmpleado.cs" />
+    <Compile Include="Pedir datos de la capa Sesion\SolicitarDatosUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Login\Recuperar.cs" />
     <Compile Include="Gestion de Empleados\Registrar.cs" />
-    <Compile Include="Pedir datos de la capa Sesion\SolicitarDatos.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Datos\Datos.csproj">

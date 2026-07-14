@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Datos.DTOs
+namespace Entidad.Preguntas_y_Respuestas
 {
-    public class RespuestaSeguridadDTO
+    public class Preguntas_Seguridad
     {
         public int IdPregunta { get; set; }
         public string Pregunta { get; set; }
-        public string Respuesta { get; set; }
     }
 }

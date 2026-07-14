@@ -84,6 +84,14 @@ namespace Datos
                                 {
                                     UsuarioSesion.SetTiempoResetIntentos(null);
                                 }
+
+                                string documento = reader["Documento"] == null ? string.Empty : reader["Documento"].ToString();
+
+                                Empleado empleado = new Empleado();
+                                if (!string.IsNullOrEmpty(documento))
+                                {
+                                    empleado.CargarEmpleadoSesion(documento);
+                                }
                             }
                             return true;
                         }
@@ -209,6 +217,55 @@ namespace Datos
                         return true;
                     }
                     catch
+                    {
+                        return false;
+                    }
+                }
+            }
+        }
+        public bool RegistrarRespuesta(int idUsuario, int idPregunta, string respuesta)
+        {
+            using (SqlConnection conn = new SqlConnection(AccesoCadena()))
+            {
+                using (SqlCommand cmd = new SqlCommand("sp_RegistrarRespuestaUsuario", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@IdUsuario", idUsuario);
+                    cmd.Parameters.AddWithValue("@IdPregunta", idPregunta);
+                    cmd.Parameters.AddWithValue("@Respuesta", respuesta.Trim());
+
+                    try
+                    {
+                        conn.Open();
+                        cmd.ExecuteNonQuery();
+                        UsuarioSesion.SetPrimeraVez(false);
+                        return true;
+                    }
+                    catch (SqlException)
+                    {
+                        return false;
+                    }
+                }
+            }
+        }
+        public bool ActualizarRespuesta(int idUsuario, int idPregunta, string nuevaRespuesta)
+        {
+            using (conexion = new SqlConnection(AccesoCadena()))
+            {
+                using (SqlCommand cmd = new SqlCommand("sp_ActualizarRespuestaUsuario", conexion))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@IdUsuario", idUsuario);
+                    cmd.Parameters.AddWithValue("@IdPregunta", idPregunta);
+                    cmd.Parameters.AddWithValue("@NuevaRespuesta", nuevaRespuesta);
+
+                    try
+                    {
+                        conexion.Open();
+                        int filasAfectadas = cmd.ExecuteNonQuery();
+                        return filasAfectadas > 0;
+                    }
+                    catch (Exception ex)
                     {
                         return false;
                     }

@@ -1,16 +1,18 @@
-﻿using System;
+﻿using Datos;
+using Entidad;
+using Servicios;
+using Sesion;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Datos;
-using Servicios;
-using Sesion;
 
 namespace Logica
 {
     public class IniciarSesion
     {
+        private BitacoraServicio bitacora = new BitacoraServicio();
         Usuario usuariodatos = new Usuario(); // objeto de la capa Datos
         Empleado empleadodatos = new Empleado(); // objeto de la capa Datos
         public (bool Exito,string Mensaje,string Nombre) Iniciar(string contrasena)
@@ -40,7 +42,7 @@ namespace Logica
                 string contraseña = partes[1];
 
                 // 2. Hashear la cadena completa (usuario-contraseña)
-                string hash = ConvertirHash.GenerateSHA256Hash(usuario, contraseña);
+                string hash = ConvertirHash.GenerateSHA256Hash(contrasena);
 
                 // 3. Buscar en la base de datos
                 if (!usuariodatos.VerificarUsuario(usuario))
@@ -72,7 +74,16 @@ namespace Logica
                     }
                     if (UsuarioSesion.ObtenerContraseña() != hash)
                     {
+                        //registra los intentos fallidos
+                        bitacora.Registrar( "Intento de iniciar fallido","El usuario ingreso una contraseña incorrecta.","SEGURIDAD","ADVERTENCIA");
+
                         usuariodatos.RestarIntentos(UsuarioSesion.ObtenerNombreUsuario());
+
+                        if (UsuarioSesion.ObtenerBloqueado()) // cuando llega a 0 intentos 
+                        {
+                            bitacora.Registrar("Usuario bloqueado","El usuario supero la cantidad maxima de intentos permitidos.","SEGURIDAD","CRITICO");
+                        }
+
                         return (false, "Contraseña incorrecta", null);
                     }
                     if (UsuarioSesion.ObtenerIntentosSesion() == 0 || UsuarioSesion.ObtenerTiempoResetIntentos() < hora)

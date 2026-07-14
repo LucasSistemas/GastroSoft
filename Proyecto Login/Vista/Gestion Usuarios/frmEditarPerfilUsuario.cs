@@ -1,4 +1,7 @@
-﻿using Logica;
+﻿using Entidad;
+using Logica;
+using Logica.Gestion_de_Empleados;
+using Logica.Pedir_datos_de_la_capa_Sesion;
 using Sesion;
 using System;
 using System.Collections.Generic;
@@ -11,27 +14,184 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
+using Vista.Gestion_Usuarios;
+
 namespace Vista
 {
     public partial class frmEditarPerfilUsuario : Form
     {
+        //Listas para cargar los combobox 
 
-        frmMenuPrincipal menuPrincipal;
-        SolicitarDatos logica;
-        Logica.Gestion_de_Empleados.ActualizarEmpleado logicaEmpleado;
+        private List<Nacionalidades> listanac = new List<Nacionalidades> { };
+        private List<Provincias> listaprov = new List<Provincias> { };
+        private List<Partidos> listapart = new List<Partidos> { };
+        private List<Localidades> listaloc = new List<Localidades> { };
+
+        //Variebles e instancias de Utilidad
+        CargarFormularios cargar = new CargarFormularios();
+        Registrar logica = new Registrar();
+        int idNacionalidad;
+        int idProvincia;
+        int idPartido;
+
+        frmMenuPrincipal menuPrincipal; //referencia
+
+        BitacoraServicio bitacora = new BitacoraServicio();
+        SolicitarDatosUsuario solicitarDatosUsuario = new SolicitarDatosUsuario();
+        SolicitarDatosEmpleado solicitarDatosEmpleado = new SolicitarDatosEmpleado();
+        ActualizarEmpleado logicaEmpleado;
 
         public frmEditarPerfilUsuario(frmMenuPrincipal menu)
         {
             InitializeComponent();
             this.menuPrincipal = menu;
-            logica = new SolicitarDatos();
-            logicaEmpleado = new Logica.Gestion_de_Empleados.ActualizarEmpleado();
+            logicaEmpleado = new ActualizarEmpleado();
+            CargarTodasLasListas();
         }
+        private void CargarTodasLasListas()
+        {
+            //Se cargan todas las listas
+            listanac = cargar.CargarNacionalidades();
+            listaprov = cargar.CargarProvincias();
+            listapart = cargar.CargarPartidos();
+            listaloc = cargar.CargarLocalidades();
+
+            CargarNacionalidades();
+            LimpiarSiguientes();
+        }
+
+        #region FILTROS
+        //SE REALIZAN LOS FILTROS
+        private void cbNacionalidad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //1.Se verifica q la opcion elegida sea de index mas de 1
+            if (cbNacionalidad.SelectedIndex < 0) return;
+            LimpiarSiguientes();
+
+            //2.Se guarda en una variable la index de la opcion elegida del combobox
+            idNacionalidad = (int)cbNacionalidad.SelectedValue;
+
+            //3. Se crea un objeto tipo var que actua como lista para cargar los filtros con la opcion elegida en el combobox
+            var provinciasFiltradas = listaprov.Where(p => p.IdNacionalidad == idNacionalidad).OrderBy(p => p.Provincia).ToList();
+
+            CargarProvincias(provinciasFiltradas);
+
+            LimpiarPartidoLocalidad();
+            cbProvincia.SelectedIndex = -1;
+        }
+
+        private void cbProvincia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //1.Se verifica q la opcion elegida sea de index mas de 1
+            if (cbProvincia.SelectedIndex < 0) return;
+
+            //2. Se asegura de que la opcion sea valida
+            if (cbProvincia.SelectedValue == null || cbProvincia.SelectedValue.ToString() == "0" || (int)cbProvincia.SelectedValue == 0) return;
+
+            //3.Se guarda en una variable la index de la opcion elegida del combobox
+            idProvincia = (int)cbProvincia.SelectedValue;
+
+            //4. Se crea un objeto tipo var que actua como lista para cargar los filtros con la opcion elegida en el combobox
+            var partidosFiltrados = listapart.Where(p => p.IdProvincia == idProvincia).OrderBy(p => p.Partido).ToList();
+
+            CargarPartidos(partidosFiltrados);
+            LimpiarLocalidad();
+        }
+
+        private void cbPartido_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //1.Se verifica q la opcion elegida sea de index mas de 1
+            if (cbPartido.SelectedIndex < 0) return;
+
+            //2. Se asegura de que la opcion sea valida
+            if (cbPartido.SelectedValue == null || cbPartido.SelectedValue.ToString() == "0" || (int)cbPartido.SelectedValue == 0) return;
+
+            //3.Se guarda en una variable la index de la opcion elegida del combobox
+            idPartido = (int)cbPartido.SelectedValue;
+
+            //4. Se crea un objeto tipo var que actua como lista para cargar los filtros con la opcion elegida en el combobox
+            var localidadesFiltradas = listaloc.Where(l => l.IdPartido == idPartido).OrderBy(l => l.Localidad).ToList();
+
+            CargarLocalidades(localidadesFiltradas);
+        }
+        #endregion
+
+        #region CARGAR COMBOBOX
+        //SE CARGAN LOS COMBOBOX
+        private void CargarNacionalidades()
+        {
+            cbNacionalidad.DataSource = null;
+            cbNacionalidad.DisplayMember = "Nacionalidad";
+            cbNacionalidad.ValueMember = "IdNacionalidad";
+            cbNacionalidad.DataSource = listanac;
+            cbNacionalidad.SelectedIndex = -1;
+        }
+
+        private void CargarProvincias(List<Provincias> lista)
+        {
+            cbProvincia.DataSource = null;
+            cbProvincia.DisplayMember = "Provincia";
+            cbProvincia.ValueMember = "IdProvincia";
+            cbProvincia.DataSource = lista;
+            cbProvincia.SelectedIndex = -1;
+        }
+
+        private void CargarPartidos(List<Partidos> lista)
+        {
+            cbPartido.DataSource = null;
+            cbPartido.DisplayMember = "Partido";
+            cbPartido.ValueMember = "IdPartido";
+            cbPartido.DataSource = lista;
+            cbPartido.SelectedIndex = -1;
+        }
+
+        private void CargarLocalidades(List<Localidades> lista)
+        {
+            cbLocalidad.DataSource = null;
+            cbLocalidad.DisplayMember = "Localidad";
+            cbLocalidad.ValueMember = "IdLocalidad";
+            cbLocalidad.DataSource = lista;
+            cbLocalidad.SelectedIndex = -1;
+        }
+        #endregion
+
+        #region LIMPIAR TODOS LOS CAMPOS
+        //SE LIMPIAN LOS COMBOBOX
+        private void LimpiarSiguientes()
+        {
+            cbProvincia.DataSource = null;
+            cbProvincia.Items.Clear();
+            cbProvincia.Items.Add("-- Seleccione --");
+            cbPartido.DataSource = null;
+            cbPartido.Items.Clear();
+            cbPartido.Items.Add("-- Seleccione --");
+            cbLocalidad.DataSource = null;
+            cbLocalidad.Items.Clear();
+            cbLocalidad.Items.Add("-- Seleccione --");
+        }
+
+        private void LimpiarPartidoLocalidad()
+        {
+            cbPartido.DataSource = null;
+            cbPartido.Items.Clear();
+            cbPartido.Items.Add("-- Seleccione --");
+            cbLocalidad.DataSource = null;
+            cbLocalidad.Items.Clear();
+            cbLocalidad.Items.Add("-- Seleccione --");
+        }
+
+        private void LimpiarLocalidad()
+        {
+            cbLocalidad.DataSource = null;
+            cbLocalidad.Items.Clear();
+            cbLocalidad.Items.Add("-- Seleccione --");
+        }
+        #endregion
         private void frmEditarPerfilUsuario_Load(object sender, EventArgs e)
         {
-            tbEmpleado.Text = logica.SolicitarNombre();
-            tbRol.Text = logica.SolicitarRol();
-            tbUsuario.Text = logica.SolicitarUsuario();
+            lblEmpleado.Text = "Empleado :" +solicitarDatosEmpleado.SolicitarNombre()+" "+solicitarDatosEmpleado.SolicitarApellido();
+            lblRol.Text = "Rol :"+solicitarDatosUsuario.SolicitarRol();
+            lblUsuario.Text="Usuario :"+solicitarDatosUsuario.SolicitarNombre();
 
             txtNombre.Text = EmpleadoSesion.Nombre;
             txtApellido.Text = EmpleadoSesion.Apellido;
@@ -48,40 +208,8 @@ namespace Vista
             txtCodigoPostal.Text = EmpleadoSesion.CodigoPostal.ToString();
             cbLocalidad.SelectedItem = EmpleadoSesion.Localidad;
         }
-        #region Eventos para validar campos
-        private void tbNombre_R_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            //solo letras
 
-            if (!char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && !char.IsControl(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void tbApellido_R_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            //solo letras
-
-            if (!char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && !char.IsControl(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void tbTelefono_R_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            //solo numeros
-
-            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-        #endregion
-
-        #region Guardar Cambios
-        private void btGuardar_Cambios_Click(object sender, EventArgs e)
+        private void btnGuardar_Cambios_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtNombre.Text)) //para que el nombre no este vacio
             {
@@ -241,7 +369,7 @@ namespace Vista
             string fechaNacString = dtpFechaNac.Value.ToString("yyyy-MM-dd");
 
             bool exito = logicaEmpleado.ModificarEmpleado(
-                EmpleadoSesion.Id,
+                EmpleadoSesion.ObtenerIdEmpleado(),
                 txtNombre.Text,
                 txtApellido.Text,
                 txtDocumento.Text,
@@ -262,6 +390,8 @@ namespace Vista
             // 3. Validamos el resultado booleano
             if (exito)
             {
+                bitacora.Registrar("Modificacion de perfil","El usuario actualizo sus datos personales","USUARIO","INFO");
+
                 MessageBox.Show("Perfil actualizado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
@@ -272,20 +402,79 @@ namespace Vista
             //si son correctas se actualiza los datos
             MessageBox.Show("Perfil actualizado correctamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-        #endregion
 
-        private void btCambiarRespuestas_Click(object sender, EventArgs e)
+        private void btnCambiarRespuestas_Click(object sender, EventArgs e)
         {
-            Vista.Gestion_Usuarios.frmCambiarRespuestas frmRespuestas = new Vista.Gestion_Usuarios.frmCambiarRespuestas(this, EmpleadoSesion.Id);
+            frmCambiarRespuestas frmRespuestas = new frmCambiarRespuestas(this);
             frmRespuestas.Show();
             this.Hide();
         }
 
-        private void btAtras_Click_1(object sender, EventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
         {
             this.Dispose();
             this.Close();
             menuPrincipal.Show();
         }
+
+        #region Restricciones
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)
+                && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true; //impide caracteres
+            }
+        }
+
+        private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)
+                && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true; //impide caracteres
+            }
+        }
+
+        private void txtDocumento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //impide ingresar mas de 8 digitos
+            if (txtDocumento.Text.Length >= 8 && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; //impide caracteres
+            }
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; //impide caracteres
+            }
+        }
+
+        private void txtNumero_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; //impide caracteres
+            }
+        }
+
+        private void txtPiso_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; //impide caracteres
+            }
+        }
+        #endregion
     }
 }

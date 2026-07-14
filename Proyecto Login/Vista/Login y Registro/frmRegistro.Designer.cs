@@ -366,7 +366,7 @@
             this.cbNacionalidad.Name = "cbNacionalidad";
             this.cbNacionalidad.Size = new System.Drawing.Size(129, 27);
             this.cbNacionalidad.TabIndex = 34;
-            this.cbNacionalidad.SelectedIndexChanged += new System.EventHandler(this.cbNacionalidad_SelectedIndexChanged_1);
+            this.cbNacionalidad.SelectedIndexChanged += new System.EventHandler(this.cbNacionalidad_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -551,7 +551,6 @@
             this.Name = "frmRegistro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registrar empleado | Gastrosft";
-            this.Load += new System.EventHandler(this.frmRegistro_Load);
             this.gpDatos.ResumeLayout(false);
             this.gpDatos.PerformLayout();
             this.groupBox2.ResumeLayout(false);

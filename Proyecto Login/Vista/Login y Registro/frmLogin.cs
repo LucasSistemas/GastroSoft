@@ -13,10 +13,13 @@ namespace Vista
 {
     public partial class frmLogin : Form
     {
+        BitacoraServicio servicio = new BitacoraServicio();
         frmPreguntasDeSeguridad frmPreguntasDeSeguridad;
+        frmRecuperar frmRecuperar;
         public frmLogin()
         {
             InitializeComponent();
+            frmRecuperar = new frmRecuperar(this);
         }
 
         private void btnEntrar_Click(object sender, EventArgs e)
@@ -46,8 +49,10 @@ namespace Vista
                         }
                         else
                         {
+                            servicio.Registrar("Inicio sesion","El usuario inicio sesion correctamente.","LOGIN","INFO");
+
                             MessageBox.Show(resultado.Mensaje, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            frmMenuPrincipal menu = new frmMenuPrincipal(this, resultado.Nombre);
+                            frmMenuPrincipal menu = new frmMenuPrincipal(this);
                             menu.Show();
                             txtContrasena.Clear();
                             this.Hide();
@@ -117,6 +122,12 @@ namespace Vista
             {
                 e.Cancel = false;
             }
+        }
+
+        private void lblOlvidó_Click(object sender, EventArgs e)
+        {
+            frmRecuperar.Show();
+            this.Hide();
         }
     }
 }

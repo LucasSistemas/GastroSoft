@@ -131,7 +131,7 @@ namespace Datos
                         {
                             if (reader.Read())
                             {
-                                EmpleadoSesion.Id = Convert.ToInt32(reader["IdEmpleado"]);
+                                EmpleadoSesion.SetIdEmpleado(Convert.ToInt32(reader["IdEmpleado"]));
                                 EmpleadoSesion.SetNombre(reader["Nombre"].ToString());
                                 EmpleadoSesion.SetApellido(reader["Apellido"].ToString());
                                 EmpleadoSesion.SetDocumento(reader["Documento"].ToString());
@@ -144,7 +144,7 @@ namespace Datos
                                 EmpleadoSesion.SetNumero(reader["Numero"].ToString());
                                 EmpleadoSesion.SetPiso(reader["Piso"].ToString());
                                 EmpleadoSesion.SetDepartamento(reader["Departamento"].ToString());
-                                EmpleadoSesion.SetCodigoPostal(Convert.ToInt32(reader["Codigo_Postal"]));
+                                EmpleadoSesion.SetCodigoPostal(Convert.ToInt32(reader["CodigoPostal"]));
                                 EmpleadoSesion.SetLocalidad(reader["Localidad"].ToString());
                                 // Aquí puedes almacenar estos datos en variables de sesión o en un objeto de usuario según tu implementación.
                             }

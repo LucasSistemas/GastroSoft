@@ -12,29 +12,17 @@ namespace Vista
 {
     public partial class frmRecuperar : Form
     {
-        public frmRecuperar()
+        frmLogin login;
+        public frmRecuperar(frmLogin login)
         {
             InitializeComponent();
+            this.login = login;
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void btAtras_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
+            login.Show();
+            this.Close();
         }
     }
 }

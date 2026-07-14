@@ -30,6 +30,7 @@ namespace Vista
             nuevasPoliticas.RequiereNumeros = cbNumeros.Checked;
             nuevasPoliticas.RequiereEspeciales = cbCaracteres.Checked;
             nuevasPoliticas.NoRepetirContraseñas = cbNoRepetir.Checked;
+            nuevasPoliticas.ValidarDatosPersonales = checkValidardatospersonales.Checked;
 
             // Aca se evaluan los radioButtons para saber la cantidad de preguntas dependiendo de cual este tildada / checkeada
             if (rbDos.Checked) nuevasPoliticas.CantidadPreguntasRequeridas = 2;

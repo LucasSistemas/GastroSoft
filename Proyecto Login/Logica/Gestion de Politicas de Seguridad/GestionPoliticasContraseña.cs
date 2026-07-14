@@ -11,7 +11,7 @@ namespace Logica
     public class GestionPoliticasContraseña
     {
         // Aca intanciamos la clase "DatosPoliticasSeguridad" de la capa de datos para poder comunicarnos con la Base de Datos 
-        private DatosPoliticasSeguridad _datosPoliticas = new DatosPoliticasSeguridad();
+        private PoliticasSeguridad _datosPoliticas = new PoliticasSeguridad();
 
         // Método para leer las políticas de seguridad desde la base de datos.       
         public PoliticasSeguridadContraseña LeerPoliticas()

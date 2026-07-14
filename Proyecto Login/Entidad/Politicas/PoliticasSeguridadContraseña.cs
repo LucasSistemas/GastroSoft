@@ -14,5 +14,7 @@ namespace Entidad
         public bool RequiereEspeciales { get; set; }
         public bool NoRepetirContraseñas { get; set; }
         public int CantidadPreguntasRequeridas { get; set; }
+        public bool ValidarDatosPersonales { get; set; }
+        public bool NoContenerUsuario { get; set; }
     }
 }

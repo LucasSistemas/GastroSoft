@@ -44,7 +44,7 @@
             this.rbCinco = new System.Windows.Forms.RadioButton();
             this.rbTres = new System.Windows.Forms.RadioButton();
             this.gbValidaciones = new System.Windows.Forms.GroupBox();
-            this.cbValidar = new System.Windows.Forms.CheckBox();
+            this.checkValidardatospersonales = new System.Windows.Forms.CheckBox();
             this.btGuardar = new System.Windows.Forms.Button();
             this.btVolver = new System.Windows.Forms.Button();
             this.btCancelar = new System.Windows.Forms.Button();
@@ -227,7 +227,7 @@
             // 
             // gbValidaciones
             // 
-            this.gbValidaciones.Controls.Add(this.cbValidar);
+            this.gbValidaciones.Controls.Add(this.checkValidardatospersonales);
             this.gbValidaciones.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbValidaciones.Location = new System.Drawing.Point(133, 532);
             this.gbValidaciones.Margin = new System.Windows.Forms.Padding(4);
@@ -238,16 +238,16 @@
             this.gbValidaciones.TabStop = false;
             this.gbValidaciones.Text = "Validaciones adicionales";
             // 
-            // cbValidar
+            // checkValidardatospersonales
             // 
-            this.cbValidar.AutoSize = true;
-            this.cbValidar.Location = new System.Drawing.Point(44, 57);
-            this.cbValidar.Margin = new System.Windows.Forms.Padding(4);
-            this.cbValidar.Name = "cbValidar";
-            this.cbValidar.Size = new System.Drawing.Size(193, 24);
-            this.cbValidar.TabIndex = 6;
-            this.cbValidar.Text = "Validar datos personales";
-            this.cbValidar.UseVisualStyleBackColor = true;
+            this.checkValidardatospersonales.AutoSize = true;
+            this.checkValidardatospersonales.Location = new System.Drawing.Point(44, 57);
+            this.checkValidardatospersonales.Margin = new System.Windows.Forms.Padding(4);
+            this.checkValidardatospersonales.Name = "checkValidardatospersonales";
+            this.checkValidardatospersonales.Size = new System.Drawing.Size(193, 24);
+            this.checkValidardatospersonales.TabIndex = 6;
+            this.checkValidardatospersonales.Text = "Validar datos personales";
+            this.checkValidardatospersonales.UseVisualStyleBackColor = true;
             // 
             // btGuardar
             // 
@@ -339,7 +339,7 @@
         private System.Windows.Forms.CheckBox cbMayuscula;
         private System.Windows.Forms.RadioButton rbCinco;
         private System.Windows.Forms.RadioButton rbTres;
-        private System.Windows.Forms.CheckBox cbValidar;
+        private System.Windows.Forms.CheckBox checkValidardatospersonales;
         private System.Windows.Forms.Label lblCantidad;
         private System.Windows.Forms.Button btGuardar;
         private System.Windows.Forms.Button btVolver;

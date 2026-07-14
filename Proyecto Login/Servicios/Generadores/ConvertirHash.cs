@@ -10,9 +10,8 @@ namespace Servicios
 {
     public class ConvertirHash
     {
-        public static string GenerateSHA256Hash(string usuarioh, string contrasenah)
+        public static string GenerateSHA256Hash(string texto)
         {
-            string hash = $"{usuarioh}-{contrasenah}";
             /*
             ✅ Crea instancia del algoritmo SHA256
             ✅ "using" libera memoria automáticamente
@@ -20,7 +19,7 @@ namespace Servicios
             */
             using (SHA256 sha256 = SHA256.Create())
             {
-                byte[] bytes = Encoding.UTF8.GetBytes(hash);
+                byte[] bytes = Encoding.UTF8.GetBytes(texto);
                 byte[] bytehash = sha256.ComputeHash(bytes);
                 /*
                 sha256.ComputeHash():

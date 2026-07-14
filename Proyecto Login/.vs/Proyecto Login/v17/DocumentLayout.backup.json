@@ -1,14 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\rukus\\Downloads\\GastroSoft-ConfiguracionDeContrase-as\\Proyecto Login\\",
+  "WorkspaceRootPath": "C:\\Users\\rukus\\OneDrive\\Desktop\\repositorio\\GastroSoft\\Proyecto Login\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B1E55ED2-9CD6-4404-96E2-45AB6BB40186}|Logica\\Logica.csproj|c:\\users\\rukus\\downloads\\gastrosoft-configuraciondecontrase-as\\proyecto login\\logica\\gestion de usuario\\crearnuevo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B1E55ED2-9CD6-4404-96E2-45AB6BB40186}|Logica\\Logica.csproj|solutionrelative:logica\\gestion de usuario\\crearnuevo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|c:\\users\\rukus\\onedrive\\desktop\\repositorio\\gastrosoft\\proyecto login\\vista\\gestion usuarios\\frmcambiarrespuestas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|solutionrelative:vista\\gestion usuarios\\frmcambiarrespuestas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|C:\\Users\\rukus\\Downloads\\GastroSoft-ConfiguracionDeContrase-as\\Proyecto Login\\vista\\menu\\frmmenuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|solutionrelative:vista\\menu\\frmmenuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{B1E55ED2-9CD6-4404-96E2-45AB6BB40186}|Logica\\Logica.csproj|c:\\users\\rukus\\onedrive\\desktop\\repositorio\\gastrosoft\\proyecto login\\logica\\gestion de usuario\\gestionrespuestasseguridad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1E55ED2-9CD6-4404-96E2-45AB6BB40186}|Logica\\Logica.csproj|solutionrelative:logica\\gestion de usuario\\gestionrespuestasseguridad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|c:\\users\\rukus\\onedrive\\desktop\\repositorio\\gastrosoft\\proyecto login\\vista\\gestion usuarios\\frmcambiarrespuestas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{15E5FECF-3A0A-40A7-B23B-368FB43D674C}|Vista\\Vista.csproj|solutionrelative:vista\\gestion usuarios\\frmcambiarrespuestas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1E55ED2-9CD6-4404-96E2-45AB6BB40186}|Logica\\Logica.csproj|c:\\users\\rukus\\onedrive\\desktop\\repositorio\\gastrosoft\\proyecto login\\logica\\cargar datos a formularios\\preguntas a cambiarrespuestas\\cargarpreguntasseguridad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1E55ED2-9CD6-4404-96E2-45AB6BB40186}|Logica\\Logica.csproj|solutionrelative:logica\\cargar datos a formularios\\preguntas a cambiarrespuestas\\cargarpreguntasseguridad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{845CA4C1-C517-4A2A-8D14-E65765F34B37}|Datos\\Datos.csproj|c:\\users\\rukus\\onedrive\\desktop\\repositorio\\gastrosoft\\proyecto login\\datos\\politicas y preguntas seguridad\\preguntasseguridad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{845CA4C1-C517-4A2A-8D14-E65765F34B37}|Datos\\Datos.csproj|solutionrelative:datos\\politicas y preguntas seguridad\\preguntasseguridad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{845CA4C1-C517-4A2A-8D14-E65765F34B37}|Datos\\Datos.csproj|c:\\users\\rukus\\onedrive\\desktop\\repositorio\\gastrosoft\\proyecto login\\datos\\abm\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{845CA4C1-C517-4A2A-8D14-E65765F34B37}|Datos\\Datos.csproj|solutionrelative:datos\\abm\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,26 +39,79 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CrearNuevo.cs",
-              "DocumentMoniker": "C:\\Users\\rukus\\Downloads\\GastroSoft-ConfiguracionDeContrase-as\\Proyecto Login\\Logica\\Gestion de Usuario\\CrearNuevo.cs",
-              "RelativeDocumentMoniker": "Logica\\Gestion de Usuario\\CrearNuevo.cs",
-              "ToolTip": "C:\\Users\\rukus\\Downloads\\GastroSoft-ConfiguracionDeContrase-as\\Proyecto Login\\Logica\\Gestion de Usuario\\CrearNuevo.cs",
-              "RelativeToolTip": "Logica\\Gestion de Usuario\\CrearNuevo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "frmCambiarRespuestas.cs",
+              "DocumentMoniker": "C:\\Users\\rukus\\OneDrive\\Desktop\\repositorio\\GastroSoft\\Proyecto Login\\Vista\\Gestion Usuarios\\frmCambiarRespuestas.cs",
+              "RelativeDocumentMoniker": "Vista\\Gestion Usuarios\\frmCambiarRespuestas.cs",
+              "ToolTip": "C:\\Users\\rukus\\OneDrive\\Desktop\\repositorio\\GastroSoft\\Proyecto Login\\Vista\\Gestion Usuarios\\frmCambiarRespuestas.cs",
+              "RelativeToolTip": "Vista\\Gestion Usuarios\\frmCambiarRespuestas.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-09T20:51:17.752Z",
+              "WhenOpened": "2026-07-14T20:18:50.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmCambiarRespuestas.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\rukus\\OneDrive\\Desktop\\repositorio\\GastroSoft\\Proyecto Login\\Vista\\Gestion Usuarios\\frmCambiarRespuestas.cs",
+              "RelativeDocumentMoniker": "Vista\\Gestion Usuarios\\frmCambiarRespuestas.cs",
+              "ToolTip": "C:\\Users\\rukus\\OneDrive\\Desktop\\repositorio\\GastroSoft\\Proyecto Login\\Vista\\Gestion Usuarios\\frmCambiarRespuestas.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vista\\Gestion Usuarios\\frmCambiarRespuestas.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-14T20:17:45.182Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CargarPreguntasSeguridad.cs",
+              "DocumentMoniker": "C:\\Users\\rukus\\OneDrive\\Desktop\\repositorio\\GastroSoft\\Proyecto Login\\Logica\\Cargar datos a Formularios\\Preguntas a CambiarRespuestas\\CargarPreguntasSeguridad.cs",
+              "RelativeDocumentMoniker": "Logica\\Cargar datos a Formularios\\Preguntas a CambiarRespuestas\\CargarPreguntasSeguridad.cs",
+              "ToolTip": "C:\\Users\\rukus\\OneDrive\\Desktop\\repositorio\\GastroSoft\\Proyecto Login\\Logica\\Cargar datos a Formularios\\Preguntas a CambiarRespuestas\\CargarPreguntasSeguridad.cs",
+              "RelativeToolTip": "Logica\\Cargar datos a Formularios\\Preguntas a CambiarRespuestas\\CargarPreguntasSeguridad.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-14T19:20:31.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Empleado.cs",
+              "DocumentMoniker": "C:\\Users\\rukus\\OneDrive\\Desktop\\repositorio\\GastroSoft\\Proyecto Login\\Datos\\ABM\\Empleado.cs",
+              "RelativeDocumentMoniker": "Datos\\ABM\\Empleado.cs",
+              "ToolTip": "C:\\Users\\rukus\\OneDrive\\Desktop\\repositorio\\GastroSoft\\Proyecto Login\\Datos\\ABM\\Empleado.cs",
+              "RelativeToolTip": "Datos\\ABM\\Empleado.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAEMAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-14T19:12:56.317Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PreguntasSeguridad.cs",
+              "DocumentMoniker": "C:\\Users\\rukus\\OneDrive\\Desktop\\repositorio\\GastroSoft\\Proyecto Login\\Datos\\Politicas y Preguntas Seguridad\\PreguntasSeguridad.cs",
+              "RelativeDocumentMoniker": "Datos\\Politicas y Preguntas Seguridad\\PreguntasSeguridad.cs",
+              "ToolTip": "C:\\Users\\rukus\\OneDrive\\Desktop\\repositorio\\GastroSoft\\Proyecto Login\\Datos\\Politicas y Preguntas Seguridad\\PreguntasSeguridad.cs",
+              "RelativeToolTip": "Datos\\Politicas y Preguntas Seguridad\\PreguntasSeguridad.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAACkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-14T19:05:38.986Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "frmMenuPrincipal.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\rukus\\Downloads\\GastroSoft-ConfiguracionDeContrase-as\\Proyecto Login\\Vista\\Menu\\frmMenuPrincipal.cs",
-              "RelativeDocumentMoniker": "Vista\\Menu\\frmMenuPrincipal.cs",
-              "ToolTip": "C:\\Users\\rukus\\Downloads\\GastroSoft-ConfiguracionDeContrase-as\\Proyecto Login\\Vista\\Menu\\frmMenuPrincipal.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Vista\\Menu\\frmMenuPrincipal.cs [Dise\u00F1o]",
+              "Title": "GestionRespuestasSeguridad.cs",
+              "DocumentMoniker": "C:\\Users\\rukus\\OneDrive\\Desktop\\repositorio\\GastroSoft\\Proyecto Login\\Logica\\Gestion de Usuario\\GestionRespuestasSeguridad.cs",
+              "RelativeDocumentMoniker": "Logica\\Gestion de Usuario\\GestionRespuestasSeguridad.cs",
+              "ToolTip": "C:\\Users\\rukus\\OneDrive\\Desktop\\repositorio\\GastroSoft\\Proyecto Login\\Logica\\Gestion de Usuario\\GestionRespuestasSeguridad.cs",
+              "RelativeToolTip": "Logica\\Gestion de Usuario\\GestionRespuestasSeguridad.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-09T19:03:47.565Z"
+              "WhenOpened": "2026-07-14T19:03:42.215Z",
+              "EditorCaption": ""
             }
           ]
         }

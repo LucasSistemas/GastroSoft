@@ -261,6 +261,7 @@
             this.btnBitacora.Text = "Bitacora";
             this.btnBitacora.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBitacora.UseVisualStyleBackColor = false;
+            this.btnBitacora.Click += new System.EventHandler(this.btnBitacora_Click);
             // 
             // btnPoliticasContraseña
             // 

@@ -2,7 +2,7 @@ use ProyectoLogin
 
 go
 
-CREATE OR ALTER PROCEDURE sp_CargarEmpleadoSesion
+CREATE OR ALTER PROCEDURE sp_CargarEmpleadoSesion --este sp ya estaba creado
     @Documento NVARCHAR(50)
 AS
 BEGIN
@@ -129,8 +129,8 @@ BEGIN
         RS.IdPregunta,
         P.Pregunta,
         RS.Respuesta
-    FROM Respuesta_Seguridad RS
-    INNER JOIN Pregunta_Seguridad P ON RS.IdPregunta = P.IdPregunta
+    FROM RespuestaSeguridad RS
+    INNER JOIN PreguntaSeguridad P ON RS.IdPregunta = P.IdPregunta
     WHERE RS.IdUsuario = @IdUsuario;
 END;
 GO

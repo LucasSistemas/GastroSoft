@@ -1,4 +1,5 @@
 ﻿using Entidad;
+using Sesion;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Datos
 {
-    public class DatosPoliticasSeguridad : Conexion
+    public class PoliticasSeguridad : Conexion
     {
         // Método para leer la configuración mediante el SP (stored prosedure)
         public PoliticasSeguridadContraseña ObtenerPoliticas()
@@ -35,6 +36,8 @@ namespace Datos
                             politicas.RequiereEspeciales = Convert.ToBoolean(reader["CaracteresEspeciales"]);
                             politicas.NoRepetirContraseñas = Convert.ToBoolean(reader["NoRepiteContraseña"]);
                             politicas.CantidadPreguntasRequeridas = Convert.ToInt32(reader["CantidadPreguntas"]);
+                            politicas.ValidarDatosPersonales = Convert.ToBoolean(reader["ValidarDatosPersonales"]);
+                            politicas.NoContenerUsuario = Convert.ToBoolean(reader["NoContenerUsuario"]);
                         }
                     }
                 }
@@ -62,6 +65,8 @@ namespace Datos
                     cmd.Parameters.AddWithValue("@CaracteresEspeciales", politicas.RequiereEspeciales);
                     cmd.Parameters.AddWithValue("@NoRepiteContraseña", politicas.NoRepetirContraseñas);
                     cmd.Parameters.AddWithValue("@CantidadPreguntas", politicas.CantidadPreguntasRequeridas);
+                    cmd.Parameters.AddWithValue("@ValidarDatosPersonales",politicas.ValidarDatosPersonales);
+                    cmd.Parameters.AddWithValue("@NoContenerUsuario", politicas.NoContenerUsuario);
 
                     try
                     {
@@ -78,5 +83,7 @@ namespace Datos
                 }
             }
         }
+
+
     }
 }

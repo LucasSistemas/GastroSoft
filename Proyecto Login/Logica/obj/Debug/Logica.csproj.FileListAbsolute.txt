@@ -88,3 +88,18 @@ C:\Users\gimen\OneDrive\Desktop\Nueva carpeta\GastroSoft\Proyecto Login\Logica\o
 C:\Users\gimen\OneDrive\Desktop\Nueva carpeta\GastroSoft\Proyecto Login\Logica\obj\Debug\Logica.csproj.Up2Date
 C:\Users\gimen\OneDrive\Desktop\Nueva carpeta\GastroSoft\Proyecto Login\Logica\obj\Debug\Logica.dll
 C:\Users\gimen\OneDrive\Desktop\Nueva carpeta\GastroSoft\Proyecto Login\Logica\obj\Debug\Logica.pdb
+C:\Users\rukus\OneDrive\Desktop\repositorio\GastroSoft\Proyecto Login\Logica\bin\Debug\Logica.dll
+C:\Users\rukus\OneDrive\Desktop\repositorio\GastroSoft\Proyecto Login\Logica\bin\Debug\Logica.pdb
+C:\Users\rukus\OneDrive\Desktop\repositorio\GastroSoft\Proyecto Login\Logica\bin\Debug\Datos.dll
+C:\Users\rukus\OneDrive\Desktop\repositorio\GastroSoft\Proyecto Login\Logica\bin\Debug\Entidad.dll
+C:\Users\rukus\OneDrive\Desktop\repositorio\GastroSoft\Proyecto Login\Logica\bin\Debug\Servicios.dll
+C:\Users\rukus\OneDrive\Desktop\repositorio\GastroSoft\Proyecto Login\Logica\bin\Debug\Sesion.dll
+C:\Users\rukus\OneDrive\Desktop\repositorio\GastroSoft\Proyecto Login\Logica\bin\Debug\Datos.pdb
+C:\Users\rukus\OneDrive\Desktop\repositorio\GastroSoft\Proyecto Login\Logica\bin\Debug\Entidad.pdb
+C:\Users\rukus\OneDrive\Desktop\repositorio\GastroSoft\Proyecto Login\Logica\bin\Debug\Servicios.pdb
+C:\Users\rukus\OneDrive\Desktop\repositorio\GastroSoft\Proyecto Login\Logica\bin\Debug\Sesion.pdb
+C:\Users\rukus\OneDrive\Desktop\repositorio\GastroSoft\Proyecto Login\Logica\obj\Debug\Logica.csproj.AssemblyReference.cache
+C:\Users\rukus\OneDrive\Desktop\repositorio\GastroSoft\Proyecto Login\Logica\obj\Debug\Logica.csproj.CoreCompileInputs.cache
+C:\Users\rukus\OneDrive\Desktop\repositorio\GastroSoft\Proyecto Login\Logica\obj\Debug\Logica.csproj.Up2Date
+C:\Users\rukus\OneDrive\Desktop\repositorio\GastroSoft\Proyecto Login\Logica\obj\Debug\Logica.dll
+C:\Users\rukus\OneDrive\Desktop\repositorio\GastroSoft\Proyecto Login\Logica\obj\Debug\Logica.pdb

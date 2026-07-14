@@ -6,7 +6,7 @@
 --///////////////////////////////////////////////////////////////////////////
 
 ---------------------------------------------------------------------------------------------------
---                                    REGISTRAR EMPLEADO
+--                                   1. REGISTRAR EMPLEADO
 ---------------------------------------------------------------------------------------------------
 --Prosedimieto almacenado
 CREATE OR ALTER PROCEDURE sp_Registro_Empleado
@@ -50,7 +50,7 @@ BEGIN
         and Numero = @Numero 
         and Piso = @Piso 
         and Departamento = @Departamento 
-        and Codigo_Postal = @CodigoPostal 
+        and CodigoPostal = @CodigoPostal 
         and IdLocalidad = @IdLocalidad;
 
         -- =====================================================
@@ -115,7 +115,7 @@ GO
 --///////////////////////////////////////////////////////////////////////////
 
 ---------------------------------------------------------------------------------------------------
---                                       INICIAR SESION
+--                                     2.  INICIAR SESION
 ---------------------------------------------------------------------------------------------------
 Create or alter procedure sp_Iniciar_Sesion
     @Usuario    nvarchar (50)
@@ -124,21 +124,20 @@ begin
     -- 1. Verificar que el usuario existe
     IF EXISTS (select 1 from Usuarios where NombreUsuario= @Usuario)
     BEGIN
-        -- 2. Obtener los roles del usuario
-        SELECT u.IdUsuario,u.NombreUsuario,r.Rol,c.HashContraseña,u.PrimeraVez,u.Intentos_Sesion,u.TiempoResetIntentos,u.Fecha_Ultimo_Login,u.Bloqueado,u.BloqueadoHasta,u.TiempoResetIntentos
+        -- 2. Devuelve todos los datos del usuario
+        SELECT u.IdUsuario,u.NombreUsuario,r.Rol,c.HashContraseña,u.PrimeraVez,u.Intentos_Sesion,u.TiempoResetIntentos,u.Fecha_Ultimo_Login,u.Bloqueado,u.BloqueadoHasta,e.Documento
         FROM Usuarios u
         INNER JOIN Roles r ON r.IdRol = u.IdRol
         INNER JOIN Contraseñas c ON c.IdContraseña = u.IdContraseña
-        WHERE u.NombreUsuario = @Usuario
-    END
-    ELSE
+        LEFT JOIN Empleados e on e.IdEmpleado = u.IdEmpleado
+        WHERE u.NombreUsuario = @Usuario  
+    end
+    else
     BEGIN
         -- Credenciales inválidas - devolver vacío
         SELECT NULL WHERE 1=0;
     END
-
 end
-
 go
 --///////////////////////////////////////////////////////////////////////////
 --///////////////////////////////////////////////////////////////////////////
@@ -148,7 +147,7 @@ go
 --///////////////////////////////////////////////////////////////////////////
 
 ---------------------------------------------------------------------------------------------------
---                             Actualizar Fecha Ultimo Login
+--                         3.    Actualizar Fecha Ultimo Login
 ---------------------------------------------------------------------------------------------------
 create or alter procedure sp_Actualizar_FechaUltimoLogin
     @Usuario nvarchar (50)
@@ -168,7 +167,7 @@ go
 --///////////////////////////////////////////////////////////////////////////
 
 ---------------------------------------------------------------------------------------------------
---                                       Restar Intentos
+--                                  4.     Restar Intentos
 ---------------------------------------------------------------------------------------------------
 create or alter procedure sp_RestarIntentos
     @Usuario nvarchar (50)
@@ -209,7 +208,7 @@ go
 --///////////////////////////////////////////////////////////////////////////
 --///////////////////////////////////////////////////////////////////////////
 ---------------------------------------------------------------------------------------------------
---                                       Reiniciar Intentos
+--                                 5.      Reiniciar Intentos
 ---------------------------------------------------------------------------------------------------
 create or alter procedure sp_ReiniciarIntentos
     @Usuario nvarchar (50)
@@ -236,7 +235,7 @@ go
 
 
 ---------------------------------------------------------------------------------------------------
---                                       Bloquear Usuario
+--                                 6.      Bloquear Usuario
 ---------------------------------------------------------------------------------------------------
 create or alter procedure sp_BloquearUsuario
     @Usuario nvarchar (50)
@@ -266,7 +265,7 @@ go
 --///////////////////////////////////////////////////////////////////////////
 
 ---------------------------------------------------------------------------------------------------
---                                  Validar y Dar Alta Empleado 
+--                             7.     Validar y Dar Alta Empleado 
 ---------------------------------------------------------------------------------------------------
 create or alter procedure sp_ValidaryDarAltaEmpleado
     @Codigo nvarchar (25),
@@ -332,7 +331,7 @@ go
 --///////////////////////////////////////////////////////////////////////////
 
 ---------------------------------------------------------------------------------------------------
---                                      Cargar Codigo Para Alta
+--                                 8.     Cargar Codigo Para Alta
 ---------------------------------------------------------------------------------------------------
 create or alter procedure sp_CargarCodigoAcceso
     @Codigo nvarchar (25),
@@ -359,13 +358,13 @@ go
 --///////////////////////////////////////////////////////////////////////////
 
 ---------------------------------------------------------------------------------------------------
---                                      Cargar Empleado Sesion
+--                           9.  Cargar Empleado Sesion
 ---------------------------------------------------------------------------------------------------
 CREATE OR ALTER PROCEDURE sp_CargarEmpleadoSesion
     @Documento NVARCHAR(50)
 AS
 BEGIN
-    SELECT e.Nombre,e.Apellido,e.Documento,e.Sexo,e.Genero,e.Fecha_Nac,e.Telefono,e.Mail,d.Calle,d.Numero,d.Piso,d.Departamento,d.CodigoPostal,l.Localidad
+    SELECT e.IdEmpleado,e.Nombre,e.Apellido,e.Documento,e.Sexo,e.Genero,e.Fecha_Nac,e.Telefono,e.Mail,d.Calle,d.Numero,d.Piso,d.Departamento,d.CodigoPostal,l.Localidad
     FROM Empleados e
     INNER JOIN Direcciones d
         ON e.IdDireccion = d.IdDireccion
@@ -374,6 +373,7 @@ BEGIN
     WHERE e.Documento = @Documento;
 END
 
+GO
 --///////////////////////////////////////////////////////////////////////////
 --///////////////////////////////////////////////////////////////////////////
 --/////////////////////////////////////////////////////////V//////////////////
@@ -381,7 +381,7 @@ END
 --///////////////////////////////////////////////////////////////////////////
 --///////////////////////////////////////////////////////////////////////////
 ---------------------------------------------------------------------------------------------------
---                               OBTENER POLÍTICAS DE SEGURIDAD
+--                   10.           OBTENER POLÍTICAS DE SEGURIDAD
 ---------------------------------------------------------------------------------------------------
 CREATE OR ALTER PROCEDURE sp_ObtenerConfiguracionSeguridad
 AS
@@ -393,7 +393,9 @@ BEGIN
         Numeros, 
         CaracteresEspeciales, 
         NoRepiteContraseña, 
-        CantidadPreguntas
+        CantidadPreguntas,
+        ValidarDatosPersonales,
+        NoContenerUsuario
     FROM PoliticaContraseña;
 END;
 GO
@@ -404,7 +406,7 @@ GO
 --///////////////////////////////////////////////////////////////////////////
 --///////////////////////////////////////////////////////////////////////////
 ---------------------------------------------------------------------------------------------------
---                              MODIFICAR POLÍTICAS DE SEGURIDAD
+--                       11.       MODIFICAR POLÍTICAS DE SEGURIDAD
 ---------------------------------------------------------------------------------------------------
 CREATE OR ALTER PROCEDURE sp_ModificarConfiguracionSeguridad
     @Longitud INT,
@@ -412,22 +414,21 @@ CREATE OR ALTER PROCEDURE sp_ModificarConfiguracionSeguridad
     @Numeros BIT,
     @CaracteresEspeciales BIT,
     @NoRepiteContraseña BIT,
-    @CantidadPreguntas INT
+    @CantidadPreguntas INT,
+    @ValidarDatosPersonales BIT
 AS
 BEGIN
-    SET NOCOUNT ON;
-    
-    UPDATE PoliticasSeguridad 
+    UPDATE PoliticaContraseña 
     SET 
         Longitud = @Longitud, 
         Mayusculas = @Mayusculas, 
         Numeros = @Numeros, 
-        RequiereEspeciales = @CaracteresEspeciales, 
+        CaracteresEspeciales = @CaracteresEspeciales, 
         NoRepiteContraseña = @NoRepiteContraseña, 
-        CantidadPreguntas = @CantidadPreguntas;
+        CantidadPreguntas = @CantidadPreguntas,
+        ValidarDatosPersonales = @ValidarDatosPersonales
 END;
 GO
-
 --///////////////////////////////////////////////////////////////////////////
 --///////////////////////////////////////////////////////////////////////////
 --/////////////////////////////////////////////////////////V//////////////////
@@ -435,7 +436,58 @@ GO
 --///////////////////////////////////////////////////////////////////////////
 --///////////////////////////////////////////////////////////////////////////
 ---------------------------------------------------------------------------------------------------
---                              CREAR NUEVO USUARIO
+--                         12.      OBTENER PREGUNTAS DE SEGURIDAD Y ALEATORIAS
+---------------------------------------------------------------------------------------------------
+CREATE OR ALTER PROCEDURE sp_ObtenerPreguntasAleatorias
+AS
+BEGIN
+    DECLARE @Cantidad INT;
+
+    -- Primero se Busca cuántas preguntas exigen las politicas actuales
+    SELECT TOP 1 @Cantidad = CantidadPreguntas FROM PoliticaContraseña;
+    
+    -- Si por algún motivo no hay políticas creadas, por defecto se traeran 3
+    IF @Cantidad IS NULL SET @Cantidad = 3;
+
+    -- Y por ultimo se elligen pregtuntas de forma aleatoria usando NEWID(), gracias papa sql
+    SELECT TOP (@Cantidad) IdPregunta, Pregunta 
+    FROM PreguntaSeguridad
+    ORDER BY NEWID();
+END;
+GO
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--/////////////////////////////////////////////////////////V//////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+---------------------------------------------------------------------------------------------------
+--                      13.         GUARDAR RESPUESTAS DE LAS PREGUNTAS DE SEGURIDAD
+---------------------------------------------------------------------------------------------------
+CREATE OR ALTER PROCEDURE sp_RegistrarRespuestaUsuario
+    @IdUsuario INT,
+    @IdPregunta INT,
+    @Respuesta NVARCHAR(250)
+AS
+BEGIN
+    -- se inserta la respuesta
+    INSERT INTO RespuestaSeguridad (IdUsuario, IdPregunta, RespuestaHash)
+    VALUES (@IdUsuario, @IdPregunta, @Respuesta);
+
+    --- actualizamos al usuario para que ya no sea su "Primera Vez"
+    UPDATE Usuarios 
+    SET PrimeraVez = 0 
+    WHERE IdUsuario = @IdUsuario;
+END;
+GO
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--/////////////////////////////////////////////////////////V//////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+---------------------------------------------------------------------------------------------------
+--                      14.        CREAR NUEVO USUARIO
 ---------------------------------------------------------------------------------------------------
 CREATE OR ALTER PROCEDURE sp_CrearNuevoUsuario
     @Usuario nvarchar (50),
@@ -462,3 +514,269 @@ begin
     values(@Usuario,2,@IdContraseña,1,3,getdate(),@IdEmpleado)
 
 end
+
+GO
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--/////////////////////////////////////////////////////////V//////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+---------------------------------------------------------------------------------------------------
+--                         15.           ACTUALIZAR EMPLEADO
+---------------------------------------------------------------------------------------------------
+CREATE OR ALTER PROCEDURE sp_Actualizar_Empleado
+    @IdEmpleado INT,
+    @Nombre NVARCHAR(50),
+    @Apellido NVARCHAR(50),
+    @Documento NVARCHAR(50),
+    @Sexo NVARCHAR(50),
+    @Genero NVARCHAR(50),
+    @Fecha_Nac DATE,
+    @Telefono NVARCHAR(50),
+    @Mail NVARCHAR(50),
+    @Calle NVARCHAR(150),
+    @Numero NVARCHAR(20),
+    @Piso NVARCHAR(10) = NULL,
+    @Departamento NVARCHAR(10) = NULL,
+    @CodigoPostal INT,
+    @IdLocalidad INT
+AS
+BEGIN
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
+        -- 1. Obtenemos el IdDireccion asignado a este empleado
+        DECLARE @IdDireccion INT;
+        
+        SELECT @IdDireccion = IdDireccion 
+        FROM Empleados 
+        WHERE IdEmpleado = @IdEmpleado;
+
+        -- Si el empleado existe, procedemos a actualizar
+        IF @IdDireccion IS NOT NULL
+        BEGIN
+            -- 2. Actualizamos la tabla de Direcciones primero
+            UPDATE Direcciones
+            SET Calle = @Calle,
+                Numero = @Numero,
+                Piso = @Piso,
+                Departamento = @Departamento,
+                CodigoPostal = @CodigoPostal,
+                IdLocalidad = @IdLocalidad
+            WHERE IdDireccion = @IdDireccion;
+
+            -- 3. Actualizamos la tabla de Empleados después
+            UPDATE Empleados
+            SET Nombre = @Nombre,
+                Apellido = @Apellido,
+                Documento = @Documento,
+                Sexo = @Sexo,
+                Genero = @Genero,
+                Fecha_Nac = @Fecha_Nac,
+                Telefono = @Telefono,
+                Mail = @Mail
+            WHERE IdEmpleado = @IdEmpleado;
+
+            COMMIT TRANSACTION;
+        END
+        ELSE
+        BEGIN
+            -- Si no se encontró el empleado, cancelamos la transacción
+            ROLLBACK TRANSACTION;
+            RAISERROR('El empleado especificado no existe.', 16, 1);
+        END
+
+    END TRY
+    BEGIN CATCH
+        -- En caso de cualquier error (ej. claves foráneas), deshacemos los cambios
+        IF @@TRANCOUNT > 0
+            ROLLBACK TRANSACTION;
+    END CATCH
+END
+
+GO
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--/////////////////////////////////////////////////////////V//////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+---------------------------------------------------------------------------------------------------
+--                      16.          ACTUALIZAR RESPUESTAS SEGURIDAD
+---------------------------------------------------------------------------------------------------
+CREATE OR ALTER PROCEDURE sp_ActualizarRespuestaUsuario
+    @IdUsuario INT,
+    @IdPregunta INT,
+    @NuevaRespuesta NVARCHAR(50)
+AS
+BEGIN
+    -- Verificamos si ya existe el registro para ese usuario y esa pregunta
+    IF EXISTS (SELECT 1 FROM RespuestaSeguridad WHERE IdUsuario = @IdUsuario AND IdPregunta = @IdPregunta)
+    BEGIN
+        UPDATE RespuestaSeguridad
+        SET RespuestaHash = @NuevaRespuesta
+        WHERE IdUsuario = @IdUsuario AND IdPregunta = @IdPregunta;
+    END
+    ELSE
+    BEGIN
+        RAISERROR('Error: El usuario no tiene registrada una respuesta para esa pregunta.', 16, 1);
+    END
+END;
+GO
+
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--/////////////////////////////////////////////////////////V//////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+---------------------------------------------------------------------------------------------------
+--                           17.     OBTENER PREGUNTAS USUARIO
+---------------------------------------------------------------------------------------------------
+CREATE or alter PROCEDURE sp_ObtenerPreguntasUsuario
+    @IdUsuario INT
+AS
+BEGIN
+    select p.IdPregunta,u.IdUsuario,p.Pregunta
+    from RespuestaSeguridad r
+    inner join PreguntaSeguridad p on p.IdPregunta = r.IdPregunta
+    inner join Usuarios u on u.IdUsuario = r.IdUsuario
+    where r.IdUsuario = 2
+END
+
+go
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--/////////////////////////////////////////////////////////V//////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+---------------------------------------------------------------------------------------------------
+--                         18.       OBTENER PREGUNTAS SEGURIDAD
+---------------------------------------------------------------------------------------------------
+create or alter procedure sp_ObtenerPreguntasSeguridad
+as
+begin
+    select IdPregunta,Pregunta
+    from PreguntaSeguridad
+end
+
+go
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--/////////////////////////////////////////////////////////V//////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+---------------------------------------------------------------------------------------------------
+--                         19.      REGISTRAR BITACORA
+---------------------------------------------------------------------------------------------------
+CREATE OR ALTER PROCEDURE sp_RegistrarBitacora 
+    @NombreUsuario nvarchar(50), 
+    @Accion nvarchar(100),
+    @Descripcion nvarchar(250),
+    @Tipo nvarchar(50),
+    @Nivel nvarchar(20)
+AS 
+BEGIN 
+    Insert into Bitacora(FechaHora,NombreUsuario,Accion,Descripcion,Tipo, Nivel)VALUES(GETDATE(),@NombreUsuario,@Accion,@Descripcion,@Tipo,@Nivel);
+END;
+GO
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--/////////////////////////////////////////////////////////V//////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+---------------------------------------------------------------------------------------------------
+--                         20.      MOSTRAR BITACORA
+---------------------------------------------------------------------------------------------------
+CREATE or alter PROCEDURE sp_MostrarBitacora
+AS
+BEGIN
+    SELECT 
+    IdBitacora,
+    FechaHora,
+    NombreUsuario,
+    Accion,
+    Tipo,
+    Nivel,
+    Descripcion
+    FROM Bitacora
+    ORDER BY FechaHora DESC;
+END;
+
+GO
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--/////////////////////////////////////////////////////////V//////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+---------------------------------------------------------------------------------------------------
+--                         21.      FILTRAR BITACORA
+---------------------------------------------------------------------------------------------------
+CREATE OR ALTER PROCEDURE sp_FiltrarBitacora
+    @FechaDesde DATE,
+    @FechaHasta DATE,
+    @NombreUsuario NVARCHAR(50) = NULL,
+    @Tipo VARCHAR(50) = NULL,
+    @Accion VARCHAR(100) = NULL,
+    @Nivel VARCHAR(20) = NULL
+AS
+BEGIN
+    SELECT
+    IdBitacora,
+    FechaHora,
+    NombreUsuario,
+    Accion,
+    Tipo,
+    Nivel,
+    Descripcion
+    FROM Bitacora
+    WHERE FechaHora >= @FechaDesde
+    AND FechaHora < DATEADD(DAY,1,@FechaHasta)
+    AND (@NombreUsuario IS NULL OR NombreUsuario = @NombreUsuario)
+    AND (@Tipo IS NULL OR Tipo = @Tipo)
+    AND (@Accion IS NULL OR Accion = @Accion)
+    AND (@Nivel IS NULL OR Nivel = @Nivel)
+    ORDER BY FechaHora DESC;
+END;
+GO
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--/////////////////////////////////////////////////////////V//////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+---------------------------------------------------------------------------------------------------
+--                         22.      MOSTRAR ACCIONES EN COMBOBOX
+---------------------------------------------------------------------------------------------------
+CREATE OR ALTER PROCEDURE sp_MostrarAccionesBitacora
+AS
+    BEGIN
+    SELECT DISTINCT Accion
+    FROM Bitacora
+    ORDER BY Accion;
+END;
+
+GO
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--/////////////////////////////////////////////////////////V//////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+--///////////////////////////////////////////////////////////////////////////
+---------------------------------------------------------------------------------------------------
+--                         23.      MOSTRAR USUARIOS EN COMBOBOX
+---------------------------------------------------------------------------------------------------
+--MOSTRAR USUARIOS EN COMBOBOX--
+CREATE OR ALTER PROCEDURE sp_MostrarUsuariosBitacora
+AS
+BEGIN
+    SELECT IdUsuario, NombreUsuario
+    FROM Usuarios
+    ORDER BY NombreUsuario;
+END;
+GO

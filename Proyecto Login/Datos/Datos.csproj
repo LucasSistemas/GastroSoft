@@ -41,13 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BitacoraDatos.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="ABM\Empleado.cs" />
-    <Compile Include="Consultas Tablas\DatosPoliticasSeguridad.cs" />
+    <Compile Include="Politicas y Preguntas Seguridad\PoliticasSeguridad.cs" />
     <Compile Include="Consultas Tablas\Geografia.cs" />
-    <Compile Include="Consultas Tablas\PreguntasSeguridad.cs" />
+    <Compile Include="Politicas y Preguntas Seguridad\PreguntasSeguridad.cs" />
     <Compile Include="Consultas Tablas\TablaEmpleados.cs" />
-    <Compile Include="DTOs\RespuestaSeguridadDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ABM\Usuario.cs" />
   </ItemGroup>

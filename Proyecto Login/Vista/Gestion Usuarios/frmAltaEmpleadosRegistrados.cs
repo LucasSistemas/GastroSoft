@@ -1,4 +1,8 @@
-﻿using Entidad.Empleados_y_Usuarios;
+﻿using Entidad;
+using Entidad.Empleados_y_Usuarios;
+using Logica;
+using Logica.Cargar_datos_a_Formularios.Empleados_a_Dar_Alta;
+using Logica.Gestion_de_Empleados;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,13 +12,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Logica.Cargar_datos_a_Formularios.Empleados_a_Dar_Alta;
-using Logica.Gestion_de_Empleados;
 
 namespace Vista
 {
     public partial class frmAltaEmpleadosRegistrados : Form
     {
+        private BitacoraServicio bitacora = new BitacoraServicio();
         private frmMenuPrincipal menu;
         private CargarEmpleadosPendientes logica = new CargarEmpleadosPendientes();
 
@@ -51,7 +54,6 @@ namespace Vista
             dgvAltaEmpleado.MultiSelect = false; // Solo una fila
 
             dgvAltaEmpleado.RowHeadersVisible = false; // Sacar el margen
-
         }
 
         private void btDarAlta_Click(object sender, EventArgs e)
@@ -71,6 +73,8 @@ namespace Vista
                 }
                 else
                 {
+                    bitacora.Registrar("Alta de empleado","Se genero el codigo de acceso y se envio al empleado correctamente. ","USUARIO","INFO");
+
                     MessageBox.Show(resultado.mensaje, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     frmAltaEmpleadosRegistrados_Load(sender, e); // Recargo el dgv
                 }

@@ -7,7 +7,7 @@ using Sesion;
 
 namespace Logica
 {
-    public class SolicitarDatos
+    public class SolicitarDatosUsuario
     {
         public string SolicitarNombre()
         {

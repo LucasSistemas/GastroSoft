@@ -38,9 +38,19 @@ namespace Logica.Gestion_de_Usuario
                 // Y ACA SE PNDRIA LA CONSULTA PARA TRAER LAS CONTRASEÑAS ANTERIIORES GUARDADAS EN LA BASE DE DATOS VERIFICAR QUE LA
                 // CONTRASEÑA BNUEVA NO ES IGUAL A ALGUNA DE LAS ANTERIORES USADAS POR EL OLVIDADIZO DEL USUARIO
             }
+            if (politicasActuales.NoContenerUsuario && contraseña.Contains(usuario))
+            {
+                return (false, "La contraseña no puede contener el nombre de usuario");
+            }
+            if (politicasActuales.ValidarDatosPersonales)
+            {
+                // Aquí puedes implementar la lógica para validar que la contraseña no contenga datos personales del usuario
+                // Por ejemplo, verificar que no contenga el nombre, apellido, fecha de nacimiento, etc.
+            }
 
             // Si todas las validaciones pasan, se puede proceder a crear el usuario
-            string hash = ConvertirHash.GenerateSHA256Hash(usuario, contraseña);
+            string userpass = usuario + "-" + contraseña;
+            string hash = ConvertirHash.GenerateSHA256Hash(userpass);
 
             CrearNuevoUsuario crearNuevo = new CrearNuevoUsuario();
             bool resultado = crearNuevo.CrearUsuario(usuario, hash);

@@ -1,5 +1,9 @@
-﻿using Datos.DTOs;
+﻿using Entidad.Preguntas_y_Respuestas;
+using Logica;
+using Logica.Cargar_datos_a_Formularios.Preguntas_a_CambiarRespuestas;
 using Logica.Gestion_de_Empleados;
+using Logica.Gestion_de_Usuario;
+using Sesion;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,118 +13,129 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using TextBox = System.Windows.Forms.TextBox;
 
 namespace Vista.Gestion_Usuarios
 {
     public partial class frmCambiarRespuestas : Form
     {
-        private frmEditarPerfilUsuario perfil;
-        private PreguntasRespuestas logica = new PreguntasRespuestas();
-        private int idUsuarioActual;
-        private List<RespuestaSeguridadDTO> respuestasOriginales;
+        frmEditarPerfilUsuario frmEditarPerfil;
+
+        CargarPreguntasUsuario cargar;
+        private GestionRespuestasSeguridad gestionperfil;
+        private List<Preguntas_Seguridad> listaPreguntas = new List<Preguntas_Seguridad>();
+        private CargarPreguntasSeguridad cargarPreguntas;
+
 
         // Constructor 1: Si necesitás pasarle la referencia del perfil
-        public frmCambiarRespuestas(frmEditarPerfilUsuario perfil, int idUsuario)
+        public frmCambiarRespuestas(frmEditarPerfilUsuario perfil)
         {
             InitializeComponent();
-            this.perfil = perfil;
-            this.idUsuarioActual = idUsuario;
-        }
-
-        // Constructor 2: Por si querés llamarlo solo con el ID (sobrecarga útil)
-        public frmCambiarRespuestas(int idUsuario)
-        {
-            InitializeComponent();
-            this.idUsuarioActual = idUsuario;
+            this.frmEditarPerfil = perfil;
         }
 
         private void frmCambiarRespuestas_Load(object sender, EventArgs e)
         {
-            CargarPreguntasUsuario();
+            //  Primero se ocultan todos los renglones de preguntas por defecto al momento de que se cargue la pantalla/formulario
+            OcultarTodosLosCampos();
+
+            cargar = new CargarPreguntasUsuario();
+
+            var resultado = cargar.CargarPreguntas();
+
+            Label[] labelspregunta ={lblPregunta1,lblPregunta2,lblPregunta3,lblPregunta4,lblPregunta5};
+            Label[] labelsrespuesta = { lblRespuesta1, lblRespuesta2, lblRespuesta3, lblRespuesta4, lblRespuesta5 };
+            TextBox[] textBoxes = {txtRespuesta1,txtRespuesta2,txtRespuesta3,txtRespuesta4,txtRespuesta5 };
+
+
+            if (!resultado.Exito)
+            {
+                MessageBox.Show(resultado.Mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                List<Preguntas_Seguridad> preguntas = resultado.Preguntas;
+
+                for (int i = 0; i < labelspregunta.Length; i++)
+                {
+                    if (i < preguntas.Count)
+                    {
+                        labelspregunta[i].Text = preguntas[i].Pregunta;
+                        labelspregunta[i].Visible = true;
+                        labelsrespuesta[i].Visible = true;
+                        textBoxes[i].Visible = true;
+                    }
+                    else
+                    {
+                        labelspregunta[i].Visible = false;
+                        labelsrespuesta[i].Visible = false;
+                        textBoxes[i].Visible = false;
+                    }
+                }
+            }
         }
-
-        private void CargarPreguntasUsuario()
+        private void OcultarTodosLosCampos()
         {
-            try
-            {
-                respuestasOriginales = logica.ObtenerRespuestasUsuario(idUsuarioActual);
-
-                if (respuestasOriginales != null && respuestasOriginales.Count >= 5)
-                {
-                    lblPregunta_1.Text = respuestasOriginales[0].Pregunta;
-                    lblPregunta_2.Text = respuestasOriginales[1].Pregunta;
-                    lblPregunta_3.Text = respuestasOriginales[2].Pregunta;
-                    lblPregunta_4.Text = respuestasOriginales[3].Pregunta;
-                    lblPregunta_5.Text = respuestasOriginales[4].Pregunta;
-
-                    tbRespuesta_1.Text = respuestasOriginales[0].Respuesta;
-                    tbRespuesta_2.Text = respuestasOriginales[1].Respuesta;
-                    tbRespuesta_3.Text = respuestasOriginales[2].Respuesta;
-                    tbRespuesta_4.Text = respuestasOriginales[3].Respuesta;
-                    tbRespuesta_5.Text = respuestasOriginales[4].Respuesta;
-                }
-                else
-                {
-                    MessageBox.Show("No se pudieron cargar las 5 preguntas de seguridad del usuario.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    this.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Ocurrió un error al cargar las preguntas: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            // Primero se apagan los controles visibles en el diseño diseño para luego ser activados la cantidad correspondiente segun las politicas
+            lblPregunta1.Visible = false; txtRespuesta1.Visible = false;
+            lblPregunta2.Visible = false; txtRespuesta2.Visible = false;
+            lblPregunta3.Visible = false; txtRespuesta3.Visible = false;
+            lblPregunta4.Visible = false; txtRespuesta4.Visible = false;
+            lblPregunta5.Visible = false; txtRespuesta5.Visible = false;
         }
 
         private void btGuardar_Cambios_Click(object sender, EventArgs e)
         {
             // Validaciones de campos vacíos
-            if (string.IsNullOrWhiteSpace(tbRespuesta_1.Text))
+            if (txtRespuesta1.Visible && string.IsNullOrWhiteSpace(txtRespuesta1.Text))
             {
                 MessageBox.Show("Debe responder la pregunta 1.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                tbRespuesta_1.Focus();
+                txtRespuesta1.Focus();
                 return;
             }
 
-            if (string.IsNullOrWhiteSpace(tbRespuesta_2.Text))
+            if (txtRespuesta2.Visible && string.IsNullOrWhiteSpace(txtRespuesta2.Text))
             {
                 MessageBox.Show("Debe responder la pregunta 2.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                tbRespuesta_2.Focus();
+                txtRespuesta2.Focus();
                 return;
             }
 
-            if (string.IsNullOrWhiteSpace(tbRespuesta_3.Text))
+            if (txtRespuesta3.Visible && string.IsNullOrWhiteSpace(txtRespuesta4.Text))
             {
                 MessageBox.Show("Debe responder la pregunta 3.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                tbRespuesta_3.Focus();
+                txtRespuesta4.Focus();
                 return;
             }
 
-            if (string.IsNullOrWhiteSpace(tbRespuesta_4.Text))
+            if (txtRespuesta4.Visible && string.IsNullOrWhiteSpace(txtRespuesta3.Text))
             {
                 MessageBox.Show("Debe responder la pregunta 4.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                tbRespuesta_4.Focus();
+                txtRespuesta3.Focus();
                 return;
             }
 
-            if (string.IsNullOrWhiteSpace(tbRespuesta_5.Text))
+            if (txtRespuesta5.Visible && string.IsNullOrWhiteSpace(txtRespuesta5.Text))
             {
                 MessageBox.Show("Debe responder la pregunta 5.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                tbRespuesta_5.Focus();
+                txtRespuesta5.Focus();
                 return;
             }
 
             try
             {
-                List<RespuestaSeguridadDTO> respuestasNuevas = new List<RespuestaSeguridadDTO>
+                List<Respuestas_Seguridad> respuestasNuevas = new List<Respuestas_Seguridad>
                 {
-                    new RespuestaSeguridadDTO { IdPregunta = respuestasOriginales[0].IdPregunta, Respuesta = tbRespuesta_1.Text.Trim() },
-                    new RespuestaSeguridadDTO { IdPregunta = respuestasOriginales[1].IdPregunta, Respuesta = tbRespuesta_2.Text.Trim() },
-                    new RespuestaSeguridadDTO { IdPregunta = respuestasOriginales[2].IdPregunta, Respuesta = tbRespuesta_3.Text.Trim() },
-                    new RespuestaSeguridadDTO { IdPregunta = respuestasOriginales[3].IdPregunta, Respuesta = tbRespuesta_4.Text.Trim() },
-                    new RespuestaSeguridadDTO { IdPregunta = respuestasOriginales[4].IdPregunta, Respuesta = tbRespuesta_5.Text.Trim() }
+                    new Respuestas_Seguridad { IdPregunta = listaPreguntas[0].IdPregunta, RespuestaHash = txtRespuesta1.Text},
+                    new Respuestas_Seguridad { IdPregunta = listaPreguntas[1].IdPregunta, RespuestaHash = txtRespuesta2.Text},
+                    new Respuestas_Seguridad { IdPregunta = listaPreguntas[2].IdPregunta, RespuestaHash = txtRespuesta3.Text},
+                    new Respuestas_Seguridad { IdPregunta = listaPreguntas[3].IdPregunta, RespuestaHash = txtRespuesta4.Text},
+                    new Respuestas_Seguridad { IdPregunta = listaPreguntas[4].IdPregunta, RespuestaHash = txtRespuesta5.Text}
                 };
 
-                bool exito = logica.GuardarCambiosRespuestas(idUsuarioActual, respuestasNuevas);
+                gestionperfil = new GestionRespuestasSeguridad();
+                bool exito = gestionperfil.ActualizarCambiosRespuestas(respuestasNuevas);
 
                 if (exito)
                 {
@@ -139,9 +154,11 @@ namespace Vista.Gestion_Usuarios
             }
         }
 
-        private void btAtras_Click(object sender, EventArgs e)
+        private void btnVolver_Click(object sender, EventArgs e)
         {
+            this.Dispose();
             this.Close();
+            frmEditarPerfil.Show();
         }
     }
 }

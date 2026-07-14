@@ -83,6 +83,7 @@
             this.lblOlvidó.Size = new System.Drawing.Size(184, 16);
             this.lblOlvidó.TabIndex = 6;
             this.lblOlvidó.Text = "¿Ház olvidado tu contraseña?";
+            this.lblOlvidó.Click += new System.EventHandler(this.lblOlvidó_Click);
             // 
             // pictureBox1
             // 

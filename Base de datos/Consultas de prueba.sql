@@ -1,4 +1,4 @@
-alter table Usuarios add IdEmpleado int null
+alter table PoliticaContraseña add NoContenerUsuario bit default 1 not null
 alter table Usuarios add foreign key (IdEmpleado) references Empleados(IdEmpleado)
 
 alter table Contraseñas add IdUsuario int null
@@ -13,10 +13,13 @@ update Empleados set Mail = 'tumail@gmail.com' where IdEmpleado = 1
 update Empleados set VencimientoCodigo = null where IdEmpleado = 1
 
 update Empleados set CodigoAcceso = 'bGCnsT' where IdEmpleado = 1
-update Empleados set VencimientoCodigo =  where IdEmpleado = 1
+update Empleados set VencimientoCodigo = NULL  where IdEmpleado = 1
 
-
-update Contraseñas set IdUsuario = null where IdContraseña = 1
+select p.IdPregunta,u.IdUsuario,p.Pregunta
+from RespuestaSeguridad r
+inner join PreguntaSeguridad p on p.IdPregunta = r.IdPregunta
+inner join Usuarios u on u.IdUsuario = r.IdUsuario
+where r.IdUsuario = 2
 
 drop table Contraseñas
 
@@ -30,6 +33,7 @@ dbcc CHECKIDENT ('Empleados',RESEED,0)
 select * from Usuarios
 select * from Empleados
 select * from Roles
+select * from Usuario_Rol
 
 SELECT fk.name
 FROM sys.foreign_keys fk
@@ -195,5 +199,3 @@ WHERE parent_object_id = OBJECT_ID('Contraseñas');
 
 ALTER TABLE Contraseñas
 DROP CONSTRAINT FK__Contra__IdUsuario__177F90F9;
-
-FK__Contraseñ__IdUsu__17F790F9

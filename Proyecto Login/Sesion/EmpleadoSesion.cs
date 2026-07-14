@@ -8,7 +8,7 @@ namespace Sesion
 {
     public static class EmpleadoSesion
     {
-        public static int Id { get; set; }
+        public static int IdEmpleado { get; set; }
         public static string Nombre { get; set; }
         public static string Apellido { get; set; }
         public static string Documento { get; set; }
@@ -25,6 +25,10 @@ namespace Sesion
         public static string Localidad { get; set; }
         
         #region Getters
+        public static int ObtenerIdEmpleado()
+        {
+            return IdEmpleado;
+        }
         public static string ObtenerNombre()
         {
             return Nombre;
@@ -92,6 +96,10 @@ namespace Sesion
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         */
         #region Setters
+        public static void SetIdEmpleado(int idempleado)
+        {
+            EmpleadoSesion.IdEmpleado = idempleado;
+        }
         public static void SetNombre(string nombre)
         {
             EmpleadoSesion.Nombre = nombre;

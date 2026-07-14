@@ -18,19 +18,14 @@ namespace Vista
     {
         private string nombreapellidoempleado;
         private ValidarContraseña validarContraseña;
-        frmLogin login = new frmLogin();
+        frmLogin login; //referencia
         CerrarSesion cerrarSesion = new Logica.CerrarSesion();
-
+        BitacoraServicio bitacora = new BitacoraServicio();
         public frmCrearUsuario(frmLogin login,string nomape)
         {
             InitializeComponent();
+            this.login = login; 
             nombreapellidoempleado = nomape;
-        }
-
-        private void btnVolver_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-            this.Close();
         }
 
         private void btnFinalizar_Click(object sender, EventArgs e)
@@ -67,6 +62,8 @@ namespace Vista
                 }
                 else
                 {
+                    bitacora.Registrar("Creacion de usuario","El empleado creo su usuario correctamente. ","USUARIO","INFO");
+
                     MessageBox.Show(resultadoValidacion.Mensaje, "Crear Usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     cerrarSesion.Cerrar();
                     login.Show();

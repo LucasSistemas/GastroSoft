@@ -147,7 +147,7 @@ foreign key (IdEmpleado) references Empleados(IdEmpleado)
 go
 
 
-create table Historial_Contraseña(
+create table HistorialContraseña(
 IdHistorial int primary key identity,
 Contraseña_Pasada nvarchar(100)not null,
 Fecha_Modificacion datetime not null,
@@ -158,20 +158,20 @@ foreign key (IdUsuario) references Usuarios(IdUsuario)
 
 go
 
-create table Pregunta_Seguridad(
+create table PreguntaSeguridad(
 IdPregunta int primary key identity,
 Pregunta nvarchar(50)not null
 );
 
 go
 
-create table Respuesta_Seguridad(
+create table RespuestaSeguridad(
 IdRespuestaSeguridad int primary key identity,
 IdPregunta int not null,
 IdUsuario int not null,
-Respuesta nvarchar(50) not null,
+RespuestaHash nvarchar(50) not null,
 
-foreign key (IdPregunta) references Pregunta_Seguridad(IdPregunta),
+foreign key (IdPregunta) references PreguntaSeguridad(IdPregunta),
 foreign key (IdUsuario) references Usuarios(IdUsuario)
 );
 
@@ -184,7 +184,7 @@ go
 --///////////////////////////////////////////////////////////////////////////
 
 --Tablas de normalizacion
-create table Rol_Permiso(
+create table RolPermiso(
 IdRol int not null,
 IdPermiso int not null,
 Duracion datetime
@@ -203,16 +203,15 @@ go
 --///////////////////////////////////////////////////////////////////////////
 
 --Settings
-create table Bitacora(
-IdBitacora int primary key identity,
-FechaHora datetime default getdate() not null,
-Accion nvarchar(50) not null,
-Modulo nvarchar(50) not null,
-Descripcion nvarchar(250) not null,
-Criticidad nvarchar(20) not null,
-IdUsuario int not null,
-
-foreign key (IdUsuario) references Usuarios(IdUsuario)
+CREATE TABLE Bitacora(
+IdBitacora int identity(1,1) primary key, /*identificador de la bitacora*/
+FechaHora DateTime not null default (getdate()),
+NombreUsuario nvarchar(50) not null, 
+Accion nvarchar(100) not null,
+Tipo nvarchar(50) not null default '',
+Nivel nvarchar(20) not null default '',
+Descripcion nvarchar(250)not null default ''
+--Constraint FK_Bitacora_Usuario Foreign key (NombreUsuario) references Usuarios(NombreUsuario)
 );
 
 go
@@ -224,7 +223,9 @@ create table PoliticaContraseña(
     Numeros bit default 0 NOT NULL,
     CaracteresEspeciales bit default 0 NOT NULL,
     NoRepiteContraseña bit default 0 NOT NULL,
-    CantidadPreguntas int default 3 NOT NULL
+    CantidadPreguntas int default 3 NOT NULL,
+    ValidarDatosPersonales bit default 0 NOT NULL,
+    NoContenerUsuario bit default 1 not null
 );
 
 

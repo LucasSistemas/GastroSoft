@@ -30,21 +30,21 @@
         {
             this.btGuardar_Cambios = new System.Windows.Forms.Button();
             this.gbP_S = new System.Windows.Forms.GroupBox();
-            this.lblPregunta_5 = new System.Windows.Forms.Label();
-            this.lblPregunta_4 = new System.Windows.Forms.Label();
-            this.lblPregunta_3 = new System.Windows.Forms.Label();
-            this.lblPregunta_2 = new System.Windows.Forms.Label();
-            this.lblPregunta_1 = new System.Windows.Forms.Label();
-            this.tbRespuesta_3 = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.tbRespuesta_5 = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.tbRespuesta_2 = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.tbRespuesta_4 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.tbRespuesta_1 = new System.Windows.Forms.TextBox();
+            this.lblPregunta5 = new System.Windows.Forms.Label();
+            this.lblPregunta4 = new System.Windows.Forms.Label();
+            this.lblPregunta3 = new System.Windows.Forms.Label();
+            this.lblPregunta2 = new System.Windows.Forms.Label();
+            this.lblPregunta1 = new System.Windows.Forms.Label();
+            this.txtRespuesta4 = new System.Windows.Forms.TextBox();
+            this.lblRespuesta4 = new System.Windows.Forms.Label();
+            this.txtRespuesta5 = new System.Windows.Forms.TextBox();
+            this.lblRespuesta5 = new System.Windows.Forms.Label();
+            this.txtRespuesta2 = new System.Windows.Forms.TextBox();
+            this.lblRespuesta2 = new System.Windows.Forms.Label();
+            this.txtRespuesta3 = new System.Windows.Forms.TextBox();
+            this.lblRespuesta3 = new System.Windows.Forms.Label();
+            this.lblRespuesta1 = new System.Windows.Forms.Label();
+            this.txtRespuesta1 = new System.Windows.Forms.TextBox();
             this.btAtras = new System.Windows.Forms.Button();
             this.gbP_S.SuspendLayout();
             this.SuspendLayout();
@@ -54,9 +54,10 @@
             this.btGuardar_Cambios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btGuardar_Cambios.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btGuardar_Cambios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btGuardar_Cambios.Location = new System.Drawing.Point(359, 394);
+            this.btGuardar_Cambios.Location = new System.Drawing.Point(479, 485);
+            this.btGuardar_Cambios.Margin = new System.Windows.Forms.Padding(4);
             this.btGuardar_Cambios.Name = "btGuardar_Cambios";
-            this.btGuardar_Cambios.Size = new System.Drawing.Size(127, 31);
+            this.btGuardar_Cambios.Size = new System.Drawing.Size(169, 38);
             this.btGuardar_Cambios.TabIndex = 17;
             this.btGuardar_Cambios.Text = "Guardar cambios";
             this.btGuardar_Cambios.UseVisualStyleBackColor = true;
@@ -65,177 +66,197 @@
             // gbP_S
             // 
             this.gbP_S.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.gbP_S.Controls.Add(this.lblPregunta_5);
-            this.gbP_S.Controls.Add(this.lblPregunta_4);
-            this.gbP_S.Controls.Add(this.lblPregunta_3);
-            this.gbP_S.Controls.Add(this.lblPregunta_2);
-            this.gbP_S.Controls.Add(this.lblPregunta_1);
-            this.gbP_S.Controls.Add(this.tbRespuesta_3);
-            this.gbP_S.Controls.Add(this.label19);
-            this.gbP_S.Controls.Add(this.tbRespuesta_5);
-            this.gbP_S.Controls.Add(this.label17);
-            this.gbP_S.Controls.Add(this.tbRespuesta_2);
-            this.gbP_S.Controls.Add(this.label15);
-            this.gbP_S.Controls.Add(this.tbRespuesta_4);
-            this.gbP_S.Controls.Add(this.label13);
-            this.gbP_S.Controls.Add(this.label11);
-            this.gbP_S.Controls.Add(this.tbRespuesta_1);
+            this.gbP_S.Controls.Add(this.lblPregunta5);
+            this.gbP_S.Controls.Add(this.lblPregunta4);
+            this.gbP_S.Controls.Add(this.lblPregunta3);
+            this.gbP_S.Controls.Add(this.lblPregunta2);
+            this.gbP_S.Controls.Add(this.lblPregunta1);
+            this.gbP_S.Controls.Add(this.txtRespuesta4);
+            this.gbP_S.Controls.Add(this.lblRespuesta4);
+            this.gbP_S.Controls.Add(this.txtRespuesta5);
+            this.gbP_S.Controls.Add(this.lblRespuesta5);
+            this.gbP_S.Controls.Add(this.txtRespuesta2);
+            this.gbP_S.Controls.Add(this.lblRespuesta2);
+            this.gbP_S.Controls.Add(this.txtRespuesta3);
+            this.gbP_S.Controls.Add(this.lblRespuesta3);
+            this.gbP_S.Controls.Add(this.lblRespuesta1);
+            this.gbP_S.Controls.Add(this.txtRespuesta1);
             this.gbP_S.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbP_S.ForeColor = System.Drawing.Color.White;
-            this.gbP_S.Location = new System.Drawing.Point(136, 26);
+            this.gbP_S.Location = new System.Drawing.Point(181, 32);
+            this.gbP_S.Margin = new System.Windows.Forms.Padding(4);
             this.gbP_S.Name = "gbP_S";
-            this.gbP_S.Size = new System.Drawing.Size(529, 362);
+            this.gbP_S.Padding = new System.Windows.Forms.Padding(4);
+            this.gbP_S.Size = new System.Drawing.Size(768, 446);
             this.gbP_S.TabIndex = 16;
             this.gbP_S.TabStop = false;
             this.gbP_S.Text = "Preguntas de seguridad";
             // 
-            // lblPregunta_5
+            // lblPregunta5
             // 
-            this.lblPregunta_5.AutoSize = true;
-            this.lblPregunta_5.Location = new System.Drawing.Point(332, 290);
-            this.lblPregunta_5.Name = "lblPregunta_5";
-            this.lblPregunta_5.Size = new System.Drawing.Size(64, 15);
-            this.lblPregunta_5.TabIndex = 34;
-            this.lblPregunta_5.Text = "Pregunta 5";
+            this.lblPregunta5.AutoSize = true;
+            this.lblPregunta5.Location = new System.Drawing.Point(443, 350);
+            this.lblPregunta5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPregunta5.Name = "lblPregunta5";
+            this.lblPregunta5.Size = new System.Drawing.Size(80, 20);
+            this.lblPregunta5.TabIndex = 34;
+            this.lblPregunta5.Text = "Pregunta 5";
             // 
-            // lblPregunta_4
+            // lblPregunta4
             // 
-            this.lblPregunta_4.AutoSize = true;
-            this.lblPregunta_4.Location = new System.Drawing.Point(332, 233);
-            this.lblPregunta_4.Name = "lblPregunta_4";
-            this.lblPregunta_4.Size = new System.Drawing.Size(64, 15);
-            this.lblPregunta_4.TabIndex = 33;
-            this.lblPregunta_4.Text = "Pregunta 4";
+            this.lblPregunta4.AutoSize = true;
+            this.lblPregunta4.Location = new System.Drawing.Point(443, 280);
+            this.lblPregunta4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPregunta4.Name = "lblPregunta4";
+            this.lblPregunta4.Size = new System.Drawing.Size(80, 20);
+            this.lblPregunta4.TabIndex = 33;
+            this.lblPregunta4.Text = "Pregunta 4";
             // 
-            // lblPregunta_3
+            // lblPregunta3
             // 
-            this.lblPregunta_3.AutoSize = true;
-            this.lblPregunta_3.Location = new System.Drawing.Point(332, 181);
-            this.lblPregunta_3.Name = "lblPregunta_3";
-            this.lblPregunta_3.Size = new System.Drawing.Size(64, 15);
-            this.lblPregunta_3.TabIndex = 32;
-            this.lblPregunta_3.Text = "Pregunta 3";
+            this.lblPregunta3.AutoSize = true;
+            this.lblPregunta3.Location = new System.Drawing.Point(443, 216);
+            this.lblPregunta3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPregunta3.Name = "lblPregunta3";
+            this.lblPregunta3.Size = new System.Drawing.Size(80, 20);
+            this.lblPregunta3.TabIndex = 32;
+            this.lblPregunta3.Text = "Pregunta 3";
             // 
-            // lblPregunta_2
+            // lblPregunta2
             // 
-            this.lblPregunta_2.AutoSize = true;
-            this.lblPregunta_2.Location = new System.Drawing.Point(332, 124);
-            this.lblPregunta_2.Name = "lblPregunta_2";
-            this.lblPregunta_2.Size = new System.Drawing.Size(64, 15);
-            this.lblPregunta_2.TabIndex = 31;
-            this.lblPregunta_2.Text = "Pregunta 2";
+            this.lblPregunta2.AutoSize = true;
+            this.lblPregunta2.Location = new System.Drawing.Point(443, 146);
+            this.lblPregunta2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPregunta2.Name = "lblPregunta2";
+            this.lblPregunta2.Size = new System.Drawing.Size(80, 20);
+            this.lblPregunta2.TabIndex = 31;
+            this.lblPregunta2.Text = "Pregunta 2";
             // 
-            // lblPregunta_1
+            // lblPregunta1
             // 
-            this.lblPregunta_1.AutoSize = true;
-            this.lblPregunta_1.Location = new System.Drawing.Point(332, 74);
-            this.lblPregunta_1.Name = "lblPregunta_1";
-            this.lblPregunta_1.Size = new System.Drawing.Size(64, 15);
-            this.lblPregunta_1.TabIndex = 30;
-            this.lblPregunta_1.Text = "Pregunta 1";
+            this.lblPregunta1.AutoSize = true;
+            this.lblPregunta1.Location = new System.Drawing.Point(443, 84);
+            this.lblPregunta1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPregunta1.Name = "lblPregunta1";
+            this.lblPregunta1.Size = new System.Drawing.Size(80, 20);
+            this.lblPregunta1.TabIndex = 30;
+            this.lblPregunta1.Text = "Pregunta 1";
             // 
-            // tbRespuesta_3
+            // txtRespuesta4
             // 
-            this.tbRespuesta_3.Location = new System.Drawing.Point(40, 225);
-            this.tbRespuesta_3.Name = "tbRespuesta_3";
-            this.tbRespuesta_3.Size = new System.Drawing.Size(214, 23);
-            this.tbRespuesta_3.TabIndex = 29;
+            this.txtRespuesta4.Location = new System.Drawing.Point(53, 277);
+            this.txtRespuesta4.Margin = new System.Windows.Forms.Padding(4);
+            this.txtRespuesta4.Name = "txtRespuesta4";
+            this.txtRespuesta4.Size = new System.Drawing.Size(284, 27);
+            this.txtRespuesta4.TabIndex = 29;
             // 
-            // label19
+            // lblRespuesta4
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(37, 205);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(60, 15);
-            this.label19.TabIndex = 28;
-            this.label19.Text = "Respuesta";
+            this.lblRespuesta4.AutoSize = true;
+            this.lblRespuesta4.Location = new System.Drawing.Point(49, 252);
+            this.lblRespuesta4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRespuesta4.Name = "lblRespuesta4";
+            this.lblRespuesta4.Size = new System.Drawing.Size(76, 20);
+            this.lblRespuesta4.TabIndex = 28;
+            this.lblRespuesta4.Text = "Respuesta";
             // 
-            // tbRespuesta_5
+            // txtRespuesta5
             // 
-            this.tbRespuesta_5.Location = new System.Drawing.Point(40, 282);
-            this.tbRespuesta_5.Name = "tbRespuesta_5";
-            this.tbRespuesta_5.Size = new System.Drawing.Size(218, 23);
-            this.tbRespuesta_5.TabIndex = 25;
+            this.txtRespuesta5.Location = new System.Drawing.Point(53, 347);
+            this.txtRespuesta5.Margin = new System.Windows.Forms.Padding(4);
+            this.txtRespuesta5.Name = "txtRespuesta5";
+            this.txtRespuesta5.Size = new System.Drawing.Size(289, 27);
+            this.txtRespuesta5.TabIndex = 25;
             // 
-            // label17
+            // lblRespuesta5
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(39, 262);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(60, 15);
-            this.label17.TabIndex = 24;
-            this.label17.Text = "Respuesta";
+            this.lblRespuesta5.AutoSize = true;
+            this.lblRespuesta5.Location = new System.Drawing.Point(52, 322);
+            this.lblRespuesta5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRespuesta5.Name = "lblRespuesta5";
+            this.lblRespuesta5.Size = new System.Drawing.Size(76, 20);
+            this.lblRespuesta5.TabIndex = 24;
+            this.lblRespuesta5.Text = "Respuesta";
             // 
-            // tbRespuesta_2
+            // txtRespuesta2
             // 
-            this.tbRespuesta_2.Location = new System.Drawing.Point(40, 116);
-            this.tbRespuesta_2.Name = "tbRespuesta_2";
-            this.tbRespuesta_2.Size = new System.Drawing.Size(214, 23);
-            this.tbRespuesta_2.TabIndex = 21;
+            this.txtRespuesta2.Location = new System.Drawing.Point(53, 143);
+            this.txtRespuesta2.Margin = new System.Windows.Forms.Padding(4);
+            this.txtRespuesta2.Name = "txtRespuesta2";
+            this.txtRespuesta2.Size = new System.Drawing.Size(284, 27);
+            this.txtRespuesta2.TabIndex = 21;
             // 
-            // label15
+            // lblRespuesta2
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(41, 96);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(60, 15);
-            this.label15.TabIndex = 20;
-            this.label15.Text = "Respuesta";
+            this.lblRespuesta2.AutoSize = true;
+            this.lblRespuesta2.Location = new System.Drawing.Point(55, 118);
+            this.lblRespuesta2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRespuesta2.Name = "lblRespuesta2";
+            this.lblRespuesta2.Size = new System.Drawing.Size(76, 20);
+            this.lblRespuesta2.TabIndex = 20;
+            this.lblRespuesta2.Text = "Respuesta";
             // 
-            // tbRespuesta_4
+            // txtRespuesta3
             // 
-            this.tbRespuesta_4.Location = new System.Drawing.Point(41, 173);
-            this.tbRespuesta_4.Name = "tbRespuesta_4";
-            this.tbRespuesta_4.Size = new System.Drawing.Size(218, 23);
-            this.tbRespuesta_4.TabIndex = 17;
+            this.txtRespuesta3.Location = new System.Drawing.Point(55, 213);
+            this.txtRespuesta3.Margin = new System.Windows.Forms.Padding(4);
+            this.txtRespuesta3.Name = "txtRespuesta3";
+            this.txtRespuesta3.Size = new System.Drawing.Size(289, 27);
+            this.txtRespuesta3.TabIndex = 17;
             // 
-            // label13
+            // lblRespuesta3
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(38, 149);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(60, 15);
-            this.label13.TabIndex = 16;
-            this.label13.Text = "Respuesta";
+            this.lblRespuesta3.AutoSize = true;
+            this.lblRespuesta3.Location = new System.Drawing.Point(51, 183);
+            this.lblRespuesta3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRespuesta3.Name = "lblRespuesta3";
+            this.lblRespuesta3.Size = new System.Drawing.Size(76, 20);
+            this.lblRespuesta3.TabIndex = 16;
+            this.lblRespuesta3.Text = "Respuesta";
             // 
-            // label11
+            // lblRespuesta1
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(37, 42);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(60, 15);
-            this.label11.TabIndex = 14;
-            this.label11.Text = "Respuesta";
+            this.lblRespuesta1.AutoSize = true;
+            this.lblRespuesta1.Location = new System.Drawing.Point(49, 52);
+            this.lblRespuesta1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRespuesta1.Name = "lblRespuesta1";
+            this.lblRespuesta1.Size = new System.Drawing.Size(76, 20);
+            this.lblRespuesta1.TabIndex = 14;
+            this.lblRespuesta1.Text = "Respuesta";
             // 
-            // tbRespuesta_1
+            // txtRespuesta1
             // 
-            this.tbRespuesta_1.Location = new System.Drawing.Point(40, 66);
-            this.tbRespuesta_1.Name = "tbRespuesta_1";
-            this.tbRespuesta_1.Size = new System.Drawing.Size(214, 23);
-            this.tbRespuesta_1.TabIndex = 13;
+            this.txtRespuesta1.Location = new System.Drawing.Point(53, 81);
+            this.txtRespuesta1.Margin = new System.Windows.Forms.Padding(4);
+            this.txtRespuesta1.Name = "txtRespuesta1";
+            this.txtRespuesta1.Size = new System.Drawing.Size(284, 27);
+            this.txtRespuesta1.TabIndex = 13;
             // 
             // btAtras
             // 
             this.btAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAtras.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btAtras.Location = new System.Drawing.Point(24, 26);
+            this.btAtras.Location = new System.Drawing.Point(32, 32);
+            this.btAtras.Margin = new System.Windows.Forms.Padding(4);
             this.btAtras.Name = "btAtras";
-            this.btAtras.Size = new System.Drawing.Size(71, 31);
+            this.btAtras.Size = new System.Drawing.Size(95, 38);
             this.btAtras.TabIndex = 18;
             this.btAtras.Text = "Volver";
             this.btAtras.UseVisualStyleBackColor = true;
-            this.btAtras.Click += new System.EventHandler(this.btAtras_Click);
+            this.btAtras.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // frmCambiarRespuestas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.btAtras);
             this.Controls.Add(this.btGuardar_Cambios);
             this.Controls.Add(this.gbP_S);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmCambiarRespuestas";
-            this.Text = "Cambiar Respuestas";
+            this.Text = "Cambiar Respuestas | Gastrosoft";
+            this.Load += new System.EventHandler(this.frmCambiarRespuestas_Load);
             this.gbP_S.ResumeLayout(false);
             this.gbP_S.PerformLayout();
             this.ResumeLayout(false);
@@ -246,21 +267,21 @@
 
         private System.Windows.Forms.Button btGuardar_Cambios;
         private System.Windows.Forms.GroupBox gbP_S;
-        private System.Windows.Forms.Label lblPregunta_5;
-        private System.Windows.Forms.Label lblPregunta_4;
-        private System.Windows.Forms.Label lblPregunta_3;
-        private System.Windows.Forms.Label lblPregunta_2;
-        private System.Windows.Forms.Label lblPregunta_1;
-        private System.Windows.Forms.TextBox tbRespuesta_3;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox tbRespuesta_5;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox tbRespuesta_2;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox tbRespuesta_4;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox tbRespuesta_1;
+        private System.Windows.Forms.Label lblPregunta5;
+        private System.Windows.Forms.Label lblPregunta4;
+        private System.Windows.Forms.Label lblPregunta3;
+        private System.Windows.Forms.Label lblPregunta2;
+        private System.Windows.Forms.Label lblPregunta1;
+        private System.Windows.Forms.TextBox txtRespuesta4;
+        private System.Windows.Forms.Label lblRespuesta4;
+        private System.Windows.Forms.TextBox txtRespuesta5;
+        private System.Windows.Forms.Label lblRespuesta5;
+        private System.Windows.Forms.TextBox txtRespuesta2;
+        private System.Windows.Forms.Label lblRespuesta2;
+        private System.Windows.Forms.TextBox txtRespuesta3;
+        private System.Windows.Forms.Label lblRespuesta3;
+        private System.Windows.Forms.Label lblRespuesta1;
+        private System.Windows.Forms.TextBox txtRespuesta1;
         private System.Windows.Forms.Button btAtras;
     }
 }
